@@ -11,7 +11,8 @@
     "apps/*"
   ],
   "devDependencies": {
-    "lerna": "^7.4.2"
+    "lerna": "^7.4.2",
+    "prettier": "^3.0.3"
   },
   "scripts": {
     "dev": "yarn lerna run dev",

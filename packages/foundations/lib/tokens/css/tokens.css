@@ -1,0 +1,34 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 03 Nov 2023 22:39:22 GMT
+ */
+
+:root {
+  --colors-primary-cyan-hex: #5FB4A2;
+  --colors-primary-cyan-rgb: rgb(95, 180, 162);
+  --colors-primary-dark-blue-hex: #203A4C;
+  --colors-primary-dark-blue-rgb: rgb(32, 58, 76);
+  --colors-primary-grayish-dark-blue-hex: #33323D;
+  --colors-primary-grayish-dark-blue-rgb: rgb(51, 50, 61);
+  --colors-secondary-very-light-grey-hex: #FAFAFA;
+  --colors-secondary-very-light-grey-rgb: rgb(250, 250, 250);
+  --colors-secondary-light-grey-hex: #EAEAEB;
+  --colors-secondary-light-grey-rgb: rgb(234, 234, 235);
+  --font-family-primary: Ibarra Real Nova;
+  --font-family-secondary: Public Sans;
+  --font-h1-size: 50px;
+  --font-h1-family: Ibarra Real Nova;
+  --font-h1-line-height: 50px;
+  --font-h2-size: 40px;
+  --font-h2-family: Ibarra Real Nova;
+  --font-h2-line-height: 42px;
+  --font-h3-size: 32px;
+  --font-h3-family: Ibarra Real Nova;
+  --font-h3-line-height: 36px;
+  --font-body-1-size: 16px;
+  --font-body-1-family: Public Sans;
+  --font-body-1-line-height: 30px;
+  --font-body-2-size: 15px;
+  --font-body-2-family: Public Sans;
+  --font-body-2-line-height: 30px;
+}

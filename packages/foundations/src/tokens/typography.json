@@ -1,0 +1,50 @@
+{
+  "font": {
+    "family": {
+      "primary": {
+        "value": "Ibarra Real Nova"
+      },
+      "secondary": {
+        "value": "Public Sans"
+      }
+    },
+
+    "h1": {
+      "size": { "value": "50px" },
+      "family": { "value": "{font.family.primary.value}" },
+      "line-height": { "value": "50px" }
+    },
+    "h2": {
+      "size": {
+        "value": "40px"
+      },
+      "family": { "value": "{font.family.primary.value}" },
+      "line-height": { "value": "42px" }
+    },
+    "h3": {
+      "size": {
+        "value": "32px"
+      },
+      "family": { "value": "{font.family.primary.value}" },
+      "line-height": { "value": "36px" }
+    },
+    "body-1": {
+      "size": {
+        "value": "16px"
+      },
+      "family": { "value": "{font.family.secondary.value}" },
+      "line-height": {
+        "value": "30px"
+      }
+    },
+    "body-2": {
+      "size": {
+        "value": "15px"
+      },
+      "family": { "value": "{font.family.secondary.value}" },
+      "line-height": {
+        "value": "30px"
+      }
+    }
+  }
+}

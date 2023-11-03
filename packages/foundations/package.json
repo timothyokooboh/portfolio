@@ -1,9 +1,14 @@
 {
   "name": "foundations",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "style-dictionary build && tsc"
+  },
   "devDependencies": {
-    "style-dictionary": "^3.9.0"
+    "style-dictionary": "^3.9.0",
+    "typescript": "^5.2.2"
   }
 }
