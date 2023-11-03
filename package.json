@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/timothyokooboh/portfolio",
+  "author": "timothy okooboh <okoobohtimothy@gmail.com>",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "lerna": "^7.4.2"
+  },
+  "scripts": {
+    "dev": "yarn lerna run dev",
+    "build": "yarn lerna run build"
+  }
+}
