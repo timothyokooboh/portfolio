@@ -20,6 +20,10 @@
       "value": "32px"
     }
   },
+  "fontWeight": {
+    "regular": { "value": "400" },
+    "bold": { "value": "700" }
+  },
   "lineHeight": {
     "body": {
       "value": "30px"

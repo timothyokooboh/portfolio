@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 04 Nov 2023 12:23:35 GMT
+ * Generated on Sat, 04 Nov 2023 12:39:46 GMT
  */
 
 module.exports = {
@@ -256,6 +256,42 @@ module.exports = {
       "path": [
         "fontSize",
         "h3"
+      ]
+    }
+  },
+  "fontWeight": {
+    "regular": {
+      "value": "400",
+      "filePath": "src/tokens/typography.json",
+      "isSource": true,
+      "original": {
+        "value": "400"
+      },
+      "name": "FontWeightRegular",
+      "attributes": {
+        "category": "fontWeight",
+        "type": "regular"
+      },
+      "path": [
+        "fontWeight",
+        "regular"
+      ]
+    },
+    "bold": {
+      "value": "700",
+      "filePath": "src/tokens/typography.json",
+      "isSource": true,
+      "original": {
+        "value": "700"
+      },
+      "name": "FontWeightBold",
+      "attributes": {
+        "category": "fontWeight",
+        "type": "bold"
+      },
+      "path": [
+        "fontWeight",
+        "bold"
       ]
     }
   },

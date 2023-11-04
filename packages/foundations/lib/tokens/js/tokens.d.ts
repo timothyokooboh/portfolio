@@ -238,8 +238,8 @@ export let fontSize: {
         path: string[];
     };
 };
-export namespace lineHeight {
-    namespace body {
+export namespace fontWeight {
+    namespace regular {
         let value_8: string;
         export { value_8 as value };
         let filePath_4: string;
@@ -263,7 +263,7 @@ export namespace lineHeight {
         let path_4: string[];
         export { path_4 as path };
     }
-    namespace h1 {
+    namespace bold {
         let value_10: string;
         export { value_10 as value };
         let filePath_5: string;
@@ -287,7 +287,9 @@ export namespace lineHeight {
         let path_5: string[];
         export { path_5 as path };
     }
-    namespace h2 {
+}
+export namespace lineHeight {
+    namespace body {
         let value_12: string;
         export { value_12 as value };
         let filePath_6: string;
@@ -311,7 +313,7 @@ export namespace lineHeight {
         let path_6: string[];
         export { path_6 as path };
     }
-    namespace h3 {
+    namespace h1 {
         let value_14: string;
         export { value_14 as value };
         let filePath_7: string;
@@ -334,5 +336,53 @@ export namespace lineHeight {
         export { attributes_7 as attributes };
         let path_7: string[];
         export { path_7 as path };
+    }
+    namespace h2 {
+        let value_16: string;
+        export { value_16 as value };
+        let filePath_8: string;
+        export { filePath_8 as filePath };
+        let isSource_8: boolean;
+        export { isSource_8 as isSource };
+        export namespace original_8 {
+            let value_17: string;
+            export { value_17 as value };
+        }
+        export { original_8 as original };
+        let name_8: string;
+        export { name_8 as name };
+        export namespace attributes_8 {
+            let category_8: string;
+            export { category_8 as category };
+            let type_8: string;
+            export { type_8 as type };
+        }
+        export { attributes_8 as attributes };
+        let path_8: string[];
+        export { path_8 as path };
+    }
+    namespace h3 {
+        let value_18: string;
+        export { value_18 as value };
+        let filePath_9: string;
+        export { filePath_9 as filePath };
+        let isSource_9: boolean;
+        export { isSource_9 as isSource };
+        export namespace original_9 {
+            let value_19: string;
+            export { value_19 as value };
+        }
+        export { original_9 as original };
+        let name_9: string;
+        export { name_9 as name };
+        export namespace attributes_9 {
+            let category_9: string;
+            export { category_9 as category };
+            let type_9: string;
+            export { type_9 as type };
+        }
+        export { attributes_9 as attributes };
+        let path_9: string[];
+        export { path_9 as path };
     }
 }

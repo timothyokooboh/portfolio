@@ -22,6 +22,7 @@ const flattenValue = (obj) => {
 module.exports = {
   colors: flattenValue(tokens.colors),
   fontSize: flattenValue(tokens.fontSize),
+  fontWeight: flattenValue(tokens.fontWeight),
   lineHeight: flattenValue(tokens.lineHeight),
   fontFamily: {
     publicSans: "Public Sans",
