@@ -1,7 +1,80 @@
 <template>
-  <div></div>
+  <button
+    class="btn flex items-center"
+    :class="{
+      primary: variant === 'primary',
+      secondary: variant === 'secondary',
+    }"
+  >
+    <slot name="leftIcon" v-if="variant === 'primary'">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        height="48"
+        viewBox="0 0 48 48"
+        fill="none"
+      >
+        <rect opacity="0.1" width="48" height="48" fill="black" />
+        <path d="M16 26L24 30L32 26" stroke="white" />
+        <path opacity="0.5" d="M16 22L24 26L32 22" stroke="white" />
+        <path opacity="0.25" d="M16 18L24 22L32 18" stroke="white" />
+      </svg>
+    </slot>
+
+    <div class="btn__default-slot">
+      <slot />
+    </div>
+  </button>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { variant } = withDefaults(
+  defineProps<{
+    variant?: "primary" | "secondary";
+  }>(),
+  {
+    variant: "primary",
+  },
+);
+</script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.btn {
+  &__default-slot {
+    padding-inline: 32px;
+  }
+
+  &:disabled {
+    cursor: no-drop;
+  }
+}
+.primary {
+  background-color: var(--colors-primary-blue-100);
+  color: #fff;
+  transition: all 0.2s ease;
+
+  &:disabled {
+    background-color: var(--colors-secondary-grey-200);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--colors-primary-cyan);
+  }
+}
+.secondary {
+  color: var(--colors-primary-blue-200);
+  border: 1px solid currentColor;
+  padding-block: 17px;
+  transition: all 0.2s ease;
+
+  &:disabled {
+    background-color: #fff;
+    border: 1px solid var(--colors-secondary-grey-200);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--colors-primary-blue-200);
+    color: #fff;
+  }
+}
+</style>

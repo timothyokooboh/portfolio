@@ -7,6 +7,6 @@ export default {
       ...tokens,
     },
   },
-  content: ["./index.html", "./src/*/.{vue,js,ts}"],
+  content: ["./index.html", "./src/**/*.{vue,js,ts}"],
   plugins: [],
 };
