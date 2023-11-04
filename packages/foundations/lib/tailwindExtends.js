@@ -1,4 +1,8 @@
 "use strict";
+/**
+ * Create an object that is compatible with
+ * what Tailwind CSS expects in its theme.extend option
+ */
 var tokens = require("./tokens/js/tokens");
 var flattenValue = function (obj) {
     var result = {};
@@ -13,11 +17,12 @@ var flattenValue = function (obj) {
     return result;
 };
 module.exports = {
-    prefix: "pt",
-    theme: {
-        colors: flattenValue(tokens.colors),
-        font: flattenValue(tokens.font),
+    colors: flattenValue(tokens.colors),
+    fontSize: flattenValue(tokens.fontSize),
+    lineHeight: flattenValue(tokens.lineHeight),
+    fontFamily: {
+        publicSans: "Public Sans",
+        ibarra: "Ibarra Real Nova",
     },
-    plugins: [],
 };
-//# sourceMappingURL=tailWindPreset.config.js.map
+//# sourceMappingURL=tailwindExtends.js.map

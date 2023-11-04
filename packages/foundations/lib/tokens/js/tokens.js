@@ -1,7 +1,7 @@
 "use strict";
 /**
  * Do not edit directly
- * Generated on Sat, 04 Nov 2023 07:19:38 GMT
+ * Generated on Sat, 04 Nov 2023 12:23:35 GMT
  */
 module.exports = {
     "colors": {
@@ -136,341 +136,197 @@ module.exports = {
             }
         }
     },
-    "font": {
-        "family": {
-            "primary": {
-                "value": "Ibarra Real Nova",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "Ibarra Real Nova"
-                },
-                "name": "FontFamilyPrimary",
-                "attributes": {
-                    "category": "font",
-                    "type": "family",
-                    "item": "primary"
-                },
-                "path": [
-                    "font",
-                    "family",
-                    "primary"
-                ]
+    "fontFamily": {
+        "primary": {
+            "value": "Public Sans",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "Public Sans"
             },
-            "secondary": {
-                "value": "Public Sans",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "Public Sans"
-                },
-                "name": "FontFamilySecondary",
-                "attributes": {
-                    "category": "font",
-                    "type": "family",
-                    "item": "secondary"
-                },
-                "path": [
-                    "font",
-                    "family",
-                    "secondary"
-                ]
-            }
+            "name": "FontFamilyPrimary",
+            "attributes": {
+                "category": "fontFamily",
+                "type": "primary"
+            },
+            "path": [
+                "fontFamily",
+                "primary"
+            ]
         },
-        "h1": {
-            "size": {
-                "value": "50px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "50px"
-                },
-                "name": "FontH1Size",
-                "attributes": {
-                    "category": "font",
-                    "type": "h1",
-                    "item": "size"
-                },
-                "path": [
-                    "font",
-                    "h1",
-                    "size"
-                ]
+        "secondary": {
+            "value": "Ibarra Real Nova",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "Ibarra Real Nova"
             },
-            "family": {
-                "value": "Ibarra Real Nova",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "{font.family.primary.value}"
-                },
-                "name": "FontH1Family",
-                "attributes": {
-                    "category": "font",
-                    "type": "h1",
-                    "item": "family"
-                },
-                "path": [
-                    "font",
-                    "h1",
-                    "family"
-                ]
+            "name": "FontFamilySecondary",
+            "attributes": {
+                "category": "fontFamily",
+                "type": "secondary"
             },
-            "lineHeight": {
-                "value": "50px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "50px"
-                },
-                "name": "FontH1LineHeight",
-                "attributes": {
-                    "category": "font",
-                    "type": "h1",
-                    "item": "lineHeight"
-                },
-                "path": [
-                    "font",
-                    "h1",
-                    "lineHeight"
-                ]
-            }
-        },
-        "h2": {
-            "size": {
-                "value": "40px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "40px"
-                },
-                "name": "FontH2Size",
-                "attributes": {
-                    "category": "font",
-                    "type": "h2",
-                    "item": "size"
-                },
-                "path": [
-                    "font",
-                    "h2",
-                    "size"
-                ]
-            },
-            "family": {
-                "value": "Ibarra Real Nova",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "{font.family.primary.value}"
-                },
-                "name": "FontH2Family",
-                "attributes": {
-                    "category": "font",
-                    "type": "h2",
-                    "item": "family"
-                },
-                "path": [
-                    "font",
-                    "h2",
-                    "family"
-                ]
-            },
-            "lineHeight": {
-                "value": "42px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "42px"
-                },
-                "name": "FontH2LineHeight",
-                "attributes": {
-                    "category": "font",
-                    "type": "h2",
-                    "item": "lineHeight"
-                },
-                "path": [
-                    "font",
-                    "h2",
-                    "lineHeight"
-                ]
-            }
-        },
-        "h3": {
-            "size": {
-                "value": "32px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "32px"
-                },
-                "name": "FontH3Size",
-                "attributes": {
-                    "category": "font",
-                    "type": "h3",
-                    "item": "size"
-                },
-                "path": [
-                    "font",
-                    "h3",
-                    "size"
-                ]
-            },
-            "family": {
-                "value": "Ibarra Real Nova",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "{font.family.primary.value}"
-                },
-                "name": "FontH3Family",
-                "attributes": {
-                    "category": "font",
-                    "type": "h3",
-                    "item": "family"
-                },
-                "path": [
-                    "font",
-                    "h3",
-                    "family"
-                ]
-            },
-            "lineHeight": {
-                "value": "36px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "36px"
-                },
-                "name": "FontH3LineHeight",
-                "attributes": {
-                    "category": "font",
-                    "type": "h3",
-                    "item": "lineHeight"
-                },
-                "path": [
-                    "font",
-                    "h3",
-                    "lineHeight"
-                ]
-            }
-        },
+            "path": [
+                "fontFamily",
+                "secondary"
+            ]
+        }
+    },
+    "fontSize": {
         "body-1": {
-            "size": {
-                "value": "16px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "16px"
-                },
-                "name": "FontBody1Size",
-                "attributes": {
-                    "category": "font",
-                    "type": "body-1",
-                    "item": "size"
-                },
-                "path": [
-                    "font",
-                    "body-1",
-                    "size"
-                ]
+            "value": "16px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "16px"
             },
-            "family": {
-                "value": "Public Sans",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "{font.family.secondary.value}"
-                },
-                "name": "FontBody1Family",
-                "attributes": {
-                    "category": "font",
-                    "type": "body-1",
-                    "item": "family"
-                },
-                "path": [
-                    "font",
-                    "body-1",
-                    "family"
-                ]
+            "name": "FontSizeBody1",
+            "attributes": {
+                "category": "fontSize",
+                "type": "body-1"
             },
-            "lineHeight": {
-                "value": "30px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "30px"
-                },
-                "name": "FontBody1LineHeight",
-                "attributes": {
-                    "category": "font",
-                    "type": "body-1",
-                    "item": "lineHeight"
-                },
-                "path": [
-                    "font",
-                    "body-1",
-                    "lineHeight"
-                ]
-            }
+            "path": [
+                "fontSize",
+                "body-1"
+            ]
         },
         "body-2": {
-            "size": {
-                "value": "15px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "15px"
-                },
-                "name": "FontBody2Size",
-                "attributes": {
-                    "category": "font",
-                    "type": "body-2",
-                    "item": "size"
-                },
-                "path": [
-                    "font",
-                    "body-2",
-                    "size"
-                ]
+            "value": "15px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "15px"
             },
-            "family": {
-                "value": "Public Sans",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "{font.family.secondary.value}"
-                },
-                "name": "FontBody2Family",
-                "attributes": {
-                    "category": "font",
-                    "type": "body-2",
-                    "item": "family"
-                },
-                "path": [
-                    "font",
-                    "body-2",
-                    "family"
-                ]
+            "name": "FontSizeBody2",
+            "attributes": {
+                "category": "fontSize",
+                "type": "body-2"
             },
-            "lineHeight": {
-                "value": "30px",
-                "filePath": "src/tokens/typography.json",
-                "isSource": true,
-                "original": {
-                    "value": "30px"
-                },
-                "name": "FontBody2LineHeight",
-                "attributes": {
-                    "category": "font",
-                    "type": "body-2",
-                    "item": "lineHeight"
-                },
-                "path": [
-                    "font",
-                    "body-2",
-                    "lineHeight"
-                ]
-            }
+            "path": [
+                "fontSize",
+                "body-2"
+            ]
+        },
+        "h1": {
+            "value": "50px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "50px"
+            },
+            "name": "FontSizeH1",
+            "attributes": {
+                "category": "fontSize",
+                "type": "h1"
+            },
+            "path": [
+                "fontSize",
+                "h1"
+            ]
+        },
+        "h2": {
+            "value": "40px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "40px"
+            },
+            "name": "FontSizeH2",
+            "attributes": {
+                "category": "fontSize",
+                "type": "h2"
+            },
+            "path": [
+                "fontSize",
+                "h2"
+            ]
+        },
+        "h3": {
+            "value": "32px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "32px"
+            },
+            "name": "FontSizeH3",
+            "attributes": {
+                "category": "fontSize",
+                "type": "h3"
+            },
+            "path": [
+                "fontSize",
+                "h3"
+            ]
+        }
+    },
+    "lineHeight": {
+        "body": {
+            "value": "30px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "30px"
+            },
+            "name": "LineHeightBody",
+            "attributes": {
+                "category": "lineHeight",
+                "type": "body"
+            },
+            "path": [
+                "lineHeight",
+                "body"
+            ]
+        },
+        "h1": {
+            "value": "50px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "50px"
+            },
+            "name": "LineHeightH1",
+            "attributes": {
+                "category": "lineHeight",
+                "type": "h1"
+            },
+            "path": [
+                "lineHeight",
+                "h1"
+            ]
+        },
+        "h2": {
+            "value": "42px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "42px"
+            },
+            "name": "LineHeightH2",
+            "attributes": {
+                "category": "lineHeight",
+                "type": "h2"
+            },
+            "path": [
+                "lineHeight",
+                "h2"
+            ]
+        },
+        "h3": {
+            "value": "36px",
+            "filePath": "src/tokens/typography.json",
+            "isSource": true,
+            "original": {
+                "value": "36px"
+            },
+            "name": "LineHeightH3",
+            "attributes": {
+                "category": "lineHeight",
+                "type": "h3"
+            },
+            "path": [
+                "lineHeight",
+                "h3"
+            ]
         }
     }
 };

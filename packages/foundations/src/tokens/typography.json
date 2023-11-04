@@ -1,50 +1,37 @@
 {
-  "font": {
-    "family": {
-      "primary": {
-        "value": "Ibarra Real Nova"
-      },
-      "secondary": {
-        "value": "Public Sans"
-      }
-    },
-
-    "h1": {
-      "size": { "value": "50px" },
-      "family": { "value": "{font.family.primary.value}" },
-      "lineHeight": { "value": "50px" }
-    },
-    "h2": {
-      "size": {
-        "value": "40px"
-      },
-      "family": { "value": "{font.family.primary.value}" },
-      "lineHeight": { "value": "42px" }
-    },
-    "h3": {
-      "size": {
-        "value": "32px"
-      },
-      "family": { "value": "{font.family.primary.value}" },
-      "lineHeight": { "value": "36px" }
-    },
+  "fontFamily": {
+    "primary": { "value": "Public Sans" },
+    "secondary": { "value": "Ibarra Real Nova" }
+  },
+  "fontSize": {
     "body-1": {
-      "size": {
-        "value": "16px"
-      },
-      "family": { "value": "{font.family.secondary.value}" },
-      "lineHeight": {
-        "value": "30px"
-      }
+      "value": "16px"
     },
     "body-2": {
-      "size": {
-        "value": "15px"
-      },
-      "family": { "value": "{font.family.secondary.value}" },
-      "lineHeight": {
-        "value": "30px"
-      }
+      "value": "15px"
+    },
+    "h1": {
+      "value": "50px"
+    },
+    "h2": {
+      "value": "40px"
+    },
+    "h3": {
+      "value": "32px"
+    }
+  },
+  "lineHeight": {
+    "body": {
+      "value": "30px"
+    },
+    "h1": {
+      "value": "50px"
+    },
+    "h2": {
+      "value": "42px"
+    },
+    "h3": {
+      "value": "36px"
     }
   }
 }

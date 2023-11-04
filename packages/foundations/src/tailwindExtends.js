@@ -1,3 +1,8 @@
+/**
+ * Create an object that is compatible with
+ * what Tailwind CSS expects in its theme.extend option
+ */
+
 const tokens = require("./tokens/js/tokens");
 
 const flattenValue = (obj) => {
@@ -15,10 +20,11 @@ const flattenValue = (obj) => {
 };
 
 module.exports = {
-  prefix: "pt", // short for portfolio
-  theme: {
-    colors: flattenValue(tokens.colors),
-    font: flattenValue(tokens.font),
+  colors: flattenValue(tokens.colors),
+  fontSize: flattenValue(tokens.fontSize),
+  lineHeight: flattenValue(tokens.lineHeight),
+  fontFamily: {
+    publicSans: "Public Sans",
+    ibarra: "Ibarra Real Nova",
   },
-  plugins: [],
 };
