@@ -16,6 +16,9 @@
   },
   "scripts": {
     "dev": "yarn lerna run dev",
-    "build": "yarn lerna run build"
+    "build": "yarn lerna run build",
+    "lint": "yarn lerna run lint",
+    "format:fix": "yarn lerna run format:watch",
+    "format:check": "yarn lerna run format:check"
   }
 }
