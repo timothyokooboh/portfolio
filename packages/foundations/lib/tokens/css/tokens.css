@@ -1,19 +1,15 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 22:39:22 GMT
+ * Generated on Sat, 04 Nov 2023 07:19:38 GMT
  */
 
 :root {
-  --colors-primary-cyan-hex: #5FB4A2;
-  --colors-primary-cyan-rgb: rgb(95, 180, 162);
-  --colors-primary-dark-blue-hex: #203A4C;
-  --colors-primary-dark-blue-rgb: rgb(32, 58, 76);
-  --colors-primary-grayish-dark-blue-hex: #33323D;
-  --colors-primary-grayish-dark-blue-rgb: rgb(51, 50, 61);
-  --colors-secondary-very-light-grey-hex: #FAFAFA;
-  --colors-secondary-very-light-grey-rgb: rgb(250, 250, 250);
-  --colors-secondary-light-grey-hex: #EAEAEB;
-  --colors-secondary-light-grey-rgb: rgb(234, 234, 235);
+  --colors-primary-cyan: #5FB4A2;
+  --colors-primary-blue-100: #203A4C;
+  --colors-primary-blue-200: #33323D;
+  --colors-secondary-grey-100: #FAFAFA;
+  --colors-secondary-grey-200: #EAEAEB;
+  --colors-secondary-red: #F43030;
   --font-family-primary: Ibarra Real Nova;
   --font-family-secondary: Public Sans;
   --font-h1-size: 50px;

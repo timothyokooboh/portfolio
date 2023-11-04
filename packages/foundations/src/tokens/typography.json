@@ -12,28 +12,28 @@
     "h1": {
       "size": { "value": "50px" },
       "family": { "value": "{font.family.primary.value}" },
-      "line-height": { "value": "50px" }
+      "lineHeight": { "value": "50px" }
     },
     "h2": {
       "size": {
         "value": "40px"
       },
       "family": { "value": "{font.family.primary.value}" },
-      "line-height": { "value": "42px" }
+      "lineHeight": { "value": "42px" }
     },
     "h3": {
       "size": {
         "value": "32px"
       },
       "family": { "value": "{font.family.primary.value}" },
-      "line-height": { "value": "36px" }
+      "lineHeight": { "value": "36px" }
     },
     "body-1": {
       "size": {
         "value": "16px"
       },
       "family": { "value": "{font.family.secondary.value}" },
-      "line-height": {
+      "lineHeight": {
         "value": "30px"
       }
     },
@@ -42,7 +42,7 @@
         "value": "15px"
       },
       "family": { "value": "{font.family.secondary.value}" },
-      "line-height": {
+      "lineHeight": {
         "value": "30px"
       }
     }

@@ -1,236 +1,138 @@
 "use strict";
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 22:39:22 GMT
+ * Generated on Sat, 04 Nov 2023 07:19:38 GMT
  */
 module.exports = {
     "colors": {
         "primary": {
             "cyan": {
-                "hex": {
-                    "value": "#5FB4A2",
-                    "filePath": "src/tokens/colors.json",
-                    "isSource": true,
-                    "original": {
-                        "value": "#5FB4A2"
-                    },
-                    "name": "ColorsPrimaryCyanHex",
-                    "attributes": {
-                        "category": "colors",
-                        "type": "primary",
-                        "item": "cyan",
-                        "subitem": "hex"
-                    },
-                    "path": [
-                        "colors",
-                        "primary",
-                        "cyan",
-                        "hex"
-                    ]
+                "value": "#5FB4A2",
+                "filePath": "src/tokens/colors.json",
+                "isSource": true,
+                "original": {
+                    "value": "#5FB4A2"
                 },
-                "rgb": {
-                    "value": "rgb(95, 180, 162)",
-                    "filePath": "src/tokens/colors.json",
-                    "isSource": true,
-                    "original": {
-                        "value": "rgb(95, 180, 162)"
-                    },
-                    "name": "ColorsPrimaryCyanRgb",
-                    "attributes": {
-                        "category": "colors",
-                        "type": "primary",
-                        "item": "cyan",
-                        "subitem": "rgb"
-                    },
-                    "path": [
-                        "colors",
-                        "primary",
-                        "cyan",
-                        "rgb"
-                    ]
-                }
+                "name": "ColorsPrimaryCyan",
+                "attributes": {
+                    "category": "colors",
+                    "type": "primary",
+                    "item": "cyan"
+                },
+                "path": [
+                    "colors",
+                    "primary",
+                    "cyan"
+                ]
             },
-            "darkBlue": {
-                "hex": {
+            "blue": {
+                "100": {
                     "value": "#203A4C",
                     "filePath": "src/tokens/colors.json",
                     "isSource": true,
                     "original": {
                         "value": "#203A4C"
                     },
-                    "name": "ColorsPrimaryDarkBlueHex",
+                    "name": "ColorsPrimaryBlue100",
                     "attributes": {
                         "category": "colors",
                         "type": "primary",
-                        "item": "darkBlue",
-                        "subitem": "hex"
+                        "item": "blue",
+                        "subitem": "100"
                     },
                     "path": [
                         "colors",
                         "primary",
-                        "darkBlue",
-                        "hex"
+                        "blue",
+                        "100"
                     ]
                 },
-                "rgb": {
-                    "value": "rgb(32, 58, 76)",
-                    "filePath": "src/tokens/colors.json",
-                    "isSource": true,
-                    "original": {
-                        "value": "rgb(32, 58, 76)"
-                    },
-                    "name": "ColorsPrimaryDarkBlueRgb",
-                    "attributes": {
-                        "category": "colors",
-                        "type": "primary",
-                        "item": "darkBlue",
-                        "subitem": "rgb"
-                    },
-                    "path": [
-                        "colors",
-                        "primary",
-                        "darkBlue",
-                        "rgb"
-                    ]
-                }
-            },
-            "grayishDarkBlue": {
-                "hex": {
+                "200": {
                     "value": "#33323D",
                     "filePath": "src/tokens/colors.json",
                     "isSource": true,
                     "original": {
                         "value": "#33323D"
                     },
-                    "name": "ColorsPrimaryGrayishDarkBlueHex",
+                    "name": "ColorsPrimaryBlue200",
                     "attributes": {
                         "category": "colors",
                         "type": "primary",
-                        "item": "grayishDarkBlue",
-                        "subitem": "hex"
+                        "item": "blue",
+                        "subitem": "200"
                     },
                     "path": [
                         "colors",
                         "primary",
-                        "grayishDarkBlue",
-                        "hex"
-                    ]
-                },
-                "rgb": {
-                    "value": "rgb(51, 50, 61)",
-                    "filePath": "src/tokens/colors.json",
-                    "isSource": true,
-                    "original": {
-                        "value": "rgb(51, 50, 61)"
-                    },
-                    "name": "ColorsPrimaryGrayishDarkBlueRgb",
-                    "attributes": {
-                        "category": "colors",
-                        "type": "primary",
-                        "item": "grayishDarkBlue",
-                        "subitem": "rgb"
-                    },
-                    "path": [
-                        "colors",
-                        "primary",
-                        "grayishDarkBlue",
-                        "rgb"
+                        "blue",
+                        "200"
                     ]
                 }
             }
         },
         "secondary": {
-            "veryLightGrey": {
-                "hex": {
+            "grey": {
+                "100": {
                     "value": "#FAFAFA",
                     "filePath": "src/tokens/colors.json",
                     "isSource": true,
                     "original": {
                         "value": "#FAFAFA"
                     },
-                    "name": "ColorsSecondaryVeryLightGreyHex",
+                    "name": "ColorsSecondaryGrey100",
                     "attributes": {
                         "category": "colors",
                         "type": "secondary",
-                        "item": "veryLightGrey",
-                        "subitem": "hex"
+                        "item": "grey",
+                        "subitem": "100"
                     },
                     "path": [
                         "colors",
                         "secondary",
-                        "veryLightGrey",
-                        "hex"
+                        "grey",
+                        "100"
                     ]
                 },
-                "rgb": {
-                    "value": "rgb(250, 250, 250)",
-                    "filePath": "src/tokens/colors.json",
-                    "isSource": true,
-                    "original": {
-                        "value": "rgb(250, 250, 250)"
-                    },
-                    "name": "ColorsSecondaryVeryLightGreyRgb",
-                    "attributes": {
-                        "category": "colors",
-                        "type": "secondary",
-                        "item": "veryLightGrey",
-                        "subitem": "rgb"
-                    },
-                    "path": [
-                        "colors",
-                        "secondary",
-                        "veryLightGrey",
-                        "rgb"
-                    ]
-                }
-            },
-            "lightGrey": {
-                "hex": {
+                "200": {
                     "value": "#EAEAEB",
                     "filePath": "src/tokens/colors.json",
                     "isSource": true,
                     "original": {
                         "value": "#EAEAEB"
                     },
-                    "name": "ColorsSecondaryLightGreyHex",
+                    "name": "ColorsSecondaryGrey200",
                     "attributes": {
                         "category": "colors",
                         "type": "secondary",
-                        "item": "lightGrey",
-                        "subitem": "hex"
+                        "item": "grey",
+                        "subitem": "200"
                     },
                     "path": [
                         "colors",
                         "secondary",
-                        "lightGrey",
-                        "hex"
-                    ]
-                },
-                "rgb": {
-                    "value": "rgb(234, 234, 235)",
-                    "filePath": "src/tokens/colors.json",
-                    "isSource": true,
-                    "original": {
-                        "value": "rgb(234, 234, 235)"
-                    },
-                    "name": "ColorsSecondaryLightGreyRgb",
-                    "attributes": {
-                        "category": "colors",
-                        "type": "secondary",
-                        "item": "lightGrey",
-                        "subitem": "rgb"
-                    },
-                    "path": [
-                        "colors",
-                        "secondary",
-                        "lightGrey",
-                        "rgb"
+                        "grey",
+                        "200"
                     ]
                 }
             },
             "red": {
-                "hex": "#F43030",
-                "rgb": "rgb(244, 48, 48)"
+                "value": "#F43030",
+                "filePath": "src/tokens/colors.json",
+                "isSource": true,
+                "original": {
+                    "value": "#F43030"
+                },
+                "name": "ColorsSecondaryRed",
+                "attributes": {
+                    "category": "colors",
+                    "type": "secondary",
+                    "item": "red"
+                },
+                "path": [
+                    "colors",
+                    "secondary",
+                    "red"
+                ]
             }
         }
     },
@@ -314,7 +216,7 @@ module.exports = {
                     "family"
                 ]
             },
-            "line-height": {
+            "lineHeight": {
                 "value": "50px",
                 "filePath": "src/tokens/typography.json",
                 "isSource": true,
@@ -325,12 +227,12 @@ module.exports = {
                 "attributes": {
                     "category": "font",
                     "type": "h1",
-                    "item": "line-height"
+                    "item": "lineHeight"
                 },
                 "path": [
                     "font",
                     "h1",
-                    "line-height"
+                    "lineHeight"
                 ]
             }
         },
@@ -373,7 +275,7 @@ module.exports = {
                     "family"
                 ]
             },
-            "line-height": {
+            "lineHeight": {
                 "value": "42px",
                 "filePath": "src/tokens/typography.json",
                 "isSource": true,
@@ -384,12 +286,12 @@ module.exports = {
                 "attributes": {
                     "category": "font",
                     "type": "h2",
-                    "item": "line-height"
+                    "item": "lineHeight"
                 },
                 "path": [
                     "font",
                     "h2",
-                    "line-height"
+                    "lineHeight"
                 ]
             }
         },
@@ -432,7 +334,7 @@ module.exports = {
                     "family"
                 ]
             },
-            "line-height": {
+            "lineHeight": {
                 "value": "36px",
                 "filePath": "src/tokens/typography.json",
                 "isSource": true,
@@ -443,12 +345,12 @@ module.exports = {
                 "attributes": {
                     "category": "font",
                     "type": "h3",
-                    "item": "line-height"
+                    "item": "lineHeight"
                 },
                 "path": [
                     "font",
                     "h3",
-                    "line-height"
+                    "lineHeight"
                 ]
             }
         },
@@ -491,7 +393,7 @@ module.exports = {
                     "family"
                 ]
             },
-            "line-height": {
+            "lineHeight": {
                 "value": "30px",
                 "filePath": "src/tokens/typography.json",
                 "isSource": true,
@@ -502,12 +404,12 @@ module.exports = {
                 "attributes": {
                     "category": "font",
                     "type": "body-1",
-                    "item": "line-height"
+                    "item": "lineHeight"
                 },
                 "path": [
                     "font",
                     "body-1",
-                    "line-height"
+                    "lineHeight"
                 ]
             }
         },
@@ -550,7 +452,7 @@ module.exports = {
                     "family"
                 ]
             },
-            "line-height": {
+            "lineHeight": {
                 "value": "30px",
                 "filePath": "src/tokens/typography.json",
                 "isSource": true,
@@ -561,12 +463,12 @@ module.exports = {
                 "attributes": {
                     "category": "font",
                     "type": "body-2",
-                    "item": "line-height"
+                    "item": "lineHeight"
                 },
                 "path": [
                     "font",
                     "body-2",
-                    "line-height"
+                    "lineHeight"
                 ]
             }
         }
