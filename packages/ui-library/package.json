@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/-library",
+  "name": "@portfolio/ui-library",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,6 +15,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@types/node": "^20.8.10",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
     "@vitejs/plugin-vue": "^4.2.3",
@@ -23,10 +24,34 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vue": "^9.18.1",
     "postcss": "^8.4.31",
+    "sass": "^1.69.5",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.3",
     "vue-eslint-parser": "^9.3.2",
     "vue-tsc": "^1.8.5"
-  }
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "main": "./dist/output.umd.js",
+  "module": "./dist/output.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/output.esm.js",
+      "require": "./dist/output.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "library"
+  ]
 }
