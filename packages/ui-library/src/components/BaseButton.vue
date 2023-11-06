@@ -40,6 +40,8 @@ const { variant } = withDefaults(
 
 <style lang="scss" scoped>
 .btn {
+  transition: all 0.25s ease;
+
   &__default-slot {
     padding-inline: 32px;
   }
@@ -51,7 +53,6 @@ const { variant } = withDefaults(
 .primary {
   background-color: var(--colors-primary-blue-100);
   color: #fff;
-  transition: all 0.2s ease;
 
   &:disabled {
     background-color: var(--colors-secondary-grey-200);
@@ -62,10 +63,10 @@ const { variant } = withDefaults(
   }
 }
 .secondary {
+  background-color: #fff;
   color: var(--colors-primary-blue-200);
   border: 1px solid currentColor;
   padding-block: 17px;
-  transition: all 0.2s ease;
 
   &:disabled {
     background-color: #fff;
