@@ -1,11 +1,20 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import BaseTextField from "./components/BaseTextField.vue";
 import BaseButton from "./components/BaseButton.vue";
+const age = ref(10);
 </script>
 
 <template>
-  <div class="flex justify-center mt-5">
-    <BaseButton variant="primary" disabled>
-      <div>sign in</div>
-    </BaseButton>
-  </div>
+  <form
+    class="m-5"
+    action="
+  "
+  >
+    <BaseTextField as="input" type="email" v-model="age" />
+
+    <BaseButton class="mt-5">Sign In</BaseButton>
+
+    {{ age }}
+  </form>
 </template>
