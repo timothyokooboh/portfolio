@@ -15,4 +15,7 @@ module.exports = {
     "plugin:vue/vue3-recommended",
     "eslint-config-prettier",
   ],
+  rules: {
+    "@typescript-eslint/no-explicit-any": "off",
+  },
 };

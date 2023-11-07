@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "@portfolio/ui-library",
+      name: "@app/ui-library",
       fileName: "output",
     },
     rollupOptions: {

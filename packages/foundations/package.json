@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/foundations",
+  "name": "@app/foundations",
   "version": "1.0.0",
   "license": "MIT",
   "main": "./lib/index.js",
