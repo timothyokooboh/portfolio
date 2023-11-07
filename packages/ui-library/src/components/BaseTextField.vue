@@ -2,17 +2,17 @@
   <input
     v-if="as === 'input'"
     :value="modelValue"
-    @input="handleInput"
     class="input bg-secondary-grey-200"
     invalid
+    @input="handleInput"
   />
 
   <textarea
     v-else
     :value="modelValue"
-    @input="handleInput"
     class="input bg-secondary-grey-200"
     invalid
+    @input="handleInput"
   />
 </template>
 
@@ -23,6 +23,7 @@ withDefaults(
     as: "input" | "textarea";
   }>(),
   {
+    modelValue: "",
     as: "input",
   },
 );
