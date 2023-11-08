@@ -1,0 +1,7 @@
+{
+  "screens": {
+    "sm": { "value": "375px" },
+    "md": { "value": "768px" },
+    "lg": { "value": "1440px" }
+  }
+}
