@@ -20,6 +20,7 @@ const flattenValue = (obj) => {
 };
 
 module.exports = {
+  screens: flattenValue(tokens.screens),
   colors: flattenValue(tokens.colors),
   fontSize: flattenValue(tokens.fontSize),
   fontWeight: flattenValue(tokens.fontWeight),

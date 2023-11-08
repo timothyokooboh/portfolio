@@ -1,9 +1,62 @@
 /**
  * Do not edit directly
- * Generated on Tue, 07 Nov 2023 18:17:13 GMT
+ * Generated on Tue, 07 Nov 2023 18:36:25 GMT
  */
 
 module.exports = {
+  "screens": {
+    "sm": {
+      "value": "375px",
+      "filePath": "src/tokens/breakpoints.json",
+      "isSource": true,
+      "original": {
+        "value": "375px"
+      },
+      "name": "ScreensSm",
+      "attributes": {
+        "category": "screens",
+        "type": "sm"
+      },
+      "path": [
+        "screens",
+        "sm"
+      ]
+    },
+    "md": {
+      "value": "768px",
+      "filePath": "src/tokens/breakpoints.json",
+      "isSource": true,
+      "original": {
+        "value": "768px"
+      },
+      "name": "ScreensMd",
+      "attributes": {
+        "category": "screens",
+        "type": "md"
+      },
+      "path": [
+        "screens",
+        "md"
+      ]
+    },
+    "lg": {
+      "value": "1440px",
+      "filePath": "src/tokens/breakpoints.json",
+      "isSource": true,
+      "original": {
+        "value": "1440px"
+      },
+      "name": "ScreensLg",
+      "attributes": {
+        "category": "screens",
+        "type": "lg"
+      },
+      "path": [
+        "screens",
+        "lg"
+      ]
+    }
+  },
   "colors": {
     "primary": {
       "cyan": {

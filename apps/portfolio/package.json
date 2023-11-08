@@ -11,10 +11,18 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@mahdikhashan/vue3-click-outside": "^0.1.2",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.9.4",
+    "eslint": "^8.53.0",
     "nuxt": "^3.8.1",
+    "nuxt-icon": "^0.6.5",
+    "sass": "^1.69.5",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "^0.8.1"
   }
 }
