@@ -7,13 +7,16 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   plugins: [vue(), dts()],
   build: {
+    outDir: "./dist",
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "@app/ui-library",
-      fileName: "output",
+      name: "ui-library",
+      // We are building for CJS and ESM, use a function to rename automatically files.
+      // Example: my-component-library.esm.js
+      fileName: (format) => `${"ui-library"}.${format}.js`,
     },
     rollupOptions: {
-      external: ["vue"],
+      external: ["vue", "tailwindcss"],
       output: {
         globals: {
           vue: "Vue",

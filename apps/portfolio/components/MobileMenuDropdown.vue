@@ -5,18 +5,22 @@
       role="menu"
       id="menu"
       aria-labelledby="menubutton"
-      class="md:hidden absolute top-[30px] right-0 bg-primary-blue-200 text-white text-center flex flex-col text-body-2 items-center justify-center w-[223px] py-10 uppercase"
+      class="z-10 md:hidden absolute top-[30px] right-0 bg-primary-blue-200 text-white text-center flex flex-col text-[12px] items-center justify-center w-[223px] py-10 uppercase"
     >
       <li role="presentation" class="menu-item mb-8">
         <NuxtLink role="menuitem" to="/">Home</NuxtLink>
       </li>
 
       <li role="presentation" class="menu-item mb-8 menu-item">
-        <NuxtLink to="/about" role="menuitem">Portfolio</NuxtLink>
+        <NuxtLink to="/portfolio" role="menuitem">Portfolio</NuxtLink>
+      </li>
+
+      <li role="presentation" class="menu-item mb-8 menu-item">
+        <NuxtLink to="/articles" role="menuitem">Articles</NuxtLink>
       </li>
 
       <li role="presentation" class="menu-item">
-        <NuxtLink role="menuitem" to="/">Contact Me</NuxtLink>
+        <NuxtLink role="menuitem" to="/contact">Contact Me</NuxtLink>
       </li>
     </ul>
   </section>
