@@ -7,6 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .menu-item {
+    @apply after:block after:content-[''] after:border-b-[1px] after:border-white after:border-solid after:scale-x-0 after:transition-transform after:duration-[0.25s] after:ease-in-out after:hover:scale-x-[1];
+  }
+}
+
 *,
 *::after,
 *::before {

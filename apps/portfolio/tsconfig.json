@@ -3,8 +3,11 @@
 
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
+    "target": "es5",
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "module": "ESNext",
-    "lib": ["esnext", "dom"]
+    "baseUrl": ".",
+    "lib": ["esnext", "dom", "dom.iterable"]
   }
 }

@@ -1,3 +1,3 @@
-import tokens from "./tokens/js/tokens.js";
+import tokens from "./tokens/js/tokens";
 
 export { tokens };

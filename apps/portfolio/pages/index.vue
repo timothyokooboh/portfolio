@@ -3,6 +3,8 @@ import { onMounted, ref } from "vue";
 import { tokens } from "@app/foundations";
 import { BaseButton } from "@app/ui-library";
 
+console.log(tokens.colors);
+
 const handleBendingAnimation = () => {
   const pictureContainer = document.querySelector(
     "#picture-container",

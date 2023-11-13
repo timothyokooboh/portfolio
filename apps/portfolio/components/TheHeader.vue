@@ -24,7 +24,9 @@ const isOpen = ref(false);
       <nav
         class="hidden md:flex text-primary-blue-200 text-[12px] uppercase space-x-[42px]"
       >
-        <NuxtLink to="/" class="menu-item">Home</NuxtLink>
+        <NuxtLink to="/" class="menu-item" active-class="text-primary-cyan"
+          >Home</NuxtLink
+        >
         <NuxtLink to="/portfolio" class="menu-item">Portfolio</NuxtLink>
         <NuxtLink to="/articles" class="menu-item">Articles</NuxtLink>
         <NuxtLink to="/contact" class="menu-item">Contact</NuxtLink>

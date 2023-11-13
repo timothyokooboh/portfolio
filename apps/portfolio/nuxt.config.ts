@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     // "@nuxtjs/eslint-module",
     "@formkit/auto-animate/nuxt",
+    "@nuxt/content",
   ],
   imports: {
     transform: {

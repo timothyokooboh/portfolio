@@ -6,6 +6,7 @@
   "types": "./lib/index.d.ts",
   "private": true,
   "scripts": {
+    "dev": "style-dictionary build && tsc",
     "build": "style-dictionary build && tsc"
   },
   "devDependencies": {

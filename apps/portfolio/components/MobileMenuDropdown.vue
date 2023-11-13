@@ -7,8 +7,10 @@
       aria-labelledby="menubutton"
       class="z-10 md:hidden absolute top-[30px] right-0 bg-primary-blue-200 text-white text-center flex flex-col text-[12px] items-center justify-center w-[223px] py-10 uppercase"
     >
-      <li role="presentation" class="menu-item mb-8">
-        <NuxtLink role="menuitem" to="/">Home</NuxtLink>
+      <li role="presentation" class="mb-8 menu-item">
+        <NuxtLink role="menuitem" to="/" active-class="text-primary-cyan"
+          >Home</NuxtLink
+        >
       </li>
 
       <li role="presentation" class="menu-item mb-8 menu-item">
@@ -31,19 +33,3 @@ defineProps<{
   isOpen: boolean;
 }>();
 </script>
-
-<style lang="scss" scoped>
-.menu-item {
-  &:hover:after {
-    transform: scaleX(1);
-  }
-
-  &:after {
-    display: block;
-    content: "";
-    border-bottom: 1px solid #fff;
-    transform: scaleX(0);
-    transition: transform 0.25s ease-in-out;
-  }
-}
-</style>
