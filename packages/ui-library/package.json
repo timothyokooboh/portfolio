@@ -1,11 +1,11 @@
 {
   "name": "@app/ui-library",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vue-tsc && vite build --watch --minify=false",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.ts",
     "format:check": "prettier --check .",
@@ -33,20 +33,14 @@
     "vue-tsc": "^1.8.5"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "tailwindcss": "^3.3.5"
   },
-  "main": "./dist/output.umd.js",
-  "module": "./dist/output.js",
+  "main": "./dist/ui-library.umd.js",
+  "module": "./dist/ui-library.es.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/output.esm.js",
-      "require": "./dist/output.js"
-    }
-  },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "keywords": [
     "vue",

@@ -1,4 +1,13 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "es5",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "baseUrl": ".",
+    "lib": ["esnext", "dom", "dom.iterable"]
+  }
 }

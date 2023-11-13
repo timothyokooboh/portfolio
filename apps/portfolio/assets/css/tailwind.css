@@ -1,11 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,700;1,400;1,700&family=K2D:wght@700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=K2D:wght@700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital@0;1&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("@app/foundations/lib/tokens/css/tokens.css");
+@import url("@app/ui-library/dist/style.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .menu-item {
+    @apply after:block after:content-[''] after:border-b-[1px] after:border-white after:border-solid after:scale-x-0 after:transition-transform after:duration-[0.25s] after:ease-in-out after:hover:scale-x-[1];
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Public Sans;
+  box-sizing: border-box;
 }

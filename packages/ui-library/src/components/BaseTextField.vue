@@ -3,7 +3,6 @@
     v-if="as === 'input'"
     :value="modelValue"
     class="input bg-secondary-grey-200"
-    invalid
     @input="handleInput"
   />
 
@@ -11,9 +10,8 @@
     v-else
     :value="modelValue"
     class="input bg-secondary-grey-200"
-    invalid
     @input="handleInput"
-  />
+  ></textarea>
 </template>
 
 <script setup lang="ts">

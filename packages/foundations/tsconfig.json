@@ -18,6 +18,7 @@
     "sourceMap": true,
     "module": "ESNext",
     "lib": ["esnext", "dom"],
+
     "paths": {
       "@/*": ["./*"]
     }
