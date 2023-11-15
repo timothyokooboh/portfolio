@@ -38,7 +38,6 @@ defineProps<{
   title: string;
   description: string;
   image: string;
-  borderColor: string;
   color: string;
 }>();
 </script>
