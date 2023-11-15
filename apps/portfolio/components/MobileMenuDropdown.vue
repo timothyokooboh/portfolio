@@ -14,15 +14,27 @@
       </li>
 
       <li role="presentation" class="menu-item mb-8 menu-item">
-        <NuxtLink to="/portfolio" role="menuitem">Portfolio</NuxtLink>
+        <NuxtLink
+          to="/portfolio"
+          role="menuitem"
+          active-class="text-primary-cyan"
+          >Portfolio</NuxtLink
+        >
       </li>
 
       <li role="presentation" class="menu-item mb-8 menu-item">
-        <NuxtLink to="/articles" role="menuitem">Articles</NuxtLink>
+        <NuxtLink
+          to="/articles"
+          role="menuitem"
+          active-class="text-primary-cyan"
+          >Articles</NuxtLink
+        >
       </li>
 
       <li role="presentation" class="menu-item">
-        <NuxtLink role="menuitem" to="/contact">Contact Me</NuxtLink>
+        <NuxtLink role="menuitem" to="/contact" active-class="text-primary-cyan"
+          >Contact Me</NuxtLink
+        >
       </li>
     </ul>
   </section>

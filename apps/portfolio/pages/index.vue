@@ -76,7 +76,9 @@ onMounted(() => {
         </h2>
 
         <a href="#about-me">
-          <BaseButton class="uppercase text-xs">About Me</BaseButton>
+          <BaseButton class="uppercase text-xs tracking-[2px]"
+            >About Me</BaseButton
+          >
         </a>
       </div>
     </section>
@@ -114,9 +116,13 @@ onMounted(() => {
           setting.
         </div>
 
-        <BaseButton variant="secondary" class="uppercase text-xs"
-          >Go to portfolio</BaseButton
-        >
+        <NuxtLink to="/portfolio">
+          <BaseButton
+            variant="secondary"
+            class="uppercase text-xs tracking-[2px]"
+            >Go to portfolio</BaseButton
+          >
+        </NuxtLink>
       </div>
     </section>
 
@@ -131,7 +137,7 @@ onMounted(() => {
       <div
         class="hidden md:block grow mx-[32px] h-[1px] bg-secondary-grey-200"
       />
-      <BaseButton variant="secondary" class="uppercase text-xs">
+      <BaseButton variant="secondary" class="uppercase text-xs tracking-[2px]">
         Contact me
       </BaseButton>
     </section>
