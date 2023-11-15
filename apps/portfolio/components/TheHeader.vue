@@ -27,9 +27,24 @@ const isOpen = ref(false);
         <NuxtLink to="/" class="menu-item" active-class="text-primary-cyan"
           >Home</NuxtLink
         >
-        <NuxtLink to="/portfolio" class="menu-item">Portfolio</NuxtLink>
-        <NuxtLink to="/articles" class="menu-item">Articles</NuxtLink>
-        <NuxtLink to="/contact" class="menu-item">Contact</NuxtLink>
+        <NuxtLink
+          to="/portfolio"
+          class="menu-item"
+          active-class="text-primary-cyan"
+          >Portfolio</NuxtLink
+        >
+        <NuxtLink
+          to="/articles"
+          class="menu-item"
+          active-class="text-primary-cyan"
+          >Articles</NuxtLink
+        >
+        <NuxtLink
+          to="/contact"
+          class="menu-item"
+          active-class="text-primary-cyan"
+          >Contact</NuxtLink
+        >
       </nav>
     </section>
 

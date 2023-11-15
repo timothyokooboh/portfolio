@@ -9,7 +9,7 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
-    "../../node_modules/@app/ui-library/src/**/*.{js,vue,ts,html}",
+    "../../node_modules/@app/ui-library/**/*.{js,vue,ts,html}",
   ],
   theme: {
     extend: {
