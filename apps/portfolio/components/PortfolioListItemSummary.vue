@@ -2,7 +2,7 @@
   <div class="md:flex md:gap-x-[69px]">
     <img
       :src="image"
-      class="border-[25px] border-purple-500 border-solid w-full h-[288px] object-cover object-top mb-[32px] md:mb-0 md:items-center md:justify-center md:basis-1/2 md:h-[314px] md:self-center md:border-[34px] lg:h-[500px]"
+      class="border-[25px] border-solid w-full h-[288px] object-cover object-top mb-[32px] md:mb-0 md:items-center md:justify-center md:basis-1/2 md:h-[314px] md:self-center md:border-[34px] lg:h-[500px]"
       :style="{ borderColor: color }"
     />
 
@@ -21,11 +21,13 @@
           {{ description }}
         </div>
 
-        <BaseButton
-          variant="secondary"
-          class="uppercase text-xs text-primary-blue-200 tracking-[2px]"
-          >View Project</BaseButton
-        >
+        <NuxtLink :to="`/portfolio/${id}`">
+          <BaseButton
+            variant="secondary"
+            class="uppercase text-xs text-primary-blue-200 tracking-[2px]"
+            >View Project</BaseButton
+          >
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -35,6 +37,7 @@
 import { BaseButton } from "@app/ui-library";
 
 defineProps<{
+  id: number;
   title: string;
   description: string;
   image: string;

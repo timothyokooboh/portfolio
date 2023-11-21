@@ -50,4 +50,8 @@ const handleInput = (e: Event) => {
     outline: 1px solid var(--colors-primary-cyan);
   }
 }
+
+textarea {
+  resize: none;
+}
 </style>

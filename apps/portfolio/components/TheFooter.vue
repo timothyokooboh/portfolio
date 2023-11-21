@@ -31,18 +31,18 @@
       class="flex items-center justify-center space-x-[16px] md:justify-end"
     >
       <a href="https://github.com/timothyokooboh" target="_blank">
-        <img src="github.svg" alt="github" class="w-[25px] h-[24px]" />
+        <img src="/github.svg" alt="github" class="w-[25px] h-[24px]" />
       </a>
 
       <a href="https://twitter.com/inspiretim24" target="_blank">
-        <img src="twitter.svg" alt="twitter" class="w-[24px] h-[19.5px]" />
+        <img src="/twitter.svg" alt="twitter" class="w-[24px] h-[19.5px]" />
       </a>
 
       <a
         href="https://www.linkedin.com/in/timothy-okooboh-193980165/"
         target="_blank"
       >
-        <img src="linkedin.svg" alt="linkedin" class="w-[24px] h-[24px]" />
+        <img src="/linkedin.svg" alt="linkedin" class="w-[24px] h-[24px]" />
       </a>
     </section>
   </div>

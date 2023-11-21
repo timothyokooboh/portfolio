@@ -102,18 +102,16 @@ onMounted(() => {
           About Me
         </div>
         <div
-          class="font-publicSans text-body-1 leading-body font-regular text-primary-blue-200 mb-[24px] max-w-[50ch]"
+          class="font-publicSans text-body-1 leading-body font-regular text-primary-blue-200 opacity-80 mb-[24px] max-w-[50ch]"
         >
-          I'm a front-end developer currently based in Lagos Nigeria. I have
-          four years of hands-on experience in Vue.js and JavaScript, three
-          years with TypeScript and two years working with React.js. Throughout
-          my career, I have had the privilege of working on a variety of
-          projects, including the development of enterprise-grade web
-          applications. My attention to detail shines when translating UI/UX
-          designs into pixel-perfect code, ensuring a seamless and visually
-          appealing user experience. I am equally comfortable working
-          independently and collaboratively in an agile, cross-functional team
-          setting.
+          I'm a front-end developer currently based in Lagos Nigeria. Throughout
+          my career working with JavaScript/TypeScript, Vue.js and React.js, I
+          have had the privilege of working on a variety of projects, including
+          the development of enterprise-grade web applications. My attention to
+          detail shines when translating UI/UX designs into pixel-perfect code,
+          ensuring a seamless and visually appealing user experience. I am
+          equally comfortable working independently and collaboratively in an
+          agile, cross-functional team setting.
         </div>
 
         <NuxtLink to="/portfolio">
