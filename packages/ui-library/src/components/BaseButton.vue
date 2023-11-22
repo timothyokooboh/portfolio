@@ -6,8 +6,9 @@
       secondary: variant === 'secondary',
     }"
   >
-    <slot name="leftIcon" v-if="variant === 'primary'">
+    <slot v-if="variant === 'primary'" name="leftIcon">
       <svg
+        v-if="showIcon"
         xmlns="http://www.w3.org/2000/svg"
         width="48"
         height="48"
@@ -21,7 +22,7 @@
       </svg>
     </slot>
 
-    <div class="btn__default-slot">
+    <div class="btn__default-slot" :class="{ 'py-4': !showIcon }">
       <slot />
     </div>
   </button>
@@ -31,9 +32,11 @@
 const { variant } = withDefaults(
   defineProps<{
     variant?: "primary" | "secondary";
+    showIcon: boolean;
   }>(),
   {
     variant: "primary",
+    showIcon: true,
   },
 );
 </script>

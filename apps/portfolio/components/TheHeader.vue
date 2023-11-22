@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
 const isOpen = ref(false);
+
+console.log("path oo", route.path);
+
+const activeClass = ref({
+  cyan: "text-primary-cyan",
+});
 </script>
 
 <template>
@@ -24,25 +33,27 @@ const isOpen = ref(false);
       <nav
         class="hidden md:flex text-primary-blue-200 text-[12px] uppercase space-x-[42px]"
       >
-        <NuxtLink to="/" class="menu-item" active-class="text-primary-cyan"
+        <NuxtLink to="/" class="menu-item" active-class="menu-item--active"
           >Home</NuxtLink
         >
         <NuxtLink
           to="/portfolio"
           class="menu-item"
-          active-class="text-primary-cyan"
+          :class="{
+            'menu-item--active': route.path.startsWith('/portfolio'),
+          }"
           >Portfolio</NuxtLink
         >
         <NuxtLink
           to="/articles"
           class="menu-item"
-          active-class="text-primary-cyan"
+          active-class="menu-item--active"
           >Articles</NuxtLink
         >
         <NuxtLink
           to="/contact"
           class="menu-item"
-          active-class="text-primary-cyan"
+          active-class="menu-item--active"
           >Contact</NuxtLink
         >
       </nav>
@@ -53,17 +64,29 @@ const isOpen = ref(false);
 </template>
 
 <style lang="scss" scoped>
+@mixin after-pseudo-style($color: #33323d) {
+  display: block;
+  content: "";
+  border-bottom: 1px solid $color;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
 .menu-item {
   &:hover:after {
     transform: scaleX(1);
   }
 
   &:after {
-    display: block;
-    content: "";
-    border-bottom: 1px solid var(--colors-primary-blue-200);
-    transform: scaleX(0);
-    transition: transform 0.25s ease-in-out;
+    @include after-pseudo-style;
+  }
+
+  &--active {
+    color: #5fb4a2;
+
+    &:after {
+      @include after-pseudo-style(#5fb4a2);
+    }
   }
 }
 </style>

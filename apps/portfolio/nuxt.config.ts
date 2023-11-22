@@ -15,5 +15,18 @@ export default defineNuxtConfig({
       exclude: [/\bsfui\b/],
     },
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: "preload",
+          as: "image",
+          href: "landing-img-desktop.svg",
+          imagesrcset:
+            "landing-img-mobile.svg, landing-img-tablet.svg, landing-img-desktop.svg",
+        },
+      ],
+    },
+  },
   //eslint: {},
 });

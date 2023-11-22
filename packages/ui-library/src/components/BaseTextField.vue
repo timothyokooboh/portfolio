@@ -42,12 +42,16 @@ const handleInput = (e: Event) => {
   padding-inline: 16px;
   border: none;
 
-  &:invalid {
-    outline: 1px solid var(--colors-secondary-red);
-  }
-
   &:focus {
     outline: 1px solid var(--colors-primary-cyan);
   }
+
+  &:required:focus:invalid {
+    outline: 1px solid var(--colors-secondary-red);
+  }
+}
+
+textarea {
+  resize: none;
 }
 </style>
