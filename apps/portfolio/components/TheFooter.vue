@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div
     class="bg-primary-blue-200 py-[56px] md:flex md:justify-between md:items-center md:px-[40px] md:py-[24px]"
@@ -47,7 +49,5 @@
     </section>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>

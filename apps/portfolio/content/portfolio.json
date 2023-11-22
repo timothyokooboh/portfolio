@@ -6,7 +6,7 @@
     "project_background": "This project was built to complement the vendors app which was built as a separate application. I used Quasar in order to ship the mobile responsive version to Google Play Store and IOS store. Firebase was used for the backend service in order to leverage the built-in web sockets capability and provide users with a real time update experience.",
     "tags": ["Vue.js", "Quasar", "Firebase", "Google Maps"],
     "images": [
-      "/eazy-access-customers-1.png",
+      "/eazy-access-customers-1.svg",
       "/eazy-access-customers-2.png",
       "/eazy-access-customers-3.png"
     ],
@@ -20,8 +20,8 @@
     "project_background": "This project was built to complement the customers app which was built as a separate application. I used Quasar in order to ship the mobile responsive version to Google Play Store and IOS store. Firebase was used for the backend service in order to leverage the built-in web sockets capability and provide users with a real time update experience.",
     "tags": ["Vue.js", "Quasar", "Firebase", "Google Maps"],
     "images": [
-      "/eazy-access-vendors-1.png",
-      "/eazy-access-vendors-2.png",
+      "/eazy-access-vendors-1.svg",
+      "/bolo.svg",
       "/eazy-access-vendors-3.png"
     ],
 

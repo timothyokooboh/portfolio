@@ -1,49 +1,3 @@
-<template>
-  <div class="border-y-[1px] border-secondary-grey-200 grid grid-cols-2">
-    <NuxtLink :to="`/portfolio/${previousProject.id}`">
-      <div class="border-r-[1px] border-secondary-grey-200 pr-3">
-        <img
-          src="/previous.svg"
-          alt="previous project"
-          class="mb-[16px] pt-[24px]"
-        />
-        <h3
-          class="text-h3 font-ibarra whitespace-nowrap overflow-hidden text-ellipsis"
-        >
-          {{ previousProject.title }}
-        </h3>
-        <div
-          class="font-regular text-body-1 text-primary-blue-200 opacity-50 pb-[24px]"
-        >
-          Previous Project
-        </div>
-      </div>
-    </NuxtLink>
-
-    <NuxtLink :to="`/portfolio/${nextProject.id}`">
-      <div class="px-3">
-        <div class="flex justify-end">
-          <img
-            src="/next.svg"
-            alt="previous project"
-            class="mb-[16px] pt-[24px]"
-          />
-        </div>
-        <h3
-          class="text-right font-ibarra text-h3 whitespace-nowrap overflow-hidden text-ellipsis"
-        >
-          {{ nextProject.title }}
-        </h3>
-        <div
-          class="text-right font-regular text-body-1 text-primary-blue-200 opacity-50 pb-[24px]"
-        >
-          Next Project
-        </div>
-      </div>
-    </NuxtLink>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { useGetPortfolio } from "~/composables/useGetPortfolio";
 import { ref } from "vue";
@@ -98,5 +52,51 @@ if (portfolio.value?.body) {
   }
 }
 </script>
+
+<template>
+  <div class="border-y-[1px] border-secondary-grey-200 grid grid-cols-2">
+    <NuxtLink :to="`/portfolio/${previousProject.id}`">
+      <div class="border-r-[1px] border-secondary-grey-200 pr-3">
+        <img
+          src="/previous.svg"
+          alt="previous project"
+          class="mb-[16px] pt-[24px]"
+        />
+        <h3
+          class="text-h3 font-ibarra whitespace-nowrap overflow-hidden text-ellipsis"
+        >
+          {{ previousProject.title }}
+        </h3>
+        <div
+          class="font-regular text-body-1 text-primary-blue-200 opacity-50 pb-[24px]"
+        >
+          Previous Project
+        </div>
+      </div>
+    </NuxtLink>
+
+    <NuxtLink :to="`/portfolio/${nextProject.id}`">
+      <div class="px-3">
+        <div class="flex justify-end">
+          <img
+            src="/next.svg"
+            alt="previous project"
+            class="mb-[16px] pt-[24px]"
+          />
+        </div>
+        <h3
+          class="text-right font-ibarra text-h3 whitespace-nowrap overflow-hidden text-ellipsis"
+        >
+          {{ nextProject.title }}
+        </h3>
+        <div
+          class="text-right font-regular text-body-1 text-primary-blue-200 opacity-50 pb-[24px]"
+        >
+          Next Project
+        </div>
+      </div>
+    </NuxtLink>
+  </div>
+</template>
 
 <style scoped></style>

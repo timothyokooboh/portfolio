@@ -44,18 +44,15 @@ onMounted(() => {
           <source
             srcset="/landing-img-desktop.svg"
             :media="`(min-width: ${tokens.screens.lg.value})`"
-            class="w-full object-cover"
           />
           <source
             srcset="/landing-img-tablet.svg"
             :media="`(min-width: ${tokens.screens.md.value})`"
-            class="w-full object-cover"
           />
 
           <source
             srcset="/landing-img-mobile.svg"
             :media="`(min-width: ${tokens.screens.sm.value})`"
-            class="w-full object-cover"
           />
 
           <img
@@ -135,9 +132,15 @@ onMounted(() => {
       <div
         class="hidden md:block grow mx-[32px] h-[1px] bg-secondary-grey-200"
       />
-      <BaseButton variant="secondary" class="uppercase text-xs tracking-[2px]">
-        Contact me
-      </BaseButton>
+
+      <NuxtLink to="/contact">
+        <BaseButton
+          variant="secondary"
+          class="uppercase text-xs tracking-[2px]"
+        >
+          Contact me
+        </BaseButton>
+      </NuxtLink>
     </section>
   </div>
 </template>

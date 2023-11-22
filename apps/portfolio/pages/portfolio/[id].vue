@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import { BaseButton } from "@app/ui-library";
+import { useGetPortfolio } from "~/composables/useGetPortfolio";
+
+const route = useRoute();
+const id = route.params.id;
+const { getPortfolio } = useGetPortfolio();
+const portfolio = await getPortfolio();
+
+const project = portfolio?.body?.find((el) => el.id === Number(id));
+const [coverImage, ...otherImages] = project!.images;
+</script>
+
 <template>
   <div>
     <img
@@ -9,7 +22,7 @@
 
     <div class="lg:grid lg:grid-cols-2 lg:gap-x-[125px] mb-[64px]">
       <section
-        class="overflow-auto relative py-[24px] mb-[48px] border-y-[1px] border-secondary-grey-200 md:grid md:grid-cols-2 md:gap-x-[50px] md:py-[32px] lg:block lg:h-fit lg:py-[48px]"
+        class="slide-up overflow-auto relative py-[24px] mb-[48px] border-y-[1px] border-secondary-grey-200 md:grid md:grid-cols-2 md:gap-x-[50px] md:py-[32px] lg:block lg:h-fit lg:py-[48px]"
       >
         <h2
           class="text-h2 font-ibarra font-bold leading-h2 tracking-[-0.36px] mb-[24px]"
@@ -35,7 +48,7 @@
       </section>
 
       <div>
-        <section class="mb-[40px]">
+        <section class="slide-down mb-[40px]">
           <h3
             class="font-ibarra text-h3 font-regular leading-h2 tracking-[-0.29px] pb-[28px]"
           >
@@ -85,20 +98,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { BaseButton } from "@app/ui-library";
-import { useGetPortfolio } from "~/composables/useGetPortfolio";
-
-const route = useRoute();
-const id = route.params.id;
-const { getPortfolio } = useGetPortfolio();
-const portfolio = await getPortfolio();
-
-const project = portfolio?.body?.find((el) => el.id === Number(id));
-const [coverImage, ...otherImages] = project!.images;
-</script>
-
-<style lang="scss">
+<style lang="scss" scoped>
 // #picture-container {
 //   perspective: 1000px;
 //   overflow: hidden;

@@ -1,3 +1,24 @@
+<script setup lang="ts">
+import { BaseTextField, BaseButton } from "@app/ui-library";
+
+const sendMessage = (event: Event) => {
+  event.preventDefault();
+
+  const myForm = event.currentTarget;
+  if (myForm) {
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  }
+};
+</script>
+
 <template>
   <form @submit="sendMessage($event)" data-netlify="true">
     <div class="mb-[24px]">
@@ -54,26 +75,5 @@
     </BaseButton>
   </form>
 </template>
-
-<script setup lang="ts">
-import { BaseTextField, BaseButton } from "@app/ui-library";
-
-const sendMessage = (event: Event) => {
-  event.preventDefault();
-
-  const myForm = event.currentTarget;
-  if (myForm) {
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
-  }
-};
-</script>
 
 <style scoped></style>

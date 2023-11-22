@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { useRoute } from "vue-router";
+
+defineProps<{
+  isOpen: boolean;
+}>();
+
+const route = useRoute();
+</script>
+
 <template>
   <section class="relative" v-auto-animate>
     <ul
@@ -17,7 +27,9 @@
         <NuxtLink
           to="/portfolio"
           role="menuitem"
-          active-class="text-primary-cyan"
+          :class="{
+            'menu-item--active': route.path.startsWith('/portfolio'),
+          }"
           >Portfolio</NuxtLink
         >
       </li>
@@ -40,8 +52,30 @@
   </section>
 </template>
 
-<script setup lang="ts">
-defineProps<{
-  isOpen: boolean;
-}>();
-</script>
+<style lang="scss" scoped>
+@mixin after-pseudo-style($color: #33323d) {
+  display: block;
+  content: "";
+  border-bottom: 1px solid $color;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.menu-item {
+  &:hover:after {
+    transform: scaleX(1);
+  }
+
+  &:after {
+    @include after-pseudo-style;
+  }
+
+  &--active {
+    color: #5fb4a2;
+
+    &:after {
+      @include after-pseudo-style(#5fb4a2);
+    }
+  }
+}
+</style>

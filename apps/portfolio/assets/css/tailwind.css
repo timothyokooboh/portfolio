@@ -24,3 +24,34 @@ body {
   font-family: Public Sans;
   box-sizing: border-box;
 }
+
+.slide-up {
+  animation: slideUp 0.3s ease-out both;
+}
+.slide-down {
+  animation: slideDown 0.3s ease-out both;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
