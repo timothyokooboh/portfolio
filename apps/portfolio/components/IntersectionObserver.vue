@@ -29,7 +29,11 @@ const root = ref<HTMLElement | null>(null);
 </script>
 
 <template>
-  <div :ref="ref" v-intersection-observer="[onIntersectionObserver, { root }]">
+  <div
+    class="opacity-0"
+    :ref="ref"
+    v-intersection-observer="[onIntersectionObserver, { root }]"
+  >
     <slot />
   </div>
 </template>

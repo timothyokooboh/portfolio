@@ -3,8 +3,6 @@ import { onMounted, ref } from "vue";
 import { tokens } from "@app/foundations";
 import { BaseButton } from "@app/ui-library";
 
-console.log(tokens.colors);
-
 const handleBendingAnimation = () => {
   const pictureContainer = document.querySelector(
     "#picture-container",
@@ -39,44 +37,50 @@ onMounted(() => {
 <template>
   <div>
     <section class="relative">
-      <div id="picture-container">
-        <picture>
-          <source
-            srcset="/landing-img-desktop.svg"
-            :media="`(min-width: ${tokens.screens.lg.value})`"
-          />
-          <source
-            srcset="/landing-img-tablet.svg"
-            :media="`(min-width: ${tokens.screens.md.value})`"
-          />
+      <IntersectionObserver>
+        <div id="picture-container">
+          <picture>
+            <source
+              srcset="/landing-img-desktop.svg"
+              :media="`(min-width: ${tokens.screens.lg.value})`"
+            />
+            <source
+              srcset="/landing-img-tablet.svg"
+              :media="`(min-width: ${tokens.screens.md.value})`"
+            />
 
-          <source
-            srcset="/landing-img-mobile.svg"
-            :media="`(min-width: ${tokens.screens.sm.value})`"
-          />
+            <source
+              srcset="/landing-img-mobile.svg"
+              :media="`(min-width: ${tokens.screens.sm.value})`"
+            />
 
-          <img
-            id="picture"
-            src="/landing-img-desktop.svg"
-            class="w-full object-cover"
-          />
-        </picture>
-      </div>
+            <img
+              id="picture"
+              src="/landing-img-desktop.svg"
+              class="w-full object-cover"
+            />
+          </picture>
+        </div>
+      </IntersectionObserver>
 
       <div
         class="bg-white md:w-[514px] lg:w-[445px] max-w-[514px] md:absolute md:bottom-[0px] mt-6"
       >
-        <h2
-          class="mb-[53px] md:pt-[56px] text-h2 lg:text-h1 font-ibarra font-bold leading-h2 lg:leading-h1 tracking-[-0.36px] text-primary-blue-200"
-        >
-          Hey, I'm Timothy Okooboh and I love building beautiful websites
-        </h2>
-
-        <a href="#about-me">
-          <BaseButton class="uppercase text-xs tracking-[2px]"
-            >About Me</BaseButton
+        <IntersectionObserver custom-class="slide-right">
+          <h2
+            class="mb-[53px] md:pt-[56px] text-h2 lg:text-h1 font-ibarra font-bold leading-h2 lg:leading-h1 tracking-[-0.36px] text-primary-blue-200"
           >
-        </a>
+            Hey, I'm Timothy Okooboh and I love building beautiful websites
+          </h2>
+        </IntersectionObserver>
+
+        <IntersectionObserver>
+          <a href="#about-me">
+            <BaseButton class="uppercase text-xs tracking-[2px]"
+              >About Me</BaseButton
+            >
+          </a>
+        </IntersectionObserver>
       </div>
     </section>
 
@@ -84,64 +88,51 @@ onMounted(() => {
       id="about-me"
       class="grid mt-[80px] gap-y-[40px] md:grid-cols-[281px_1fr] md:gap-x-[69px] lg:grid-cols-[540px_350px] lg:gap-x-[125px]"
     >
-      <img
-        src="/profile-picture.jpeg"
-        alt="profile picture"
-        class="md:h-full object-cover"
-      />
+      <IntersectionObserver>
+        <img
+          src="/profile-picture.jpeg"
+          alt="profile picture"
+          class="md:h-full object-cover"
+        />
+      </IntersectionObserver>
 
       <div
         class="py-[32px] w-fit border-y-[1px] border-secondary-grey-200 border-solid"
       >
-        <div
-          class="font-ibarra text-h2 font-bold text-primary-blue-200 pb-[32px]"
-        >
-          About Me
-        </div>
-        <div
-          class="font-publicSans text-body-1 leading-body font-regular text-primary-blue-200 opacity-80 mb-[24px] max-w-[50ch]"
-        >
-          I'm a front-end developer currently based in Lagos Nigeria. Throughout
-          my career working with JavaScript/TypeScript, Vue.js and React.js, I
-          have had the privilege of working on a variety of projects, including
-          the development of enterprise-grade web applications. My attention to
-          detail shines when translating UI/UX designs into pixel-perfect code,
-          ensuring a seamless and visually appealing user experience. I am
-          equally comfortable working independently and collaboratively in an
-          agile, cross-functional team setting.
-        </div>
-
-        <NuxtLink to="/portfolio">
-          <BaseButton
-            variant="secondary"
-            class="uppercase text-xs tracking-[2px]"
-            >Go to portfolio</BaseButton
+        <IntersectionObserver custom-class="slide-down">
+          <div
+            class="font-ibarra text-h2 font-bold text-primary-blue-200 pb-[32px]"
           >
-        </NuxtLink>
+            About Me
+          </div>
+          <div
+            class="font-publicSans text-body-1 leading-body font-regular text-primary-blue-200 opacity-80 mb-[24px] max-w-[50ch]"
+          >
+            I'm a front-end developer currently based in Lagos Nigeria.
+            Throughout my career working with JavaScript/TypeScript, Vue.js and
+            React.js, I have had the privilege of working on a variety of
+            projects, including the development of enterprise-grade web
+            applications. My attention to detail shines when translating UI/UX
+            designs into pixel-perfect code, ensuring a seamless and visually
+            appealing user experience. I am equally comfortable working
+            independently and collaboratively in an agile, cross-functional team
+            setting.
+          </div>
+        </IntersectionObserver>
+
+        <IntersectionObserver>
+          <NuxtLink to="/portfolio">
+            <BaseButton
+              variant="secondary"
+              class="uppercase text-xs tracking-[2px]"
+              >Go to portfolio</BaseButton
+            >
+          </NuxtLink>
+        </IntersectionObserver>
       </div>
     </section>
 
-    <section
-      class="w-[311px] flex flex-col items-center justify-center text-center mx-auto my-[80px] md:flex-row md:justify-between md:w-full md:text-left"
-    >
-      <h2
-        class="font-ibarra text-h2 font-bold leading-h2 mt-0 mb-[40px] md:mb-0 md:w-[350px] text-primary-blue-200"
-      >
-        Interested in doing a project together?
-      </h2>
-      <div
-        class="hidden md:block grow mx-[32px] h-[1px] bg-secondary-grey-200"
-      />
-
-      <NuxtLink to="/contact">
-        <BaseButton
-          variant="secondary"
-          class="uppercase text-xs tracking-[2px]"
-        >
-          Contact me
-        </BaseButton>
-      </NuxtLink>
-    </section>
+    <FooterCTA />
   </div>
 </template>
 

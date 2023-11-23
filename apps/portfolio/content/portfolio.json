@@ -11,7 +11,8 @@
       "/eazy-access-customers-3.png"
     ],
 
-    "color": "#5FB4A2"
+    "color": "#5FB4A2",
+    "url": "https://eazyaccess-customers.web.app/#/"
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
       "/eazy-access-vendors-3.png"
     ],
 
-    "color": "#33323D"
+    "color": "#33323D",
+    "url": "https://eazyaccess-vendors.web.app/#/"
   },
   {
     "id": 3,
@@ -35,6 +37,7 @@
     "tags": ["React.js", "Chakra UI", "TypeScript", "Firebase", "Drag & Drop"],
     "images": ["/myllo-1.png", "/myllo-2.png", "/myllo-3.png"],
 
-    "color": "#A854F7"
+    "color": "#A854F7",
+    "url": "https://myllo.co"
   }
 ]

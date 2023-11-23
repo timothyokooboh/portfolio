@@ -31,6 +31,12 @@ body {
 .slide-down {
   animation: slideDown 0.3s ease-out both;
 }
+.slide-right {
+  animation: slideRight 0.3s ease-out both;
+}
+.slide-left {
+  animation: slideLeft 0.3s ease-out both;
+}
 
 @keyframes slideUp {
   from {
@@ -47,6 +53,30 @@ body {
 @keyframes slideDown {
   from {
     transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(30px);
     opacity: 0;
   }
 

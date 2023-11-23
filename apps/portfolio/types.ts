@@ -6,6 +6,7 @@ export type Project = {
   project_background: string;
   images: string[];
   tags: string[];
+  url: string;
 };
 
 export type Portfolio = {
