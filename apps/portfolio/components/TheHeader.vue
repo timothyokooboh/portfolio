@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRoute } from "vue-router";
+import { vOnClickOutside } from "@vueuse/components";
 
 const route = useRoute();
 const isOpen = ref(false);
@@ -20,14 +21,23 @@ const activeClass = ref({
       </NuxtLink>
 
       <button
-        @click="isOpen = !isOpen"
         class="md:hidden"
         id="menubutton"
         aria-haspopup="true"
         aria-controls="menu"
       >
-        <img v-if="isOpen" src="/close-menu.svg" alt="hamburger menu" />
-        <img v-else src="/hamburger.svg" alt="close menu" />
+        <img
+          v-if="isOpen"
+          @click="isOpen = false"
+          src="/close-menu.svg"
+          alt="hamburger menu"
+        />
+        <img
+          v-else
+          @click="isOpen = true"
+          src="/hamburger.svg"
+          alt="hamburger menu"
+        />
       </button>
 
       <nav
@@ -44,12 +54,7 @@ const activeClass = ref({
           }"
           >Portfolio</NuxtLink
         >
-        <NuxtLink
-          to="/articles"
-          class="menu-item"
-          active-class="menu-item--active"
-          >Articles</NuxtLink
-        >
+
         <NuxtLink
           to="/contact"
           class="menu-item"
@@ -59,7 +64,10 @@ const activeClass = ref({
       </nav>
     </section>
 
-    <MobileMenuDropdown :isOpen="isOpen" />
+    <MobileMenuDropdown
+      :isOpen="isOpen"
+      v-on-click-outside="() => (isOpen = false)"
+    />
   </div>
 </template>
 

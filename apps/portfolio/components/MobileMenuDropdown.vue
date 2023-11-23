@@ -17,16 +17,22 @@ const route = useRoute();
       aria-labelledby="menubutton"
       class="z-10 md:hidden absolute top-[30px] right-0 bg-primary-blue-200 text-white text-center flex flex-col text-[12px] items-center justify-center w-[223px] py-10 uppercase"
     >
-      <li role="presentation" class="mb-8 menu-item">
-        <NuxtLink role="menuitem" to="/" active-class="text-primary-cyan"
+      <li role="presentation" class="mb-8">
+        <NuxtLink
+          role="menuitem"
+          to="/"
+          class="menu-item"
+          active-class="menu-item--active"
           >Home</NuxtLink
         >
       </li>
 
-      <li role="presentation" class="menu-item mb-8 menu-item">
+      <li role="presentation" class="mb-8">
         <NuxtLink
           to="/portfolio"
           role="menuitem"
+          class="menu-item"
+          active-class="menu-item--active"
           :class="{
             'menu-item--active': route.path.startsWith('/portfolio'),
           }"
@@ -34,17 +40,12 @@ const route = useRoute();
         >
       </li>
 
-      <li role="presentation" class="menu-item mb-8 menu-item">
+      <li role="presentation">
         <NuxtLink
-          to="/articles"
           role="menuitem"
-          active-class="text-primary-cyan"
-          >Articles</NuxtLink
-        >
-      </li>
-
-      <li role="presentation" class="menu-item">
-        <NuxtLink role="menuitem" to="/contact" active-class="text-primary-cyan"
+          to="/contact"
+          class="menu-item"
+          active-class="menu-item--active"
           >Contact Me</NuxtLink
         >
       </li>
@@ -53,7 +54,7 @@ const route = useRoute();
 </template>
 
 <style lang="scss" scoped>
-@mixin after-pseudo-style($color: #33323d) {
+@mixin after-pseudo-style($color: #fff) {
   display: block;
   content: "";
   border-bottom: 1px solid $color;
