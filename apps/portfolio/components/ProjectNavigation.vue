@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useGetPortfolio } from "~/composables/useGetPortfolio";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
+import { useGetPortfolio } from "~/composables/useGetPortfolio";
 import type { Portfolio, Project } from "~/types";
 
 const route = useRoute();

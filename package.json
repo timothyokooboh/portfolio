@@ -18,7 +18,8 @@
     "dev": "yarn lerna run dev",
     "build": "yarn lerna run build",
     "lint": "yarn lerna run lint",
-    "format:fix": "yarn lerna run format:watch",
+    "lint:fix": "yarn lerna run lint:fix",
+    "format:fix": "yarn lerna run format:fix",
     "format:check": "yarn lerna run format:check"
   }
 }

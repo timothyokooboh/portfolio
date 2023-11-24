@@ -20,9 +20,7 @@
         <NuxtLink to="/portfolio" class="block menu-item w-fit"
           >Portfolio</NuxtLink
         >
-        <NuxtLink to="/articles" class="block menu-item w-fit"
-          >Articles</NuxtLink
-        >
+
         <NuxtLink to="/contact" class="block menu-item w-fit"
           >Contact me</NuxtLink
         >

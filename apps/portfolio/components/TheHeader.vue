@@ -5,12 +5,6 @@ import { vOnClickOutside } from "@vueuse/components";
 
 const route = useRoute();
 const isOpen = ref(false);
-
-console.log("path oo", route.path);
-
-const activeClass = ref({
-  cyan: "text-primary-cyan",
-});
 </script>
 
 <template>
@@ -21,22 +15,22 @@ const activeClass = ref({
       </NuxtLink>
 
       <button
-        class="md:hidden"
         id="menubutton"
+        class="md:hidden"
         aria-haspopup="true"
         aria-controls="menu"
       >
         <img
           v-if="isOpen"
-          @click="isOpen = false"
           src="/close-menu.svg"
           alt="hamburger menu"
+          @click="isOpen = false"
         />
         <img
           v-else
-          @click="isOpen = true"
           src="/hamburger.svg"
           alt="hamburger menu"
+          @click="isOpen = true"
         />
       </button>
 
@@ -65,8 +59,8 @@ const activeClass = ref({
     </section>
 
     <MobileMenuDropdown
-      :isOpen="isOpen"
       v-on-click-outside="() => (isOpen = false)"
+      :is-open="isOpen"
     />
   </div>
 </template>

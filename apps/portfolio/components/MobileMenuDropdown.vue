@@ -9,11 +9,11 @@ const route = useRoute();
 </script>
 
 <template>
-  <section class="relative" v-auto-animate>
+  <section v-auto-animate class="relative">
     <ul
       v-if="isOpen"
-      role="menu"
       id="menu"
+      role="menu"
       aria-labelledby="menubutton"
       class="z-10 md:hidden absolute top-[30px] right-0 bg-primary-blue-200 text-white text-center flex flex-col text-[12px] items-center justify-center w-[223px] py-10 uppercase"
     >

@@ -20,7 +20,7 @@ const sendMessage = (event: Event) => {
 </script>
 
 <template>
-  <form @submit="sendMessage($event)" data-netlify="true">
+  <form data-netlify="true" @submit="sendMessage($event)">
     <div class="mb-[24px]">
       <label>
         <div class="text-[13px] font-bold text-primary-blue-200 mb-[8px]">
