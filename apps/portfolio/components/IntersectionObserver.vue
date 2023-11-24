@@ -30,9 +30,9 @@ const root = ref<HTMLElement | null>(null);
 
 <template>
   <div
-    class="opacity-0"
     :ref="ref"
     v-intersection-observer="[onIntersectionObserver, { root }]"
+    class="opacity-0"
   >
     <slot />
   </div>

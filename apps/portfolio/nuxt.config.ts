@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
-    // "@nuxtjs/eslint-module",
     "@formkit/auto-animate/nuxt",
     "@nuxt/content",
   ],
@@ -28,5 +27,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-  //eslint: {},
 });

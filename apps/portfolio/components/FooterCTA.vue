@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { BaseButton } from "@app/ui-library";
+</script>
+
 <template>
   <section
     class="w-[311px] flex flex-col items-center justify-center text-center mx-auto my-[80px] md:flex-row md:justify-between md:w-full md:text-left"
@@ -23,7 +27,5 @@
     </IntersectionObserver>
   </section>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped></style>

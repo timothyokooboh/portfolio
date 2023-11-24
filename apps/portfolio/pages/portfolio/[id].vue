@@ -43,10 +43,14 @@ const [coverImage, ...otherImages] = project!.images;
             {{ project?.tags.join(" / ") }}
           </div>
 
-          <a :href="project?.url" target="_blank">
+          <a
+            :href="project?.url"
+            target="_blank"
+            class="md:col-start-1 md:w-fit"
+          >
             <BaseButton
               variant="secondary"
-              class="uppercase text-[12px] tracking-[2px] md:col-start-1 md:w-fit"
+              class="uppercase text-[12px] tracking-[2px]"
             >
               Visit website
             </BaseButton>

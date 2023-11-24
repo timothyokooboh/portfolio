@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-import { tokens } from "@app/foundations";
+import { onMounted } from "vue";
+// import { tokens } from "@app/foundations";
 import { BaseButton } from "@app/ui-library";
 
 const handleBendingAnimation = () => {
@@ -17,8 +17,8 @@ const handleBendingAnimation = () => {
       const xPos = (clientX / offsetWidth - 0.5) * 2;
       const yPos = (clientY / offsetHeight - 0.5) * 2;
 
-      let rotateX = 20 * yPos;
-      let rotateY = -20 * xPos;
+      const rotateX = 20 * yPos;
+      const rotateY = -20 * xPos;
 
       picture.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(30px)`;
 
@@ -42,16 +42,16 @@ onMounted(() => {
           <picture>
             <source
               srcset="/landing-img-desktop.svg"
-              :media="`(min-width: ${tokens.screens.lg.value})`"
+              :media="`(min-width: 1440px)`"
             />
             <source
               srcset="/landing-img-tablet.svg"
-              :media="`(min-width: ${tokens.screens.md.value})`"
+              :media="`(min-width: 768px)`"
             />
 
             <source
               srcset="/landing-img-mobile.svg"
-              :media="`(min-width: ${tokens.screens.sm.value})`"
+              :media="`(min-width: 375px)`"
             />
 
             <img

@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { BaseButton } from "@app/ui-library";
+import { ref } from "vue";
 import type { Portfolio } from "~/types";
 import { useGetPortfolio } from "~/composables/useGetPortfolio";
-import { ref } from "vue";
 
 const { getPortfolio } = useGetPortfolio();
 const portfolio = ref<Portfolio | null>(null);

@@ -4,12 +4,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vue-tsc && vite build --watch --minify=false",
     "build": "vue-tsc && vite build --watch --minify=false",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.ts",
+    "lint:fix": "eslint --fix --ext .vue,.js,.ts",
     "format:check": "prettier --check .",
-    "format:watch": "prettier --write ."
+    "format:fix": "prettier --write ."
   },
   "dependencies": {
     "vue": "^3.3.4"
