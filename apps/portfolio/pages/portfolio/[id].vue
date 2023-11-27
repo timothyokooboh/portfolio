@@ -7,7 +7,7 @@ const id = route.params.id;
 const { getPortfolio } = useGetPortfolio();
 const portfolio = await getPortfolio();
 
-const project = portfolio?.body?.find((el) => el.id === Number(id));
+const project = portfolio?.body?.find((el) => el.id === id);
 const [coverImage, ...otherImages] = project!.images;
 </script>
 

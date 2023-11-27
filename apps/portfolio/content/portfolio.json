@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "eazyaccess_customers",
     "title": "Eazy Access (Customers)",
     "description": "This project required me to create an experience in which users can search for vendors and patronize their products and services. I had to integrate this app with the vendors app which I built as a separate project. I used Quasar and Firebase.",
     "project_background": "This project was built to complement the vendors app which was built as a separate application. I used Quasar in order to ship the mobile responsive version to Google Play Store and IOS store. Firebase was used for the backend service in order to leverage the built-in web sockets capability and provide users with a real time update experience.",
@@ -15,7 +15,7 @@
     "url": "https://eazyaccess-customers.web.app/#/"
   },
   {
-    "id": 2,
+    "id": "eazyaccess_vendors",
     "title": "Eazy Access (Vendors)",
     "description": "This project required me to create an experience in which vendors can sign up, register their products and services, and upload a gallery that showcases their products and services in order to be discovered and contacted by interested customers. I had to integrate this app with the customers app which I built as a separate project. I used Quasar and Firebase.",
     "project_background": "This project was built to complement the customers app which was built as a separate application. I used Quasar in order to ship the mobile responsive version to Google Play Store and IOS store. Firebase was used for the backend service in order to leverage the built-in web sockets capability and provide users with a real time update experience.",
@@ -30,7 +30,7 @@
     "url": "https://eazyaccess-vendors.web.app/#/"
   },
   {
-    "id": 3,
+    "id": "myllo",
     "title": "Myllo",
     "description": "Myllo is a reading list management and note taking app. I also synced it with a Google Chrome Extension which I built to allow users seamlessly add any online resource to their reading list.",
     "project_background": "I built Myllo to allow users have a central place for keeping track of their reading list across three categories: To Read, Reading, Have Read. Also, I wanted to create a resource sharing platform in which users can find interesting learning resources that others have added to their reading list and save them to their own reading list. Also, with this app, users can colocate items in their reading list with a note of the things they learned. I also integrated React-Beautiful-DND package to develop an intuitive drag and drop experience.",

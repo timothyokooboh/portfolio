@@ -32,7 +32,7 @@
 const { variant } = withDefaults(
   defineProps<{
     variant?: "primary" | "secondary";
-    showIcon: boolean;
+    showIcon?: boolean;
   }>(),
   {
     variant: "primary",

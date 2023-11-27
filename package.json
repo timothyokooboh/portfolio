@@ -20,6 +20,7 @@
     "lint": "yarn lerna run lint",
     "lint:fix": "yarn lerna run lint:fix",
     "format:fix": "yarn lerna run format:fix",
-    "format:check": "yarn lerna run format:check"
+    "format:check": "yarn lerna run format:check",
+    "test": "yarn lerna run test"
   }
 }
