@@ -28,6 +28,7 @@
         <IntersectionObserver>
           <NuxtLink :to="`/portfolio/${props.id}`">
             <BaseButton
+              :data-testid="props.id"
               variant="secondary"
               class="uppercase text-xs text-primary-blue-200 tracking-[2px]"
               >View Project</BaseButton

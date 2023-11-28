@@ -7,7 +7,9 @@ const sendMessage = (event: Event) => {
   const myForm = event.target as HTMLFormElement;
   if (myForm) {
     const formData = new FormData(myForm);
-    const body = new URLSearchParams(formData).toString();
+    const body = new URLSearchParams(
+      formData as unknown as URLSearchParams,
+    ).toString();
 
     fetch("/", {
       method: "POST",

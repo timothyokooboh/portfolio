@@ -18,4 +18,8 @@ test.describe("home page", () => {
     await page.getByRole("button", { name: "contact me" }).click();
     await expect(page).toHaveURL("http://localhost:3000/contact");
   });
+
+  test("can download resume", async ({ page }) => {
+    await page.getByRole("link", { name: "resume" }).click();
+  });
 });

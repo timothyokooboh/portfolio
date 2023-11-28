@@ -74,13 +74,29 @@ onMounted(() => {
           </h2>
         </IntersectionObserver>
 
-        <IntersectionObserver>
-          <a href="#about-me">
-            <BaseButton class="uppercase text-xs tracking-[2px]"
-              >About Me</BaseButton
+        <div class="flex flex-wrap items-center">
+          <IntersectionObserver>
+            <a href="#about-me">
+              <BaseButton class="uppercase text-xs tracking-[2px] mr-3 mb-2"
+                >About Me</BaseButton
+              >
+            </a>
+          </IntersectionObserver>
+
+          <IntersectionObserver>
+            <a
+              download
+              href="/resume.pdf"
+              class="flex items-center menu-item hover:translate-y-[-2px] duration-200 mb-2"
             >
-          </a>
-        </IntersectionObserver>
+              <Icon
+                name="ic:baseline-download"
+                class="mr-1 text-primary-blue-200"
+              />
+              <div class="text-xs text-primary-blue-200">Resume</div>
+            </a>
+          </IntersectionObserver>
+        </div>
       </div>
     </section>
 
