@@ -40,6 +40,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@app/foundations": "workspace:^",
+    "@app/ui-library": "workspace:^",
     "@formkit/auto-animate": "^0.8.1",
     "@nuxt/content": "^2.9.0",
     "@vueuse/components": "^10.6.1",

@@ -14,6 +14,7 @@
     "format:fix": "prettier --write ."
   },
   "dependencies": {
+    "@app/foundations": "workspace:^",
     "vue": "^3.3.4"
   },
   "devDependencies": {
