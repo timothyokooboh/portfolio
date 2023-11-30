@@ -24,6 +24,8 @@ logs
 !.env.example
 /test-results/
 /tests/
+/tests-examples/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+

@@ -2,7 +2,6 @@
 
 import { defineConfig } from "vite";
 import { configDefaults } from "vitest/config";
-
 import Vue from "@vitejs/plugin-vue";
 
 export default defineConfig(() => ({
@@ -10,6 +9,10 @@ export default defineConfig(() => ({
   test: {
     globals: true,
     environment: "jsdom",
-    exclude: [...configDefaults.exclude, "e2e/*", "tests-examples/*"],
+    exclude: [
+      ...configDefaults.exclude,
+      "apps/*/e2e/*",
+      "apps/*/tests-examples/*",
+    ],
   },
 }));
