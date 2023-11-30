@@ -14,5 +14,8 @@
     "lerna": "^7.4.2",
     "prettier": "^3.0.3",
     "turbo": "^1.10.16"
+  },
+  "scripts": {
+    "deploy": "yarn turbo deploy"
   }
 }
