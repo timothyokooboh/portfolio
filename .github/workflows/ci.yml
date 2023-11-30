@@ -25,4 +25,4 @@ jobs:
         run: yarn
 
       - name: deploy
-        run: turbo deploy
+        run: yarn deploy

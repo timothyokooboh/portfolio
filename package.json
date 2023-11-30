@@ -16,6 +16,6 @@
     "turbo": "^1.10.16"
   },
   "scripts": {
-    "deploy": "yarn turbo deploy"
+    "deploy": "yarn turbo run deploy"
   }
 }
