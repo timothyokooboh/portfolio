@@ -12,16 +12,6 @@
   ],
   "devDependencies": {
     "lerna": "^7.4.2",
-    "prettier": "^3.0.3",
-    "vitest": "^0.34.6"
-  },
-  "scripts": {
-    "dev": "yarn lerna run dev",
-    "build": "yarn lerna run build",
-    "lint": "yarn lerna run lint",
-    "lint:fix": "yarn lerna run lint:fix",
-    "format:fix": "yarn lerna run format:fix",
-    "format:check": "yarn lerna run format:check",
-    "test": "yarn lerna run test"
+    "prettier": "^3.0.3"
   }
 }
