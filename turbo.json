@@ -5,7 +5,8 @@
     "format:check": {},
     "format:fix": {},
     "test": {
-      "inputs": ["src/**/*.vue", "src/**/*.ts"]
+      "inputs": ["src/**/*.vue", "src/**/*.ts"],
+      "dependsOn": ["build"]
     },
     "e2e": {
       "inputs": ["src/**/*.vue", "src/**/*.ts"]
