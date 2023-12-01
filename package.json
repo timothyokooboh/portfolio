@@ -16,6 +16,11 @@
     "turbo": "^1.10.16"
   },
   "scripts": {
+    "format:check": "yarn turbo run format:check",
+    "lint": "yarn turbo run lint",
+    "test": "yarn turbo run test",
+    "e2e": "yarn turbo run e2e",
+    "build": "yarn turbo run build",
     "deploy": "yarn turbo run deploy"
   }
 }

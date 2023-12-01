@@ -24,5 +24,11 @@ jobs:
       - name: install dependencies
         run: yarn
 
-      - name: deploy
-        run: yarn deploy
+      - name: check formatting
+        run: yarn format:check
+      - name: lint
+        run: yarn lint
+      - name: test
+        run: yarn test
+      - name: build
+        run: yarn build
