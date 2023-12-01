@@ -27,7 +27,7 @@ There are three workspaces.
 ## Unit/Component Test
 `yarn test`
 
-## End-to-end test
+## End-to-end Test
 `yarn e2e`
 
 ## Build
