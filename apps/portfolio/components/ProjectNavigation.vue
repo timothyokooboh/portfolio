@@ -9,9 +9,9 @@ const { getPortfolio } = useGetPortfolio();
 const portfolio = ref<Portfolio | null>(null);
 portfolio.value = await getPortfolio();
 
-const id = Number(route.params.id);
+const id = route.params.id;
 const previousProject = ref<Project>({
-  id: 1,
+  id: "",
   title: "",
   description: "",
   color: "",
@@ -22,7 +22,7 @@ const previousProject = ref<Project>({
 });
 
 const nextProject = ref<Project>({
-  id: 1,
+  id: "",
   title: "",
   description: "",
   color: "",
@@ -33,24 +33,26 @@ const nextProject = ref<Project>({
 });
 
 if (portfolio.value?.body) {
+  const index = portfolio.value.body.findIndex((project) => project.id === id);
+
   /**
-   * When a user is viewing the first project in the portfolio
+   * Viewing the first project in the portfolio
    */
-  if (id === 1) {
+  if (index === 0) {
     previousProject.value =
       portfolio.value.body[portfolio.value.body.length - 1];
     nextProject.value = portfolio.value.body[1];
 
-    // When a user is viewing the last project in the portfolio
-  } else if (id === portfolio.value.body.length) {
+    // Viewing the last project in the portfolio
+  } else if (index === portfolio.value.body.length - 1) {
     previousProject.value =
       portfolio.value.body[portfolio.value.body.length - 2];
     nextProject.value = portfolio.value.body[0];
 
     // Viewing projects in between
   } else {
-    previousProject.value = portfolio.value.body[id - 2];
-    nextProject.value = portfolio.value.body[id];
+    previousProject.value = portfolio.value.body[index - 1];
+    nextProject.value = portfolio.value.body[index + 1];
   }
 }
 </script>

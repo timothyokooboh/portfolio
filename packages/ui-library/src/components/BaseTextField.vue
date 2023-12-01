@@ -18,7 +18,7 @@
 withDefaults(
   defineProps<{
     modelValue?: any;
-    as: "input" | "textarea";
+    as?: "input" | "textarea";
   }>(),
   {
     modelValue: "",

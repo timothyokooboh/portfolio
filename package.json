@@ -12,14 +12,15 @@
   ],
   "devDependencies": {
     "lerna": "^7.4.2",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.16"
   },
   "scripts": {
-    "dev": "yarn lerna run dev",
-    "build": "yarn lerna run build",
-    "lint": "yarn lerna run lint",
-    "lint:fix": "yarn lerna run lint:fix",
-    "format:fix": "yarn lerna run format:fix",
-    "format:check": "yarn lerna run format:check"
+    "format:check": "yarn turbo run format:check",
+    "lint": "yarn turbo run lint",
+    "test": "yarn turbo run test",
+    "e2e": "yarn turbo run e2e",
+    "build": "yarn turbo run build",
+    "deploy": "yarn turbo run deploy"
   }
 }

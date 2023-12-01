@@ -10,6 +10,7 @@
     "build": "style-dictionary build && tsc"
   },
   "devDependencies": {
+    "prettier": "^3.1.0",
     "style-dictionary": "^3.9.0",
     "typescript": "^5.2.2"
   }

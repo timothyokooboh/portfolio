@@ -7,6 +7,7 @@
     >
       <IntersectionObserver custom-class="slide-right">
         <h2
+          data-testid="get-in-touch"
           class="text-h2 font-ibarra font-bold leading-h2 text-primary-blue-200 pb-[24px]"
         >
           Get in Touch
