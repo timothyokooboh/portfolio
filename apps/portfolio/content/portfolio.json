@@ -22,12 +22,29 @@
     "tags": ["Vue.js", "Quasar", "Firebase", "Google Maps"],
     "images": [
       "/eazy-access-vendors-1.svg",
-      "/bolo.svg",
+      "/eazy-access-vendors-2.png",
       "/eazy-access-vendors-3.png"
     ],
 
     "color": "#33323D",
     "url": "https://eazyaccess-vendors.web.app/#/"
+  },
+  {
+    "id": "techjobs",
+    "title": "Tech Jobs",
+    "description": "This project utilizes the public jobs API of the The Muse to create a tech jobs board. Users can filter across various tech categories or remote only jobs.",
+    "project_background": "I setup a mono repo architecture. I created a foundations package, a UI library package and a Nuxt 3 web app. The foundations contained the design tokens for color, typography and breakpoints. I utilized style-dictionary package to export the tokens into tailwind css classes and scss, css and javascript variables. Tailwind CSS was used primarily for styling the UI components and web app.",
+    "tags": [
+      "Tailwind CSS",
+      "Nuxt.js",
+      "TypeScript",
+      "Mono repo architecture",
+      "Design tokens"
+    ],
+    "images": ["/techjobs-1.png", "/techjobs-2.png", "/techjobs-3.png"],
+
+    "color": "#33323D",
+    "url": "https://techjobs-ruby.vercel.app"
   },
   {
     "id": "myllo",

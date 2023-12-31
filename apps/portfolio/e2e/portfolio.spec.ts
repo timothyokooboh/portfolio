@@ -19,6 +19,11 @@ test.describe("porfolio page", () => {
     );
   });
 
+  test("can view Tech jobs project", async ({ page }) => {
+    await page.getByTestId("techjobs").click();
+    await expect(page).toHaveURL("http://localhost:3000/portfolio/techjobs");
+  });
+
   test("can view myllo project", async ({ page }) => {
     await page.getByTestId("myllo").click();
     await expect(page).toHaveURL("http://localhost:3000/portfolio/myllo");

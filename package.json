@@ -20,6 +20,7 @@
     "lint": "yarn turbo run lint",
     "test": "yarn turbo run test",
     "e2e": "yarn turbo run e2e",
+    "dev": "yarn turbo run dev",
     "build": "yarn turbo run build",
     "deploy": "yarn turbo run deploy"
   }
