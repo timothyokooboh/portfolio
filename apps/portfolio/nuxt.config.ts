@@ -19,6 +19,18 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@formkit/auto-animate/nuxt",
     "@nuxt/content",
+    [
+      "nuxt-mail",
+      {
+        message: {
+          to: "okoobohtimothy@gmail.com",
+        },
+        smtp: {
+          host: "smtp.example.com",
+          port: 587,
+        },
+      },
+    ],
   ],
 
   app: {

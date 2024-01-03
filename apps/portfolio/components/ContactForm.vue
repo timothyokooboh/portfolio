@@ -1,27 +1,35 @@
 <script setup lang="ts">
 import { BaseTextField, BaseButton } from "@app/ui-library";
 
+const mail = useMail();
+
 const sendMessage = (event: Event) => {
+  console.log("luck");
   event.preventDefault();
+  mail.send({
+    from: "john",
+    subject: "hello there",
+    text: "twice as much",
+  });
 
-  const myForm = event.target as HTMLFormElement;
-  if (myForm) {
-    const formData = new FormData(myForm);
-    const body = new URLSearchParams(
-      formData as unknown as URLSearchParams,
-    ).toString();
+  // const myForm = event.target as HTMLFormElement;
+  // if (myForm) {
+  //   const formData = new FormData(myForm);
+  //   const body = new URLSearchParams(
+  //     formData as unknown as URLSearchParams,
+  //   ).toString();
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body,
-    })
-      .then(() => {
-        console.log(body);
-        console.log("Form successfully submitted");
-      })
-      .catch((error) => alert(error));
-  }
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body,
+  //   })
+  //     .then(() => {
+  //       console.log(body);
+  //       console.log("Form successfully submitted");
+  //     })
+  //     .catch((error) => alert(error));
+  // }
 };
 </script>
 

@@ -1,6 +1,6 @@
 /**
  * Create an object that is compatible with
- * what Tailwind CSS expects in its theme.extend option
+ * what Tailwind CSS expects in its theme.extend option.
  */
 
 const tokens = require("./tokens/js/tokens");
