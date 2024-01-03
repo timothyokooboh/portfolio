@@ -1,4 +1,47 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const isSending = ref(false);
+const toastMessage = ref("");
+const showToastMessage = ref(false);
+const toastType = ref("success");
+
+const mail = useMail();
+
+const sendMessage = async (value: {
+  name: string;
+  email: string;
+  message: string;
+}) => {
+  try {
+    isSending.value = true;
+
+    await mail.send({
+      subject: "Message from a visitor of my portfolio",
+      text: `
+        My name is ${value.name}. \n 
+        My email address is ${value.email}. \n
+        My message is ${value.message}`,
+    });
+    toastType.value = "success";
+    toastMessage.value = "Message sent successfully";
+    showToastMessage.value = true;
+
+    setTimeout(() => {
+      showToastMessage.value = false;
+    }, 5000);
+  } catch (err) {
+    toastType.value = "error";
+    toastMessage.value =
+      "There was an error while sending your message. Please try again.";
+    showToastMessage.value = true;
+
+    setTimeout(() => {
+      showToastMessage.value = false;
+    }, 5000);
+  } finally {
+    isSending.value = false;
+  }
+};
+</script>
 
 <template>
   <div>
@@ -99,10 +142,27 @@
       </IntersectionObserver>
 
       <IntersectionObserver>
-        <ContactForm />
+        <ContactForm :is-sending="isSending" @send:message="sendMessage" />
       </IntersectionObserver>
     </section>
+
+    <Transition name="fade" mode="out-in">
+      <AppToast v-if="showToastMessage" :type="toastType">
+        <div>{{ toastMessage }}</div>
+      </AppToast>
+    </Transition>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(3px);
+}
+</style>

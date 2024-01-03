@@ -56,6 +56,7 @@ __metadata:
     "@mahdikhashan/vue3-click-outside": "npm:^0.1.2"
     "@nuxt/content": "npm:^2.9.0"
     "@nuxt/devtools": "npm:latest"
+    "@nuxtjs/dotenv": "npm:^1.4.2"
     "@nuxtjs/eslint-config-typescript": "npm:^12.1.0"
     "@nuxtjs/tailwindcss": "npm:^6.9.4"
     "@playwright/test": "npm:^1.40.0"
@@ -2353,6 +2354,16 @@ __metadata:
   peerDependencies:
     vue: ^3.3.4
   checksum: 77ee421f2577fb7b1cff6bfd9921d1b440bbd6999026a7e0f96fd6e3a4fe52716dd616265c5548c6aede18c7e2d5ad6e69e55f060cebad867b03ab8ce64a8d77
+  languageName: node
+  linkType: hard
+
+"@nuxtjs/dotenv@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "@nuxtjs/dotenv@npm:1.4.2"
+  dependencies:
+    consola: "npm:^3.2.3"
+    dotenv: "npm:^8.2.0"
+  checksum: dc643a5a2f66f1a2bfc5c1279d5edf151144f68e309b0363bcb07cc6b5838b9cccb7f57116fd1c74d97353f31f34c2622868dcb2b5dc03f2b820a00951b77f0d
   languageName: node
   linkType: hard
 
@@ -6922,6 +6933,13 @@ __metadata:
   version: 16.3.1
   resolution: "dotenv@npm:16.3.1"
   checksum: b95ff1bbe624ead85a3cd70dbd827e8e06d5f05f716f2d0cbc476532d54c7c9469c3bc4dd93ea519f6ad711cb522c00ac9a62b6eb340d5affae8008facc3fbd7
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.6.0
+  resolution: "dotenv@npm:8.6.0"
+  checksum: 6750431dea8efbd54b9f2d9681b04e1ccc7989486461dcf058bb708d9e3d63b04115fcdf8840e38ad1e24a4a2e1e7c1560626c5e3ac7bc09371b127c49e2d45f
   languageName: node
   linkType: hard
 

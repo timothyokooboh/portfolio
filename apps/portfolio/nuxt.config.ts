@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+require("dotenv").config();
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    emailPassword: process.env.NUXT_EMAIL_PASSWORD,
+  },
+
   nitro: {
     preset: "vercel",
     output: {
@@ -26,8 +33,12 @@ export default defineNuxtConfig({
           to: "okoobohtimothy@gmail.com",
         },
         smtp: {
-          host: "smtp.example.com",
+          host: "smtp.gmail.com",
           port: 587,
+          auth: {
+            user: "okoobohtimothy",
+            pass: process.env.NUXT_EMAIL_PASSWORD,
+          },
         },
       },
     ],
