@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
+// eslint-disable-next-line import/first
 import vsharp from "vite-plugin-vsharp";
 
 export default defineNuxtConfig({
