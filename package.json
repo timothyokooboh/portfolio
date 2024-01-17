@@ -16,6 +16,7 @@
     "turbo": "^1.10.16"
   },
   "scripts": {
+    "format:fix": "yarn turbo run format:fix",
     "format:check": "yarn turbo run format:check",
     "lint": "yarn turbo run lint",
     "test": "yarn turbo run test",
