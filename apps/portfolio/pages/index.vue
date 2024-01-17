@@ -2,6 +2,9 @@
 import { onMounted } from "vue";
 // import { tokens } from "@app/foundations";
 import { BaseButton } from "@app/ui-library";
+import mobileLandingImg from "~/assets/landing-img-mobile.svg";
+import tabletLandingImg from "~/assets/landing-img-tablet.svg";
+import desktopLandingImg from "~/assets/landing-img-desktop.svg";
 
 const handleBendingAnimation = () => {
   const pictureContainer = document.querySelector(
@@ -41,22 +44,16 @@ onMounted(() => {
         <div id="picture-container">
           <picture>
             <source
-              srcset="/landing-img-desktop.svg"
+              :srcset="desktopLandingImg"
               :media="`(min-width: 1440px)`"
             />
-            <source
-              srcset="/landing-img-tablet.svg"
-              :media="`(min-width: 768px)`"
-            />
+            <source :srcset="tabletLandingImg" :media="`(min-width: 768px)`" />
 
-            <source
-              srcset="/landing-img-mobile.svg"
-              :media="`(min-width: 375px)`"
-            />
+            <source :srcset="mobileLandingImg" :media="`(min-width: 375px)`" />
 
             <img
               id="picture"
-              src="/landing-img-desktop.svg"
+              :src="desktopLandingImg"
               class="w-full object-cover"
             />
           </picture>

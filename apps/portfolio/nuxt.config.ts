@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
+import vsharp from "vite-plugin-vsharp";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -13,6 +14,10 @@ export default defineNuxtConfig({
     output: {
       dir: ".vercel/output",
     },
+  },
+
+  vite: {
+    plugins: [vsharp()],
   },
   imports: {
     transform: {
@@ -43,78 +48,4 @@ export default defineNuxtConfig({
       },
     ],
   ],
-
-  app: {
-    head: {
-      link: [
-        {
-          rel: "preload",
-          as: "image",
-          href: "landing-img-desktop.svg",
-          imagesrcset:
-            "landing-img-mobile.svg, landing-img-tablet.svg, landing-img-desktop.svg",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "eazy-access-customers-1.svg",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "eazy-access-customers-2.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "eazy-access-customers-3.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "eazy-access-vendors-1.svg",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "eazy-access-vendors-2.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "eazy-access-vendors-3.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "techjobs-1.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "techjobs-2.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "techjobs-3.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "myllo-1.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "myllo-2.png",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "myllo-3.png",
-        },
-      ],
-    },
-  },
 });
