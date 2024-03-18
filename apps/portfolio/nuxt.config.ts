@@ -6,6 +6,9 @@ import vsharp from "vite-plugin-vsharp";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  routeRules: {
+    "/": { prerender: true },
+  },
   runtimeConfig: {
     emailPassword: process.env.NUXT_EMAIL_PASSWORD,
   },
