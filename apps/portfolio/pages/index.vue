@@ -153,7 +153,7 @@ onMounted(() => {
 #picture-container {
   perspective: 1000px;
   overflow: hidden;
-  cursor: url("cursor.png"), auto;
+  cursor: url("./cursor.png"), auto;
 }
 
 #picture {
