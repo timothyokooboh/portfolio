@@ -17,7 +17,7 @@ const [coverImage, ...otherImages] = project!.images;
       <img
         :src="coverImage"
         alt="project image"
-        class="w-full h-[190px] object-cover object-center border-[25px] border-solid mb-[40px] md:h-[350px]"
+        class="w-full h-[190px] object-cover object-top border-[25px] border-solid mb-[40px] md:h-[350px]"
         :style="{ borderColor: project?.color }"
       />
     </IntersectionObserver>

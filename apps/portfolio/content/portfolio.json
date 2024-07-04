@@ -1,5 +1,20 @@
 [
   {
+    "id": "sprintpoker",
+    "title": "SprintPoker",
+    "description": "SprintPoker is a web application that enables product teammates in organizations that practice agile methodologies to join a collaborative session in real-time and provide estimates to sprint tasks either in time estimates or story points.",
+    "project_background": "SprintPoker was built using Vue 3, TypeScript, Node.js and GraphQL. It was a good opportunity for me to practice and learn new technologies such as Node.js and GraphQL API spec. After deployment, I faced an interest challenge that arose because I deployed the API on a free server instance provided by render.com. The challenge was that the server spins down after periods of inactivity. To overcome this challenge, I wrote a bash script that makes a request to the APi and creates and deletes a dummy record at intervals of ten minutes. Then I deployed the script as a cron job via GitHub Actions. That away, I was able to keep the server from spinning down thereby ensuring that the performance of APi calls were not impacted negatively.",
+    "tags": ["Vue.js", "TypeScript", "GraphQL", "Node.js", "Cron job"],
+    "images": [
+      "/sprintpoker-4.png",
+      "/sprintpoker-2.png",
+      "/sprintpoker-1.png"
+    ],
+
+    "color": "#5FB4A2",
+    "url": "https://sprintpoker-beta.vercel.app/#/"
+  },
+  {
     "id": "eazyaccess_customers",
     "title": "Eazy Access (Customers)",
     "description": "This project required me to create an experience in which users can search for vendors and patronize their products and services. I had to integrate this app with the vendors app which I built as a separate project. I used Quasar and Firebase.",
