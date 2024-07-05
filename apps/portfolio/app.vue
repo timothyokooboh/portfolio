@@ -14,4 +14,12 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useRouter } from "#vue-router";
+const router = useRouter();
+
+router.afterEach((to) => {
+  const currentPath = to.fullPath;
+  parent.postMessage(currentPath, "*");
+});
+</script>
