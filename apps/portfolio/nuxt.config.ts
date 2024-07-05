@@ -6,9 +6,11 @@ import vsharp from "vite-plugin-vsharp";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   routeRules: {
     "/": { prerender: true },
   },
+
   runtimeConfig: {
     emailPassword: process.env.NUXT_EMAIL_PASSWORD,
   },
@@ -23,6 +25,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [vsharp()],
   },
+
   imports: {
     transform: {
       // you could also add the path of your built library to prevent this happening
@@ -30,6 +33,7 @@ export default defineNuxtConfig({
       exclude: [/\bsfui\b/],
     },
   },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
@@ -52,4 +56,6 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
+  compatibilityDate: "2024-07-05",
 });
