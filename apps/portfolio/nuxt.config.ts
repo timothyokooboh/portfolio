@@ -2,7 +2,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
 // eslint-disable-next-line import/first
-import vsharp from "vite-plugin-vsharp";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -20,10 +19,6 @@ export default defineNuxtConfig({
     output: {
       dir: ".vercel/output",
     },
-  },
-
-  vite: {
-    plugins: [vsharp()],
   },
 
   imports: {

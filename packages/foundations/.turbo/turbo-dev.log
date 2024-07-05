@@ -1,1 +1,12 @@
 
+scss
+[1m[32m✔︎ lib/tokens/scss/tokens.scss[39m[22m
+
+css
+[1m[32m✔︎ lib/tokens/css/tokens.css[39m[22m
+
+js
+[1m[32m✔︎ lib/tokens/js/tokens.js[39m[22m
+
+js-src
+[1m[32m✔︎ src/tokens/js/tokens.js[39m[22m
