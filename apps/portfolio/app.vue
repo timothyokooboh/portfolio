@@ -6,7 +6,9 @@
 
     <NuxtLoadingIndicator :height="10" />
 
-    <div class="p-8 md:py-16 md:px-[39px] lg:px-[165px] mb-auto">
+    <div
+      class="p-8 mb-auto max-w-[1512px] mx-auto md:py-16 md:px-[39px] lg:px-[165px]"
+    >
       <NuxtPage class="mt-[120px]" />
     </div>
 
