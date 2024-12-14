@@ -38,7 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="mx-auto flex flex-col items-center">
     <section class="relative">
       <IntersectionObserver>
         <div id="picture-container">
@@ -54,7 +54,8 @@ onMounted(() => {
             <img
               id="picture"
               :src="desktopLandingImg"
-              class="w-full object-cover"
+              alt=""
+              class="object-cover"
             />
           </picture>
         </div>
@@ -99,7 +100,7 @@ onMounted(() => {
 
     <section
       id="about-me"
-      class="grid mt-[80px] gap-y-[40px] md:grid-cols-[281px_1fr] md:gap-x-[69px] lg:grid-cols-[540px_350px] lg:gap-x-[125px]"
+      class="grid mt-[80px] gap-y-[40px] md:grid-cols-[381px_1fr] md:gap-x-[69px] lg:grid-cols-[540px_350px] lg:gap-x-[125px]"
     >
       <IntersectionObserver>
         <img

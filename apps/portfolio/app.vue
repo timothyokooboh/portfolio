@@ -7,7 +7,7 @@
     <NuxtLoadingIndicator :height="10" />
 
     <div
-      class="p-8 mb-auto max-w-[1512px] mx-auto md:py-16 md:px-[39px] lg:px-[165px]"
+      class="p-8 mb-auto w-screen max-w-[1212px] mx-auto md:py-16 md:px-[39px] lg:px-[165px]"
     >
       <NuxtPage class="mt-[120px]" />
     </div>
@@ -15,13 +15,3 @@
     <TheFooter />
   </div>
 </template>
-
-<script lang="ts" setup>
-import { useRouter } from "#vue-router";
-const router = useRouter();
-
-router.afterEach((to) => {
-  const currentPath = to.fullPath;
-  parent.postMessage(currentPath, "*");
-});
-</script>

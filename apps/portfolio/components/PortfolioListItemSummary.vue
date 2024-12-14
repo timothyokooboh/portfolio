@@ -3,6 +3,7 @@
     <IntersectionObserver class="md:basis-1/2 opacity-0">
       <img
         :src="props.images[0]"
+        alt=""
         class="border-[25px] border-solid w-full h-[288px] object-cover object-top mb-[32px] md:mb-0 md:items-center md:justify-center md:h-[314px] md:self-center md:border-[34px] lg:h-[500px]"
         :style="{ borderColor: color }"
       />
@@ -26,14 +27,14 @@
         </IntersectionObserver>
 
         <IntersectionObserver>
-          <NuxtLink :to="`/portfolio/${props.id}`">
+          <a :href="props.url" target="_blank">
             <BaseButton
               :data-testid="props.id"
               variant="secondary"
               class="uppercase text-xs text-primary-blue-200 tracking-[2px]"
               >View Project</BaseButton
             >
-          </NuxtLink>
+          </a>
         </IntersectionObserver>
       </div>
     </div>
