@@ -22,8 +22,21 @@
           <div
             class="text-body-2 font-regular leading-body text-primary-blue-200 mb-[24px] md:mb-[35px]"
           >
-            {{ props.description }}
+            {{ props.project_background }}
           </div>
+        </IntersectionObserver>
+
+        <IntersectionObserver>
+          <ul class="flex flex-wrap mb-5 gap-[7px]">
+            <li
+              v-for="(tag, index) in props.tags"
+              :key="tag"
+              class="text-gray-500 text-sm"
+            >
+              <span class="mr-2">{{ tag }}</span>
+              <span v-if="index < props.tags.length - 1">/</span>
+            </li>
+          </ul>
         </IntersectionObserver>
 
         <IntersectionObserver>

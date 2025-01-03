@@ -3,7 +3,7 @@
     "id": "sprintpoker",
     "title": "SprintPoker",
     "description": "SprintPoker is a web application that enables product teammates in organizations that practice agile methodologies to join a collaborative session in real-time and provide estimates to sprint tasks either in time estimates or story points.",
-    "project_background": "SprintPoker was built using Vue 3, TypeScript, Node.js and GraphQL. It was a good opportunity for me to practice and learn new technologies such as Node.js and GraphQL API spec. After deployment, I faced an interest challenge that arose because I deployed the API on a free server instance provided by render.com. The challenge was that the server spins down after periods of inactivity. To overcome this challenge, I wrote a bash script that makes a request to the APi and creates and deletes a dummy record at intervals of ten minutes. Then I deployed the script as a cron job via GitHub Actions. That away, I was able to keep the server from spinning down thereby ensuring that the performance of APi calls were not impacted negatively.",
+    "project_background": "I developed Sprintpoker using Vue 3, TypeScript, Node.js, and GraphQL, which provided an excellent opportunity to practice and explore new technologies like Node.js and the GraphQL API specification. After deploying the application, I encountered an interesting challenge: the API was hosted on a free server instance from Render.com, which automatically shuts down after periods of inactivity. To address this, I created a bash script that sends requests to the API, creating and deleting a dummy record every ten minutes. I then deployed this script as a cron job using GitHub Actions. This solution kept the server active, preventing downtime and ensuring consistent API performance.",
     "tags": ["Vue.js", "TypeScript", "GraphQL", "Node.js", "Cron job"],
     "images": [
       "/sprintpoker-4.png",
@@ -13,6 +13,17 @@
 
     "color": "#5FB4A2",
     "url": "https://sprintpoker-beta.vercel.app/#/"
+  },
+  {
+    "id": "realtrac",
+    "title": "Realtrac",
+    "description": "Realtrac is a real estate management solution for companies owners, real estate agents and buyers.",
+    "project_background": "Realtrac is a real estate management solution for companies owners, real estate agents and buyers. It is a comprehensive platform designed to automate and streamline every facet of property ownership, management and sales. I was responsible for building the frontend of the application using Next.js and TypeScript.",
+    "tags": ["React.js", "Next.js", "TypeScript"],
+    "images": ["/realtrac.png"],
+
+    "color": "#33323D",
+    "url": "https://frontend-realtrac.vercel.app/"
   },
   {
     "id": "eazyaccess_customers",
