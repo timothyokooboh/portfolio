@@ -121,13 +121,13 @@ onMounted(() => {
           <div
             class="font-publicSans text-body-1 leading-body font-regular text-primary-blue-200 opacity-80 mb-[24px] max-w-[50ch]"
           >
-            I'm a front-end developer currently based in Lagos Nigeria.
-            Throughout my career working with JavaScript/TypeScript, Vue.js and
-            React.js, I have had the privilege of working on a variety of
-            projects, including the development of enterprise-grade web
-            applications. My attention to detail shines when translating UI/UX
-            designs into pixel-perfect code, ensuring a seamless and visually
-            appealing user experience. I am equally comfortable working
+            I'm a software engineer currently based in Lagos Nigeria. Throughout
+            my career working with technologies such as TypeScript, Vue.js,
+            React.js, GraphQL, etc, I have had the privilege of working on a
+            variety of projects, including the development of enterprise-grade
+            web applications. My attention to detail shines when translating
+            UI/UX designs into pixel-perfect code, ensuring a seamless and
+            visually appealing user experience. I am equally comfortable working
             independently and collaboratively in an agile, cross-functional team
             setting.
           </div>
