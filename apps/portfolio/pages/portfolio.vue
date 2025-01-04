@@ -3,6 +3,8 @@ import { ref } from "vue";
 import type { Portfolio } from "~/types";
 import { useGetPortfolio } from "~/composables/useGetPortfolio";
 
+console.log("TESTING");
+
 const { getPortfolio } = useGetPortfolio();
 const portfolio = ref<Portfolio | null>(null);
 
