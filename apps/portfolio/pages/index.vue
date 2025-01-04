@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
-// import { tokens } from "@app/foundations";
 import { BaseButton } from "@app/ui-library";
 import mobileLandingImg from "~/assets/landing-img-mobile.svg";
 import tabletLandingImg from "~/assets/landing-img-tablet.svg";
