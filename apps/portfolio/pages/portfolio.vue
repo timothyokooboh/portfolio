@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import type { Portfolio } from "~/types";
-import { useGetPortfolio } from "~/composables/useGetPortfolio";
+// import { ref } from "vue";
+// import type { Portfolio } from "~/types";
+// import { useGetPortfolio } from "~/composables/useGetPortfolio";
 
 console.log("TESTING");
 
-const { getPortfolio } = useGetPortfolio();
-const portfolio = ref<Portfolio | null>(null);
+// const { getPortfolio } = useGetPortfolio();
+// const portfolio = ref<Portfolio | null>(null);
 
-portfolio.value = await getPortfolio();
+// portfolio.value = await getPortfolio();
 </script>
 
 <template>
