@@ -1,20 +1,17 @@
 <script setup lang="ts">
-// import { ref } from "vue";
-// import type { Portfolio } from "~/types";
-// import { useGetPortfolio } from "~/composables/useGetPortfolio";
+import { ref } from "vue";
+import type { Portfolio } from "~/types";
+import { useGetPortfolio } from "~/composables/useGetPortfolio";
 
-console.log("TESTING");
+const { getPortfolio } = useGetPortfolio();
+const portfolio = ref<Portfolio | null>(null);
 
-// const { getPortfolio } = useGetPortfolio();
-// const portfolio = ref<Portfolio | null>(null);
-
-// portfolio.value = await getPortfolio();
+portfolio.value = await getPortfolio();
 </script>
 
 <template>
   <div>
-    <p class="portfolio-list-item">testing</p>
-    <!-- <div v-if="portfolio?.body">
+    <div v-if="portfolio?.body">
       <div class="portfolio-list-item">
         <PortfolioListItemSummary
           v-for="(project, index) in portfolio.body"
@@ -25,7 +22,7 @@ console.log("TESTING");
       </div>
 
       <FooterCTA />
-    </div> -->
+    </div>
   </div>
 </template>
 
