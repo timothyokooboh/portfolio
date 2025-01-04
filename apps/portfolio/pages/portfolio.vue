@@ -13,7 +13,8 @@ portfolio.value = await getPortfolio();
 
 <template>
   <div>
-    <div v-if="portfolio?.body">
+    <p class="portfolio-list-item">testing</p>
+    <!-- <div v-if="portfolio?.body">
       <div class="portfolio-list-item">
         <PortfolioListItemSummary
           v-for="(project, index) in portfolio.body"
@@ -24,7 +25,7 @@ portfolio.value = await getPortfolio();
       </div>
 
       <FooterCTA />
-    </div>
+    </div> -->
   </div>
 </template>
 
