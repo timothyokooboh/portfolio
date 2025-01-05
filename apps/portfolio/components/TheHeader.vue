@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRoute } from "vue-router";
-import { vOnClickOutside } from "@vueuse/components";
+// import { vOnClickOutside } from "@vueuse/components";
 
 const route = useRoute();
 const isOpen = ref(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
+const closeMenu = () => {
+  isOpen.value = false;
+};
 </script>
 
 <template>
@@ -19,19 +26,10 @@ const isOpen = ref(false);
         class="md:hidden"
         aria-haspopup="true"
         aria-controls="menu"
+        @click="toggleMenu"
       >
-        <img
-          v-if="isOpen"
-          src="/close-menu.svg"
-          alt="hamburger menu"
-          @click="isOpen = false"
-        />
-        <img
-          v-else
-          src="/hamburger.svg"
-          alt="hamburger menu"
-          @click="isOpen = true"
-        />
+        <img v-if="isOpen" src="/close-menu.svg" alt="hamburger menu" />
+        <img v-else src="/hamburger.svg" alt="hamburger menu" />
       </button>
 
       <nav
@@ -58,10 +56,7 @@ const isOpen = ref(false);
       </nav>
     </section>
 
-    <MobileMenuDropdown
-      v-on-click-outside="() => (isOpen = false)"
-      :is-open="isOpen"
-    />
+    <MobileMenuDropdown :is-open="isOpen" @close:menu="closeMenu" />
   </div>
 </template>
 

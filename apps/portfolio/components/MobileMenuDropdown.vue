@@ -5,7 +5,18 @@ defineProps<{
   isOpen: boolean;
 }>();
 
+const emit = defineEmits(["close:menu"]);
 const route = useRoute();
+
+const handleKeyDown = (e: KeyboardEvent) => {
+  if (e.key === "Escape") {
+    emit("close:menu");
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("keydown", handleKeyDown);
+});
 </script>
 
 <template>
@@ -16,6 +27,7 @@ const route = useRoute();
       role="menu"
       aria-labelledby="menubutton"
       class="z-10 md:hidden absolute top-[30px] right-0 bg-primary-blue-200 text-white text-center flex flex-col text-[12px] items-center justify-center w-[223px] py-10 uppercase"
+      @keydown="handleKeyDown"
     >
       <li role="presentation" class="mb-8">
         <NuxtLink
@@ -23,6 +35,7 @@ const route = useRoute();
           to="/"
           class="menu-item"
           active-class="menu-item--active"
+          @click="$emit('close:menu')"
           >Home</NuxtLink
         >
       </li>
@@ -36,6 +49,7 @@ const route = useRoute();
           :class="{
             'menu-item--active': route.path.startsWith('/portfolio'),
           }"
+          @click="$emit('close:menu')"
           >Portfolio</NuxtLink
         >
       </li>
@@ -46,6 +60,7 @@ const route = useRoute();
           to="/contact"
           class="menu-item"
           active-class="menu-item--active"
+          @click="$emit('close:menu')"
           >Contact Me</NuxtLink
         >
       </li>
