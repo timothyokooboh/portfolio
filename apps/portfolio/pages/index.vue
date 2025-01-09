@@ -67,7 +67,7 @@ onMounted(() => {
           <h2
             class="mb-[53px] md:pt-[56px] text-h2 lg:text-h1 font-ibarra font-bold leading-h2 lg:leading-h1 tracking-[-0.36px] text-primary-blue-200"
           >
-            Hey, I'm Timothy Okooboh and I love building beautiful websites
+            Hey, I'm Timothy Okooboh and I love building valuable products
           </h2>
         </IntersectionObserver>
 
