@@ -1,86 +1,29 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
 import { BaseButton } from "@app/ui-library";
-import mobileLandingImg from "~/assets/landing-img-mobile.svg";
-import tabletLandingImg from "~/assets/landing-img-tablet.svg";
-import desktopLandingImg from "~/assets/landing-img-desktop.svg";
-
-const handleBendingAnimation = () => {
-  const pictureContainer = document.querySelector(
-    "#picture-container",
-  ) as HTMLDivElement;
-  const picture = document.querySelector("#picture") as HTMLImageElement;
-
-  if (pictureContainer && picture) {
-    pictureContainer.addEventListener("mousemove", (e) => {
-      const { clientX, clientY } = e;
-      const { offsetWidth, offsetHeight } = pictureContainer;
-
-      const xPos = (clientX / offsetWidth - 0.5) * 2;
-      const yPos = (clientY / offsetHeight - 0.5) * 2;
-
-      const rotateX = 20 * yPos;
-      const rotateY = -20 * xPos;
-
-      picture.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(30px)`;
-
-      pictureContainer.addEventListener("mouseleave", () => {
-        picture.style.transform = "rotateX(0) rotateY(0) translateZ(0)";
-      });
-    });
-  }
-};
-
-onMounted(() => {
-  handleBendingAnimation();
-});
 </script>
 
 <template>
-  <div class="mx-auto flex flex-col items-center">
-    <section class="relative">
-      <IntersectionObserver>
-        <div id="picture-container">
-          <picture>
-            <source
-              :srcset="desktopLandingImg"
-              :media="`(min-width: 1440px)`"
-            />
-            <source :srcset="tabletLandingImg" :media="`(min-width: 768px)`" />
-
-            <source :srcset="mobileLandingImg" :media="`(min-width: 375px)`" />
-
-            <img
-              id="picture"
-              :src="desktopLandingImg"
-              alt=""
-              class="object-cover"
-            />
-          </picture>
-        </div>
-      </IntersectionObserver>
-
-      <div
-        class="bg-white md:w-[514px] lg:w-[445px] max-w-[514px] md:absolute md:bottom-[0px] mt-6"
+  <div>
+    <IntersectionObserver custom-class="slide-down">
+      <section
+        class="flex flex-col-reverse items-center max-w-[500px] mx-auto lg:max-w-full lg:gap-x-[100px] lg:flex-row lg:justify-between lg:items-start"
       >
-        <IntersectionObserver custom-class="slide-right">
+        <div>
           <h2
-            class="mb-[53px] md:pt-[56px] text-h2 lg:text-h1 font-ibarra font-bold leading-h2 lg:leading-h1 tracking-[-0.36px] text-primary-blue-200"
+            class="mb-[53px] text-[2rem] lg:text-h1 font-ibarra font-bold leading-h2 tracking-[-0.36px] text-primary-blue-200 md:text-h2 md:pt-[56px] lg:leading-h1"
           >
             Hey, I'm Timothy Okooboh and I love building valuable products
           </h2>
-        </IntersectionObserver>
 
-        <div class="flex flex-wrap items-center">
-          <IntersectionObserver>
+          <div
+            class="flex flex-wrap items-center justify-center lg:justify-start"
+          >
             <a href="#about-me">
               <BaseButton class="uppercase text-xs tracking-[2px] mr-3 mb-2"
                 >About Me</BaseButton
               >
             </a>
-          </IntersectionObserver>
 
-          <IntersectionObserver>
             <a
               download
               href="/resume.pdf"
@@ -92,16 +35,24 @@ onMounted(() => {
               />
               <div class="text-xs text-primary-blue-200">Resume</div>
             </a>
-          </IntersectionObserver>
+          </div>
         </div>
-      </div>
-    </section>
+
+        <div class="hidden md:flex md:justify-end">
+          <img
+            src="/realtrac.png"
+            alt=""
+            class="md:max-w-[400px] lg:max-w-[400px] object-contain border-solid border-[10px] border-[#33323D]"
+          />
+        </div>
+      </section>
+    </IntersectionObserver>
 
     <section
       id="about-me"
-      class="grid mt-[80px] gap-y-[40px] md:grid-cols-[381px_1fr] md:gap-x-[69px] lg:grid-cols-[540px_350px] lg:gap-x-[125px]"
+      class="grid mt-[80px] gap-y-[40px] md:grid-cols-[381px_1fr] md:gap-x-[69px] lg:grid-cols-[540px_1fr] lg:gap-x-[125px]"
     >
-      <IntersectionObserver>
+      <IntersectionObserver custom-class="slide-down">
         <img
           src="/profile-picture.jpeg"
           alt="profile picture"
@@ -119,7 +70,7 @@ onMounted(() => {
             About Me
           </div>
           <div
-            class="font-publicSans text-body-1 leading-body font-regular text-primary-blue-200 opacity-80 mb-[24px] max-w-[50ch]"
+            class="font-publicSans text-body-1 leading-body font-regular text-primary-blue-200 opacity-80 mb-[24px] max-w-[75ch]"
           >
             I'm a software engineer currently based in Lagos Nigeria. Throughout
             my career working with technologies such as TypeScript, Vue.js,
@@ -148,16 +99,3 @@ onMounted(() => {
     <FooterCTA />
   </div>
 </template>
-
-<style lang="scss" scoped>
-#picture-container {
-  perspective: 1000px;
-  overflow: hidden;
-  cursor: url("./cursor.png"), auto;
-}
-
-#picture {
-  transform-style: preserve-3d;
-  transition: transform 0.3s;
-}
-</style>

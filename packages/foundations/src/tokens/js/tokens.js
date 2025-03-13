@@ -1,62 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Sat, 04 Jan 2025 22:04:16 GMT
+ * Generated on Thu, 13 Mar 2025 15:57:54 GMT
  */
 
 module.exports = {
-  "screens": {
-    "sm": {
-      "value": "375px",
-      "filePath": "src/tokens/breakpoints.json",
-      "isSource": true,
-      "original": {
-        "value": "375px"
-      },
-      "name": "ScreensSm",
-      "attributes": {
-        "category": "screens",
-        "type": "sm"
-      },
-      "path": [
-        "screens",
-        "sm"
-      ]
-    },
-    "md": {
-      "value": "768px",
-      "filePath": "src/tokens/breakpoints.json",
-      "isSource": true,
-      "original": {
-        "value": "768px"
-      },
-      "name": "ScreensMd",
-      "attributes": {
-        "category": "screens",
-        "type": "md"
-      },
-      "path": [
-        "screens",
-        "md"
-      ]
-    },
-    "lg": {
-      "value": "1440px",
-      "filePath": "src/tokens/breakpoints.json",
-      "isSource": true,
-      "original": {
-        "value": "1440px"
-      },
-      "name": "ScreensLg",
-      "attributes": {
-        "category": "screens",
-        "type": "lg"
-      },
-      "path": [
-        "screens",
-        "lg"
-      ]
-    }
-  },
   "colors": {
     "primary": {
       "cyan": {
