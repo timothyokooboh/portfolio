@@ -5,9 +5,11 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const DEFAULT_BUILD_DIRECTORY = ".next";
 const DEFAULT_IMAGE_QUALITY = 75;
 const HIGH_FIDELITY_IMAGE_QUALITY = 95;
+const TRANSPILED_PACKAGES = ["next-mdx-remote"];
 
 const nextConfig: NextConfig = {
   distDir: process.env.NEXT_DIST_DIR ?? DEFAULT_BUILD_DIRECTORY,
+  transpilePackages: TRANSPILED_PACKAGES,
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [DEFAULT_IMAGE_QUALITY, HIGH_FIDELITY_IMAGE_QUALITY],
