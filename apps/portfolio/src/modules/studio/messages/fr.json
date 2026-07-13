@@ -1,0 +1,31 @@
+{
+  "studio": {
+    "metadata": {"title": "Studio d'écriture", "description": "Espace local de rédaction MDX pour les articles du portfolio de Timothy Okooboh."},
+    "shell": {
+      "eyebrow": "Studio privé", "title": "Studio d'écriture", "description": "Un flux MDX local pour rédiger, modifier et prévisualiser les articles avant publication.",
+      "allPosts": "Tous les articles", "newPost": "Nouvel article", "backToSite": "Retour au portfolio", "signedInAs": "Connecté en tant que {email}", "signOut": "Se déconnecter"
+    },
+    "auth": {
+      "title": "Accès local au studio", "description": "Aucune connexion hébergée n'est nécessaire. Le studio s'ouvre directement sur localhost et reste absent du site déployé.",
+      "emailLabel": "Adresse e-mail", "emailPlaceholder": "vous@exemple.com", "submit": "Envoyer le lien magique", "success": "Lien envoyé. Consultez votre boîte de réception.",
+      "invalidEmail": "Saisissez une adresse e-mail valide.", "requestFailed": "Une erreur est survenue lors de la demande.", "signedInRedirect": "Vous êtes déjà connecté."
+    },
+    "setup": {
+      "title": "Flux de rédaction local", "description": "Ces routes sont prévues pour localhost. Le portfolio public peut rester statique tandis que l'espace de rédaction vit avec le code.",
+      "required": "Chemin du dépôt", "filename": "Source de contenu MDX", "note": "Les articles sont des fichiers MDX locaux. Rédigez, publiez et itérez ici, puis validez les changements comme du code."
+    },
+    "dashboard": {
+      "title": "Tous les articles", "description": "Une vue simple des essais publiés et des brouillons issus de la source MDX locale.", "status": "Statut", "updated": "Mis à jour", "readTime": "Temps de lecture", "article": "Article", "actions": "Actions",
+      "publishedCount": "Publiés", "draftCount": "Brouillons", "publishedLabel": "Publié", "draftLabel": "Brouillon", "newArticle": "Créer un article", "edit": "Modifier", "openPublic": "Ouvrir la page publique", "empty": "Aucun article."
+    },
+    "editor": {
+      "newTitle": "Créer un article", "editTitle": "Modifier l'article", "formTitle": "Détails de l'article", "description": "Rédigez directement dans le modèle MDX local avec métadonnées, blocs de code, images Markdown et composants de démonstration.",
+      "titleLabel": "Titre", "slugLabel": "Slug", "descriptionLabel": "Description d'introduction", "summaryLabel": "Résumé", "categoryLabel": "Catégorie", "readTimeLabel": "Temps de lecture", "bodyLabel": "Corps de l'article (MDX)", "bodyDescription": "Utilisez Markdown, des blocs de code, des images ou les composants MDX approuvés.",
+      "saveDraft": "Enregistrer le brouillon", "publish": "Publier l'article", "preview": "Prévisualiser la page publique", "sectionsTitle": "Sections détectées", "sectionsDescription": "Cet aperçu reflète les titres MDX actuels.", "previewTitle": "Aperçu en direct", "previewDescription": "Un aperçu léger des métadonnées d'introduction.",
+      "previewEmptyTitle": "Aperçu du nouvel article", "previewEmptyDescription": "Rédigez une introduction claire qui explique le sujet et son intérêt.", "previewEmptySummary": "Créez un résumé concis adapté aux cartes et aux archives.", "sectionCount": "{count} sections", "lineCount": "{count} lignes de contenu", "structureEmpty": "Aucune section H2 détectée. Ajoutez des titres comme ## Contexte ou ## Implémentation.", "notAvailable": "Cet article n'existe pas encore dans la source locale.",
+      "draftLabel": "Brouillon", "publishedLabel": "Publié", "newDescriptionPlaceholder": "Rédigez le paragraphe d'introduction.", "newSummaryPlaceholder": "Un résumé concis de ce que l'article enseigne.", "newTitlePlaceholder": "Titre du prochain article", "newSlugPlaceholder": "slug-article", "newCategoryPlaceholder": "Design systems", "newReadTimePlaceholder": "5 min de lecture",
+      "bodyExampleFilename": "article.mdx", "bodyExampleLabel": "Syntaxe prise en charge",
+      "errors": {"required": "Ce champ est obligatoire.", "slugTaken": "Ce slug est déjà utilisé par un autre article.", "validationError": "Corrigez les champs signalés puis réessayez."}
+    }
+  }
+}

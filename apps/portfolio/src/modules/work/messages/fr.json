@@ -1,0 +1,43 @@
+{
+  "workPage": {
+    "hero": {
+      "eyebrow": "Projets sélectionnés",
+      "title": "Un travail frontend ancré dans de vrais produits.",
+      "description": "Une sélection de projets couvrant les design systems, les workflows IA, le commerce et l’open source, avec un même fil conducteur : la responsabilité de bout en bout."
+    },
+    "professional": {
+      "eyebrow": "Études de cas",
+      "title": "Des produits livrés, racontés en profondeur.",
+      "description": "Ces projets montrent comment je travaille avec de vraies contraintes produit, de l’architecture jusqu’aux détails livrés.",
+      "cta": "Ouvrir l’étude de cas"
+    },
+    "lab": {
+      "eyebrow": "Open source",
+      "title": "Un projet open source qui a renforcé mes réflexes frontend.",
+      "description": "VBox reflète mon approche : des primitives solides, des API ergonomiques et des abstractions utiles dans du vrai code produit.",
+      "ctaPrimary": "Lire l’étude de cas",
+      "ctaSecondary": "Ouvrir le projet"
+    },
+    "cta": {
+      "eyebrow": "Prochaine étape",
+      "title": "Besoin d’un ingénieur frontend senior capable de prendre en charge le système derrière l’interface ?",
+      "description": "Bibliothèques partagées, workflows produit denses ou architecture frontend où l’accessibilité et la qualité comptent réellement.",
+      "primaryAction": "Me contacter",
+      "secondaryAction": "Télécharger le CV"
+    }
+  },
+  "workDetailPage": {
+    "backLink": "Retour aux projets",
+    "metricsEyebrow": "Indicateurs du projet",
+    "overviewEyebrow": "01 / Vue d’ensemble",
+    "challengeEyebrow": "02 / Défi",
+    "implementationEyebrow": "03 / Mise en œuvre",
+    "reflectionEyebrow": "Réflexion",
+    "reflectionTitle": "Ce que ce projet a renforcé",
+    "visitLive": "Voir le produit",
+    "roleLabel": "Rôle",
+    "timelineLabel": "Période",
+    "stackLabel": "Stack",
+    "metricLabel": "Indicateur {index}"
+  }
+}

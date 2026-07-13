@@ -1,0 +1,43 @@
+{
+  "designsPage": {
+    "hero": {
+      "eyebrow": "Estudios de diseño",
+      "title": "Estudios de interfaz de un ingeniero frontend que está fortaleciendo su criterio de diseño.",
+      "description": "Estos estudios de Figma acompañan la renovación del portafolio y documentan públicamente cómo desarrollo tipografía, composición, pensamiento sistémico y diseño de movimiento."
+    },
+    "intro": {
+      "title": "Por qué este trabajo ya está aquí",
+      "description": "Estoy desarrollando deliberadamente la parte de diseño de mi práctica en público. Estos estudios muestran qué pruebo, qué aprendo y cómo ese aprendizaje mejora mi forma de construir productos."
+    },
+    "learning": {
+      "title": "Lo que estoy aprendiendo activamente",
+      "items": [
+        {"title": "Narrativa editorial", "description": "Aprender cómo la tipografía, el ritmo y la composición pueden transmitir credibilidad técnica sin volver la interfaz densa."},
+        {"title": "Pensamiento sistémico visual", "description": "Explorar cómo un lenguaje visual puede sostener tarjetas de proyectos, casos de estudio, artículos y galerías sin perder claridad."},
+        {"title": "Estructuras preparadas para el movimiento", "description": "Diseñar pantallas con ritmo y jerarquía suficientes para que el movimiento aclare las transiciones en lugar de compensar una composición débil."}
+      ]
+    },
+    "collection": {
+      "title": "Los primeros cinco estudios del portafolio",
+      "description": "Cada dirección aborda un problema distinto: primera impresión, exploración de proyectos, casos de estudio extensos, artículos y presentación pública del trabajo de diseño.",
+      "detailsAction": "Más detalles",
+      "figmaAction": "Abrir Figma"
+    }
+  },
+  "designDetailPage": {
+    "backLink": "Volver a diseños",
+    "metadataEyebrow": "Metadatos de pantalla",
+    "overviewEyebrow": "01 / Resumen",
+    "principlesEyebrow": "02 / Principios de diseño",
+    "principlesTitle": "Las decisiones que definen esta dirección",
+    "galleryEyebrow": "03 / Vista previa",
+    "reflectionEyebrow": "Reflexión",
+    "reflectionTitle": "Lo que este estudio me está enseñando",
+    "figmaLabel": "Enlace de Figma",
+    "frameLabel": "Frame",
+    "typeLabel": "Tipo",
+    "toolLabel": "Herramienta",
+    "statusLabel": "Estado",
+    "visitFigma": "Abrir el frame en Figma"
+  }
+}

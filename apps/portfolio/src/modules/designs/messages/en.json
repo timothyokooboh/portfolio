@@ -1,0 +1,249 @@
+{
+  "designsPage": {
+    "hero": {
+      "eyebrow": "Design studies",
+      "title": "Interface studies from a frontend engineer sharpening design craft.",
+      "description": "These Figma studies sit alongside the portfolio rebuild and document how I am strengthening typography, layout, systems thinking, and motion design in public."
+    },
+    "intro": {
+      "title": "Why this work is here now",
+      "description": "I’m deliberately building the design side of my practice in public. These studies document what I am testing, what I am learning, and how that learning feeds back into the way I build products."
+    },
+    "learning": {
+      "title": "What I am actively learning",
+      "items": [
+        {
+          "title": "Editorial storytelling",
+          "description": "Learning how typography, pacing, and composition can carry technical credibility without making the interface feel dense or dry."
+        },
+        {
+          "title": "System thinking in visual form",
+          "description": "Exploring how one visual language can support project cards, case studies, writing surfaces, and design galleries without losing clarity."
+        },
+        {
+          "title": "Motion-ready interface structure",
+          "description": "Designing screens with enough rhythm and hierarchy that future motion can clarify transitions and focus rather than compensate for weak layout."
+        }
+      ]
+    },
+    "collection": {
+      "title": "The first five portfolio studies",
+      "description": "Each direction tackles a different portfolio problem: first impression, project browsing, long-form case studies, writing, and how to show design work in public.",
+      "detailsAction": "More details",
+      "figmaAction": "Open Figma"
+    }
+  },
+  "designDetailPage": {
+    "backLink": "Back to designs",
+    "metadataEyebrow": "Screen metadata",
+    "overviewEyebrow": "01 / Overview",
+    "principlesEyebrow": "02 / Design principles",
+    "principlesTitle": "The decisions shaping the direction",
+    "galleryEyebrow": "03 / Screen preview",
+    "reflectionEyebrow": "Reflection",
+    "reflectionTitle": "What this study is teaching me",
+    "figmaLabel": "Figma link",
+    "frameLabel": "Frame",
+    "typeLabel": "Type",
+    "toolLabel": "Tool",
+    "statusLabel": "Status",
+    "visitFigma": "Open the Figma frame"
+  },
+  "designProjects": {
+    "portfolio-home-direction": {
+      "label": "Portfolio Redesign / Home",
+      "cardCaption": "Hero hierarchy, proof signals, and a first impression that feels deliberate without becoming loud.",
+      "hero": {
+        "eyebrow": "Home direction",
+        "title": "Designing a homepage that feels credible before it feels flashy.",
+        "description": "This direction explores how to present my frontend depth clearly while making room for the design practice I am deliberately building."
+      },
+      "summary": "A homepage direction built around credibility, clear proof of depth, and enough visual character to feel considered.",
+      "meta": {
+        "type": "Landing page study",
+        "tool": "Stitch / Figma",
+        "status": "Selected for build",
+        "figmaFrame": "Home direction"
+      },
+      "overview": [
+        "The homepage needed to do two jobs at once. It had to establish credibility quickly for recruiters and hiring managers, and it also had to hint at a more design-conscious direction than a typical frontend portfolio.",
+        "This study focuses on the opening rhythm: strong type, evidence of systems work, a visible design taste, and a structure that can evolve when more design-led projects start joining the portfolio."
+      ],
+      "principles": [
+        {
+          "title": "Credibility up front",
+          "description": "The first screen should make experience, specialization, and proof visible before asking visitors to scroll for validation."
+        },
+        {
+          "title": "Editorial restraint",
+          "description": "The layout avoids spectacle-led interaction and instead relies on proportion, typography, and spacing to create presence."
+        },
+        {
+          "title": "Room to grow",
+          "description": "The structure leaves space for the future Design Engineer positioning without requiring a future rewrite of the entire homepage."
+        }
+      ],
+      "gallery": {
+        "title": "Homepage direction",
+        "caption": "The selected screen leans on type, proof markers, and measured contrast to create a precise first impression."
+      },
+      "reflection": "This study is teaching me that strong first impressions come more from hierarchy and restraint than from novelty. Once the structure is confident, the rest can stay subtle."
+    },
+    "selected-work-archive": {
+      "label": "Portfolio Redesign / Work Index",
+      "cardCaption": "A catalogue system for engineering work that keeps narrative quality instead of collapsing into plain thumbnails.",
+      "hero": {
+        "eyebrow": "Work archive",
+        "title": "Turning project depth into a browseable archive.",
+        "description": "This direction explores how to show a broad range of projects without flattening everything into the same kind of card."
+      },
+      "summary": "A selected-work listing that gives each project enough context to feel intentional, not just listed.",
+      "meta": {
+        "type": "Archive surface",
+        "tool": "Stitch / Figma",
+        "status": "Selected for build",
+        "figmaFrame": "Selected work archive"
+      },
+      "overview": [
+        "The work index has to carry a diverse set of projects: design systems, AI product work, full-stack commerce, and open source experiments. The challenge is making that range feel coherent rather than scattered.",
+        "This study creates a visual system that can separate shipped product work from exploratory work while keeping both within one deliberate editorial tone."
+      ],
+      "principles": [
+        {
+          "title": "Fast scanning with real context",
+          "description": "Each card should expose enough role, scope, and relevance that the visitor can decide what to open without guessing."
+        },
+        {
+          "title": "Clear grouping",
+          "description": "Professional delivery and experimental work need different framing so the archive feels curated rather than mixed together by accident."
+        },
+        {
+          "title": "Reusable card language",
+          "description": "The visual rules for cards, labels, and imagery should scale cleanly as more projects and prototypes are added over time."
+        }
+      ],
+      "gallery": {
+        "title": "Selected work archive",
+        "caption": "The screen is designed to support scanning, comparison, and progression into deeper case-study reading."
+      },
+      "reflection": "This study is helping me think more carefully about browse surfaces. The important question is not how much to show, but what deserves emphasis when someone is deciding where to click."
+    },
+    "case-study-storytelling": {
+      "label": "Portfolio Redesign / Case Study",
+      "cardCaption": "Long-form storytelling for contribution, technical decisions, and product impact without turning into a résumé dump.",
+      "hero": {
+        "eyebrow": "Case-study structure",
+        "title": "Designing a case-study page that can carry real engineering depth.",
+        "description": "This direction explores how to combine narrative, screenshots, code context, and implementation detail without making the page feel heavy."
+      },
+      "summary": "A case-study template for explaining context, constraints, implementation, and contribution without turning the page into a resume dump.",
+      "meta": {
+        "type": "Case-study page",
+        "tool": "Stitch / Figma",
+        "status": "Selected for build",
+        "figmaFrame": "Case-study storytelling"
+      },
+      "overview": [
+        "The portfolio needs project pages where I can express not just what was built, but what constraints shaped the work, what decisions I made, and where my contribution changed the outcome.",
+        "This study introduces an editorial structure with a persistent side rail, long-form reading rhythm, and room for both visual evidence and code-grounded implementation details."
+      ],
+      "principles": [
+        {
+          "title": "Narrative cadence",
+          "description": "The page alternates between dense information and breathing room so the reading experience feels guided rather than exhausting."
+        },
+        {
+          "title": "Visible ownership",
+          "description": "Role, timeline, stack, and measurable outcomes need to be easy to find because they establish the scale of contribution."
+        },
+        {
+          "title": "Code and craft together",
+          "description": "Implementation detail should feel native to the page instead of tacked on as an afterthought beneath the design story."
+        }
+      ],
+      "gallery": {
+        "title": "Case-study storytelling",
+        "caption": "The screen balances structure and warmth so technical detail feels readable, not clinical."
+      },
+      "reflection": "This study keeps reminding me that storytelling is also a layout problem. The same content can either feel heavy or readable depending on sequence, hierarchy, and pacing."
+    },
+    "writing-journal-surface": {
+      "label": "Portfolio Redesign / Writing",
+      "cardCaption": "A reading surface for technical essays, code demos, and the quieter side of craft-building.",
+      "hero": {
+        "eyebrow": "Writing surface",
+        "title": "Designing a writing surface for technical notes, code, and demos.",
+        "description": "This direction explores a quieter interface for articles about design systems, motion, accessibility, modern CSS, and frontend architecture."
+      },
+      "summary": "A writing direction where technical notes, code examples, and interactive demos can live inside one consistent editorial system.",
+      "meta": {
+        "type": "Editorial reading surface",
+        "tool": "Stitch / Figma",
+        "status": "Ready for implementation",
+        "figmaFrame": "Writing journal surface"
+      },
+      "overview": [
+        "The writing section needs to do more than list article titles. It should create enough calm and structure that readers want to stay with an idea, especially when the article includes code, live components, or implementation breakdowns.",
+        "This study focuses on readability, contrast, and modular content zones so that future posts can vary in format without breaking the tone of the portfolio."
+      ],
+      "principles": [
+        {
+          "title": "Typography-led reading",
+          "description": "The surface should let type, spacing, and rhythm do the heavy lifting instead of leaning on decorative layout noise."
+        },
+        {
+          "title": "Interactive teaching space",
+          "description": "The layout anticipates code blocks and embedded component demos as first-class citizens of the article experience."
+        },
+        {
+          "title": "Shared system, different mood",
+          "description": "The writing area should feel quieter than the project pages while still belonging unmistakably to the same design language."
+        }
+      ],
+      "gallery": {
+        "title": "Writing journal surface",
+        "caption": "A calmer, more typographic direction for educational content, annotated code, and component experiments."
+      },
+      "reflection": "This study is reinforcing how much good reading surfaces depend on restraint. When the layout gets quieter, the ideas themselves have more room."
+    },
+    "design-showcase-gallery": {
+      "label": "Portfolio Redesign / Designs",
+      "cardCaption": "A gallery system for showing design studies clearly, with enough context to make the work legible.",
+      "hero": {
+        "eyebrow": "Design showcase",
+        "title": "Designing a gallery that can show evolving design work with clarity and confidence.",
+        "description": "This direction explores how to present interface studies and Figma work without overselling them or underselling the thinking behind them."
+      },
+      "summary": "A gallery surface for showing design studies, preview images, short context, and direct links back to the source Figma files.",
+      "meta": {
+        "type": "Gallery surface",
+        "tool": "Stitch / Figma",
+        "status": "Ready for implementation",
+        "figmaFrame": "Design showcase gallery"
+      },
+      "overview": [
+        "The design side of my practice is newer than the engineering side, so the page needs framing that is confident, transparent, and scalable as more studies, prototypes, and experiments get added.",
+        "This study builds that framing through compact cards, clear captions, and a system that can scale as more Figma projects, prototypes, and interface experiments are added."
+      ],
+      "principles": [
+        {
+          "title": "Honest framing",
+          "description": "The copy and visual tone should acknowledge growth while still presenting the work with confidence and care."
+        },
+        {
+          "title": "Preview before explanation",
+          "description": "Visitors should be able to see the design direction first, then choose how much context they want to read."
+        },
+        {
+          "title": "Direct source access",
+          "description": "Each study should link back to its Figma source so the portfolio feels transparent and traceable."
+        }
+      ],
+      "gallery": {
+        "title": "Design showcase gallery",
+        "caption": "A compact but expandable system for documenting Figma studies as the design body of work grows."
+      },
+      "reflection": "This study matters because it gives the design side of the portfolio an explicit place to live. It turns ongoing practice into something visible, reviewable, and worth building on."
+    }
+  }
+}

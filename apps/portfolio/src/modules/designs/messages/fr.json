@@ -1,0 +1,43 @@
+{
+  "designsPage": {
+    "hero": {
+      "eyebrow": "Études de design",
+      "title": "Des études d'interface réalisées par un ingénieur frontend qui affine sa pratique du design.",
+      "description": "Ces études Figma accompagnent la refonte du portfolio et documentent publiquement mon travail sur la typographie, la mise en page, la pensée systémique et le motion design."
+    },
+    "intro": {
+      "title": "Pourquoi ce travail est déjà visible",
+      "description": "Je développe volontairement la dimension design de ma pratique en public. Ces études montrent ce que je teste, ce que j'apprends et comment cela enrichit ma manière de construire des produits."
+    },
+    "learning": {
+      "title": "Ce que j'apprends activement",
+      "items": [
+        {"title": "Narration éditoriale", "description": "Comprendre comment la typographie, le rythme et la composition peuvent porter une crédibilité technique sans alourdir l'interface."},
+        {"title": "Pensée systémique visuelle", "description": "Explorer comment un langage visuel unique peut soutenir les cartes projet, les études de cas, les articles et les galeries sans perdre en clarté."},
+        {"title": "Structures prêtes pour le mouvement", "description": "Concevoir des écrans dont le rythme et la hiérarchie permettent au mouvement de clarifier les transitions plutôt que de masquer une mise en page faible."}
+      ]
+    },
+    "collection": {
+      "title": "Les cinq premières études du portfolio",
+      "description": "Chaque direction répond à un enjeu différent : première impression, navigation dans les projets, études de cas longues, articles et présentation publique du travail de design.",
+      "detailsAction": "Voir les détails",
+      "figmaAction": "Ouvrir Figma"
+    }
+  },
+  "designDetailPage": {
+    "backLink": "Retour aux designs",
+    "metadataEyebrow": "Métadonnées de l'écran",
+    "overviewEyebrow": "01 / Vue d'ensemble",
+    "principlesEyebrow": "02 / Principes de design",
+    "principlesTitle": "Les décisions qui façonnent cette direction",
+    "galleryEyebrow": "03 / Aperçu de l'écran",
+    "reflectionEyebrow": "Réflexion",
+    "reflectionTitle": "Ce que cette étude m'apprend",
+    "figmaLabel": "Lien Figma",
+    "frameLabel": "Frame",
+    "typeLabel": "Type",
+    "toolLabel": "Outil",
+    "statusLabel": "Statut",
+    "visitFigma": "Ouvrir la frame Figma"
+  }
+}

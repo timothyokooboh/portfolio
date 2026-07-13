@@ -1,61 +1,31 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
-test.describe("contact page", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto("/contact");
-  });
+import { gotoHydratedPage } from "./goto-hydrated-page";
 
-  test("renders appropriate headings", async ({ page }) => {
-    await expect(
-      page.getByRole("heading", { name: "get in touch" }),
-    ).toBeVisible();
+test("routes to the contact page from the header CTA", async ({ page }) => {
+  await gotoHydratedPage(page, "/");
 
-    await expect(
-      page.getByRole("heading", { name: "contact me" }),
-    ).toBeVisible();
-  });
+  await page.getByRole("link", { name: /contact/i }).first().click();
 
-  test("email input should be invalid on typing an invalid email address", async ({
-    page,
-  }) => {
-    await page.getByTestId("email").fill("matt");
-    const isInvalid = await page.$eval('input[type="email"]', (input) => {
-      return input.matches(":invalid");
-    });
+  await expect(
+    page.getByRole("heading", {
+      name: /hiring for senior frontend, design systems, or product ui\? let.?s talk\./i,
+    }),
+  ).toBeVisible();
 
-    expect(isInvalid).toBe(true);
-  });
+  await expect(
+    page.locator('a[href="mailto:okoobohtimothy@gmail.com"]').first(),
+  ).toBeVisible();
+});
 
-  test("email input should be valid on typing a valid email address", async ({
-    page,
-  }) => {
-    await page.getByTestId("email-input").fill("matt@gmail.com");
-    const isInvalid = await page.$eval('input[name="email"]', (input) => {
-      return input.matches(":invalid");
-    });
+test("routes to the contact page from the footer CTA", async ({ page }) => {
+  await gotoHydratedPage(page, "/");
 
-    expect(isInvalid).toBe(false);
-  });
+  await page.getByRole("link", { name: /share the context\./i }).click();
 
-  test("name input should be valid on typing anything on it", async ({
-    page,
-  }) => {
-    await page.getByTestId("name-input").fill("timmy");
-    const isInvalid = await page.$eval('input[name="name"]', (input) => {
-      return input.matches(":invalid");
-    });
-
-    expect(isInvalid).toBe(false);
-  });
-
-  test("message textarea should be valid on typing anything on it", async ({
-    page,
-  }) => {
-    await page.getByTestId("message-input").fill("i want to make you an offer");
-    const isInvalid = await page.$eval('textarea[name="message"]', (input) => {
-      return input.matches(":invalid");
-    });
-
-    expect(isInvalid).toBe(false);
-  });
+  await expect(
+    page.getByRole("heading", {
+      name: /hiring for senior frontend, design systems, or product ui\? let.?s talk\./i,
+    }),
+  ).toBeVisible();
 });

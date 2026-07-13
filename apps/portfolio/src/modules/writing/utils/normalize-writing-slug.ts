@@ -1,0 +1,17 @@
+const WRITING_SLUG_DUPLICATE_SEPARATOR_PATTERN = /-+/g;
+const WRITING_SLUG_EDGE_SEPARATOR_PATTERN = /^-|-$/g;
+const WRITING_SLUG_NON_ALPHANUMERIC_PATTERN = /[^a-z0-9\s-]/g;
+const WRITING_SLUG_SEPARATOR = "-";
+const WRITING_SLUG_WHITESPACE_PATTERN = /\s+/g;
+
+function normalizeWritingSlug(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(WRITING_SLUG_NON_ALPHANUMERIC_PATTERN, "")
+    .replace(WRITING_SLUG_WHITESPACE_PATTERN, WRITING_SLUG_SEPARATOR)
+    .replace(WRITING_SLUG_DUPLICATE_SEPARATOR_PATTERN, WRITING_SLUG_SEPARATOR)
+    .replace(WRITING_SLUG_EDGE_SEPARATOR_PATTERN, "");
+}
+
+export { normalizeWritingSlug };

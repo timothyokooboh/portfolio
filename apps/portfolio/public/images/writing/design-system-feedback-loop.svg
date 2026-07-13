@@ -1,0 +1,26 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="40" fill="#0F172A"/>
+  <rect x="72" y="88" width="320" height="184" rx="28" fill="#15213B" stroke="#25324E"/>
+  <rect x="440" y="88" width="320" height="184" rx="28" fill="#15213B" stroke="#25324E"/>
+  <rect x="808" y="88" width="320" height="184" rx="28" fill="#15213B" stroke="#25324E"/>
+  <rect x="256" y="448" width="320" height="184" rx="28" fill="#15213B" stroke="#25324E"/>
+  <rect x="624" y="448" width="320" height="184" rx="28" fill="#15213B" stroke="#25324E"/>
+  <path d="M392 180H440" stroke="#4F8CFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M760 180H808" stroke="#4F8CFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M600 272V404" stroke="#D29A2E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M416 452L328 272" stroke="#4F8CFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M784 452L872 272" stroke="#4F8CFF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="600" cy="360" r="68" fill="#182847" stroke="#D29A2E" stroke-width="8"/>
+  <text x="140" y="162" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Accessible</text>
+  <text x="140" y="202" fill="#94A3B8" font-family="Arial, sans-serif" font-size="24">primitives</text>
+  <text x="510" y="162" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Documentation</text>
+  <text x="510" y="202" fill="#94A3B8" font-family="Arial, sans-serif" font-size="24">and examples</text>
+  <text x="916" y="162" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Team adoption</text>
+  <text x="916" y="202" fill="#94A3B8" font-family="Arial, sans-serif" font-size="24">and trust</text>
+  <text x="348" y="522" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Feedback loops</text>
+  <text x="348" y="562" fill="#94A3B8" font-family="Arial, sans-serif" font-size="24">from product teams</text>
+  <text x="722" y="522" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">System quality</text>
+  <text x="722" y="562" fill="#94A3B8" font-family="Arial, sans-serif" font-size="24">improves over time</text>
+  <text x="555" y="350" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="24" font-weight="700">Empathy</text>
+  <text x="523" y="386" fill="#D29A2E" font-family="Arial, sans-serif" font-size="20">connects the loop</text>
+</svg>

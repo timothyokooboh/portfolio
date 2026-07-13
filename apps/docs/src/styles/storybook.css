@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "@portfolio/foundations/theme.css";
+
+@source "../stories";
+@source "../../../../packages/ui-lib/src";
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  #storybook-root,
+  .sbdocs,
+  .docs-story {
+    isolation: isolate;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}

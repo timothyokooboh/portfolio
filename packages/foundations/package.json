@@ -1,17 +1,27 @@
 {
-  "name": "@app/foundations",
-  "version": "1.0.0",
-  "license": "MIT",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "name": "@portfolio/foundations",
+  "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "dev": "style-dictionary build && tsc",
-    "build": "style-dictionary build && tsc"
+  "type": "module",
+  "description": "Design-system foundations package for tokens such as colors, typography, and radius.",
+  "files": [
+    "src"
+  ],
+  "sideEffects": [
+    "./src/theme.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme.css": "./src/theme.css",
+    "./tokens": "./src/tokens.ts"
   },
-  "devDependencies": {
-    "prettier": "^3.1.0",
-    "style-dictionary": "^3.9.0",
-    "typescript": "^5.2.2"
+  "scripts": {
+    "build": "echo \"No build configured yet\"",
+    "lint": "echo \"No lint configured yet\"",
+    "test": "echo \"No tests configured yet\"",
+    "typecheck": "echo \"No typecheck configured yet\""
+  },
+  "peerDependencies": {
+    "tailwindcss": "^4.3.0"
   }
 }

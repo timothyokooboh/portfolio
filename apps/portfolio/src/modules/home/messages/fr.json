@@ -1,0 +1,40 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Ingénieur frontend senior",
+      "title": {
+        "line1": "Ingénierie",
+        "line2Emphasis": "frontend",
+        "line2Suffix": "avec",
+        "line3Prefix": "une solide expertise système et un",
+        "line3Gradient": "goût design en progression."
+      },
+      "description": "Ingénieur frontend senior avec plus de 6 ans d’expérience professionnelle sur des applications Vue.js et React.js, notamment les design systems, l’architecture frontend, l’accessibilité et la performance.",
+      "primaryAction": "Voir les études de cas",
+      "secondaryAction": "Dernier article",
+      "availability": "Disponible pour des rôles frontend senior, des design systems et certains contrats.",
+      "location": "Basé à Lagos, NG"
+    },
+    "positioning": {
+      "title": "Mon rôle actuel chez SeamlessHR.",
+      "description": "Chez SeamlessHR, je dirige l’équipe de la bibliothèque UI et je maintiens le design system partagé : composants, documentation, outils et patterns.",
+      "stats": {
+        "years": { "label": "Années de pratique" },
+        "components": { "label": "Composants du design system" }
+      }
+    },
+    "featuredWork": {
+      "title": "Projets sélectionnés",
+      "action": "Voir tous les projets"
+    },
+    "principles": {
+      "eyebrow": "Principes",
+      "title": "Profondeur, diversité, flexibilité et autonomie.",
+      "description": "Le fil conducteur de mon travail est la prise en charge des systèmes, la compréhension des contraintes produit et des décisions techniques délibérées."
+    },
+    "writing": {
+      "title": "Articles",
+      "action": "Tout lire"
+    }
+  }
+}

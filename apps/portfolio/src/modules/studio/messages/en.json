@@ -1,0 +1,98 @@
+{
+  "studio": {
+    "metadata": {
+      "title": "Writing Studio",
+      "description": "Local MDX authoring space for the writing section of Timothy Okooboh’s portfolio."
+    },
+    "shell": {
+      "eyebrow": "Private studio",
+      "title": "Writing Studio",
+      "description": "A local MDX workflow for drafting, editing, and previewing articles before they are published.",
+      "allPosts": "All writing",
+      "newPost": "New article",
+      "backToSite": "Back to portfolio",
+      "signedInAs": "Signed in as {email}",
+      "signOut": "Sign out"
+    },
+    "auth": {
+      "title": "Local studio access",
+      "description": "No hosted sign-in is required for the local writing workflow. The studio opens directly on localhost and stays out of the deployed experience.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "submit": "Send magic link",
+      "success": "Magic link sent. Check your inbox to continue.",
+      "invalidEmail": "Enter a valid email address.",
+      "requestFailed": "Something went wrong while requesting the magic link.",
+      "signedInRedirect": "You are already signed in."
+    },
+    "setup": {
+      "title": "Local authoring workflow",
+      "description": "These writing routes are intended for localhost during development. The public portfolio can stay static while the authoring space lives beside the codebase.",
+      "required": "Repo path",
+      "filename": "MDX content source",
+      "note": "Articles now live as local MDX files inside the repository. Draft, publish, and iterate here, then commit the content changes the same way you commit code."
+    },
+    "dashboard": {
+      "title": "All writing",
+      "description": "A simple view of published essays and drafts from the local MDX source, built for quick scanning, editing, and publishing.",
+      "status": "Status",
+      "updated": "Updated",
+      "readTime": "Read time",
+      "article": "Article",
+      "actions": "Actions",
+      "publishedCount": "Published",
+      "draftCount": "Drafts",
+      "publishedLabel": "Published",
+      "draftLabel": "Draft",
+      "newArticle": "Create article",
+      "edit": "Edit",
+      "openPublic": "Open public page",
+      "empty": "No articles yet."
+    },
+    "editor": {
+      "newTitle": "Create a new article",
+      "editTitle": "Edit article",
+      "formTitle": "Article details",
+      "description": "Write directly against the local MDX content model. This editor supports metadata, article body content, fenced code blocks, markdown images, and the custom demo components used on the public article pages.",
+      "titleLabel": "Title",
+      "slugLabel": "Slug",
+      "descriptionLabel": "Hero description",
+      "summaryLabel": "Summary",
+      "categoryLabel": "Category",
+      "readTimeLabel": "Read time",
+      "bodyLabel": "Article body (MDX)",
+      "bodyDescription": "Use markdown, fenced code blocks, markdown images, or the approved MDX components to shape the article.",
+      "saveDraft": "Save draft",
+      "publish": "Publish article",
+      "preview": "Preview public page",
+      "sectionsTitle": "Detected sections",
+      "sectionsDescription": "This preview reflects the current MDX headings in the editor body.",
+      "previewTitle": "Live preview",
+      "previewDescription": "A lightweight preview of the hero metadata that will frame the public article.",
+      "previewEmptyTitle": "New article preview",
+      "previewEmptyDescription": "Write a clear lead that explains what the article is about and why it matters.",
+      "previewEmptySummary": "Shape a concise summary that works on cards, callouts, and archive views.",
+      "sectionCount": "{count} sections",
+      "lineCount": "{count} content lines",
+      "structureEmpty": "No H2 sections detected yet. Start adding headings like ## Context or ## Implementation.",
+      "notAvailable": "This article does not exist in the local content source yet.",
+      "draftLabel": "Draft",
+      "publishedLabel": "Published",
+      "newDescriptionPlaceholder": "Write the lead paragraph that appears in the article hero.",
+      "newSummaryPlaceholder": "A concise summary of what the article teaches.",
+      "newTitlePlaceholder": "Title your next article",
+      "newSlugPlaceholder": "article-slug",
+      "newCategoryPlaceholder": "Design systems",
+      "newReadTimePlaceholder": "5 min read",
+      "bodyPlaceholder": "## Context\n\nIntroduce the article.\n\n## Implementation\n\n```tsx\nexport function Example() {\n  return <button>Open preview</button>;\n}\n```\n\n![Alt text for the image](/images/writing/example-diagram.svg \"Optional caption\")\n",
+      "bodyExampleFilename": "article.mdx",
+      "bodyExampleLabel": "Supported syntax",
+      "bodyExample": "## Context\n\nExplain the problem clearly.\n\n```tsx\nexport function ExampleCard() {\n  return <section aria-labelledby=\"title\">Preview</section>;\n}\n```\n\n![Design system relationship map](/images/writing/design-system-feedback-loop.svg \"Optional caption\")\n\n<WritingCallout eyebrow=\"Key idea\" title=\"Why this matters\">\n  Use MDX when plain markdown is not expressive enough.\n</WritingCallout>\n\n<ArticleDemo demoId=\"feedback-surface\" />",
+      "errors": {
+        "required": "This field is required.",
+        "slugTaken": "This slug is already being used by another article.",
+        "validationError": "Fix the highlighted fields and try again."
+      }
+    }
+  }
+}

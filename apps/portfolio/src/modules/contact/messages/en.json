@@ -1,0 +1,36 @@
+{
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Hiring for senior frontend, design systems, or product UI? Let’s talk.",
+      "description": "Share the role, product, and where you need ownership."
+    },
+    "actions": {
+      "email": "Email me",
+      "resume": "View resume"
+    },
+    "channels": {
+      "title": "Find me here.",
+      "items": {
+        "email": {
+          "eyebrow": "Direct",
+          "title": "Email",
+          "description": "Best for role or project details.",
+          "action": "Email me"
+        },
+        "linkedin": {
+          "eyebrow": "Hiring",
+          "title": "LinkedIn",
+          "description": "Best for recruiter outreach and introductions.",
+          "action": "Open LinkedIn"
+        },
+        "github": {
+          "eyebrow": "Code",
+          "title": "GitHub",
+          "description": "Browse my code and open-source work.",
+          "action": "View GitHub"
+        }
+      }
+    }
+  }
+}

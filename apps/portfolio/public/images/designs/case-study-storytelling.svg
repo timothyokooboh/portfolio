@@ -1,0 +1,27 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#F8F9FF"/>
+  <rect x="64" y="64" width="1472" height="872" rx="36" fill="#FFFFFF" stroke="#C6C6CD"/>
+  <text x="120" y="154" fill="#855300" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" letter-spacing="4">CASE-STUDY STORYTELLING</text>
+  <rect x="120" y="194" width="320" height="624" rx="28" fill="#0B1C30"/>
+  <rect x="164" y="244" width="232" height="16" rx="8" fill="#D89A35"/>
+  <rect x="164" y="286" width="164" height="16" rx="8" fill="#F4F7FB"/>
+  <rect x="164" y="326" width="204" height="16" rx="8" fill="#2B3A52"/>
+  <rect x="164" y="396" width="232" height="124" rx="22" fill="#101A2B"/>
+  <rect x="164" y="548" width="232" height="124" rx="22" fill="#101A2B"/>
+  <rect x="164" y="700" width="232" height="72" rx="18" fill="#F6E8D2"/>
+  <text x="496" y="250" fill="#0B1C30" font-family="Georgia, serif" font-size="86" font-weight="700">Long-form project</text>
+  <text x="496" y="338" fill="#0B1C30" font-family="Georgia, serif" font-size="86" font-weight="700">storytelling with</text>
+  <text x="496" y="426" fill="#0B1C30" font-family="Georgia, serif" font-size="86" font-weight="700">real substance.</text>
+  <text x="496" y="500" fill="#45464D" font-family="Inter, system-ui, sans-serif" font-size="32">Narrative, screenshots, implementation notes, and reflection held in one calm editorial system.</text>
+  <rect x="496" y="578" width="936" height="250" rx="30" fill="#F1F4FB"/>
+  <rect x="540" y="622" width="320" height="162" rx="24" fill="#FFFFFF"/>
+  <rect x="892" y="622" width="496" height="40" rx="20" fill="#FFFFFF"/>
+  <rect x="892" y="688" width="496" height="18" rx="9" fill="#C6C6CD"/>
+  <rect x="892" y="726" width="428" height="18" rx="9" fill="#C6C6CD"/>
+  <rect x="892" y="764" width="462" height="18" rx="9" fill="#D89A35" fill-opacity="0.25"/>
+  <rect x="580" y="664" width="240" height="18" rx="9" fill="#855300"/>
+  <rect x="580" y="704" width="206" height="18" rx="9" fill="#6B7280"/>
+  <path d="M1220 196C1308 196 1380 256 1380 344C1380 432 1308 492 1220 492C1132 492 1060 432 1060 344C1060 256 1132 196 1220 196Z" fill="#F6E8D2"/>
+  <path d="M1152 346H1288" stroke="#855300" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1152 378H1246" stroke="#855300" stroke-width="6" stroke-linecap="round"/>
+</svg>

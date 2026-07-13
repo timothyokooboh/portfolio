@@ -1,0 +1,254 @@
+{
+  "writingPage": {
+    "hero": {
+      "eyebrow": "Writing",
+      "title": "Writing about frontend systems, interface craft, and implementation detail.",
+      "description": "Short essays, build notes, and code-backed breakdowns on React, accessibility, design systems, motion, and the engineering decisions behind polished product UI."
+    },
+    "intro": {
+      "title": "What you will find here",
+      "description": "Mostly practical writing: system decisions, component experiments, implementation trade-offs, and code snippets another engineer can actually take something from."
+    },
+    "published": {
+      "title": "Published essays",
+      "description": "Articles that reflect how I think about systems, APIs, and frontend quality in practice."
+    },
+    "drafts": {
+      "title": "In progress",
+      "description": "Notes and essays that are still being shaped before they are ready to publish."
+    }
+  },
+  "writingArticlePage": {
+    "backLink": "Back to writing",
+    "metaCategory": "Category",
+    "metaReadTime": "Read time",
+    "metaPublishedOn": "Published",
+    "metaRelatedProject": "Related project",
+    "metaStatus": "Status",
+    "overviewTitle": "In this article",
+    "publishedLabel": "Published",
+    "draftLabel": "Draft",
+    "nextArticleEyebrow": "Continue reading",
+    "nextArticleTitle": "More from the writing archive",
+    "nextArticleDescription": "The writing in this portfolio is meant to grow alongside the frontend and design work, not sit apart from it.",
+    "nextArticleAction": "Browse all writing",
+    "demos": {
+      "feedbackSurface": {
+        "eyebrow": "Live component preview",
+        "description": "A small surface for testing hierarchy, motion, and state feedback.",
+        "denseMode": "Dense mode",
+        "denseModeAriaLabel": "Toggle dense mode",
+        "tabs": {
+          "review": "Review",
+          "states": "States"
+        },
+        "review": {
+          "title": "Accessibility review",
+          "description": "Compose with the smallest useful surface first.",
+          "focusTitle": "Focus target",
+          "focusDescription": "Visible ring with clear contrast and predictable keyboard flow.",
+          "feedbackTitle": "Feedback",
+          "feedbackDescription": "Motion stays subtle enough to support the task instead of competing with it.",
+          "primaryAction": "Continue review",
+          "secondaryAction": "View spec"
+        },
+        "states": {
+          "restTitle": "Rest",
+          "restDescription": "Strong default hierarchy with calm emphasis.",
+          "hoverTitle": "Hover",
+          "hoverDescription": "Subtle color change and intent without noise.",
+          "pressTitle": "Press",
+          "pressDescription": "Compressed feedback that feels responsive and grounded."
+        }
+      },
+      "componentPreview": {
+        "eyebrow": "Live component preview",
+        "title": "A small API surface in motion",
+        "description": "This kind of embedded component is the shape I want the writing system to support.",
+        "renderedIdea": "Rendered idea",
+        "name": "VBox",
+        "caption": "Composable surface",
+        "action": "Open source notes",
+        "code": "<v-box display=\"flex\" gap=\"1rem\">\n  <v-box font-weight=\"700\">VBox</v-box>\n  <v-box color=\"#55627a\">Composable surface</v-box>\n</v-box>"
+      }
+    }
+  },
+  "writingContent": {
+    "articles": {
+      "design-systems-with-empathy": {
+        "status": "published",
+        "hero": {
+          "eyebrow": "Design systems / Published",
+          "title": "Why design systems fail without engineering empathy.",
+          "description": "The technical foundation of a design system matters, but the difference between shelfware and real adoption usually comes from whether engineers feel the system helps them think and ship better."
+        },
+        "meta": {
+          "category": "Design systems",
+          "readTime": "5 min read",
+          "publishedOn": "July 2026",
+          "relatedProject": "Seamkit UI"
+        },
+        "summary": "A practical look at why shared UI libraries break down when code quality, documentation, and team habits are treated as separate problems.",
+        "sections": [
+          {
+            "title": "The library is rarely the actual problem",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "content": "Teams often say a design system failed because the components were not flexible enough, or because the tokens were too rigid, or because the docs were incomplete. Those things matter, but they are usually symptoms rather than the real cause."
+              },
+              {
+                "type": "paragraph",
+                "content": "The deeper issue is that a design system only works when engineering feels included in its shape. If developers experience the system as extra friction, extra ceremony, or a wall of rules disconnected from product reality, adoption fades quickly."
+              },
+              {
+                "type": "callout",
+                "eyebrow": "Core idea",
+                "title": "A design system is a product for the team.",
+                "body": "That means its ergonomics, documentation, onboarding experience, and escape hatches deserve the same level of care as the product interfaces it helps create."
+              }
+            ]
+          },
+          {
+            "title": "Empathy changes the implementation decisions",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "content": "Engineering empathy shows up in the details: whether component APIs are predictable, whether composition is possible without hacks, whether accessibility support is built in instead of bolted on, and whether teams can understand when to use a primitive versus a pattern."
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Build primitives that remove repeated accessibility work from product teams.",
+                  "Document intent, not only props.",
+                  "Design for composition so teams can solve product-specific problems without forking the library."
+                ]
+              },
+              {
+                "type": "code",
+                "filename": "review-surface.tsx",
+                "actionLabel": "Inspect",
+                "code": "export function ReviewSurface() {\n  return (\n    <section aria-labelledby=\"review-title\">\n      <h2 id=\"review-title\">Continue review</h2>\n      <p>Compose the smallest useful set of primitives first.</p>\n    </section>\n  );\n}"
+              }
+            ]
+          },
+          {
+            "title": "The system should teach the team as it scales",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "content": "A design system becomes much more durable when it teaches through examples, patterns, and good defaults. That is part of why I care so much about docs, naming, and implementation notes. They lower the amount of interpretation every team has to do alone."
+              },
+              {
+                "type": "demo",
+                "demoId": "feedback-surface"
+              }
+            ]
+          }
+        ]
+      },
+      "architecting-vbox": {
+        "status": "published",
+        "hero": {
+          "eyebrow": "Open source / Published",
+          "title": "Architecting VBox: a polymorphic journey.",
+          "description": "VBox started as an experiment inspired by Chakra UI’s style props, but the more interesting part of the work was designing an API that could stay expressive in Vue without collapsing under its own abstraction."
+        },
+        "meta": {
+          "category": "Open source",
+          "readTime": "8 min read",
+          "publishedOn": "July 2026",
+          "relatedProject": "VBox"
+        },
+        "summary": "The design and engineering tradeoffs behind building a typed style-props experience for Vue.",
+        "sections": [
+          {
+            "title": "The problem worth exploring",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "content": "I liked the style-props experience in Chakra UI because it reduced friction between layout intent and implementation. In Vue, I did not see an equivalent abstraction that felt both expressive and type-safe, so I treated VBox as a design problem as much as an engineering problem."
+              },
+              {
+                "type": "paragraph",
+                "content": "The goal was not to mirror Chakra exactly. It was to create a Vue-native primitive that could support polymorphism, aliases, theme values, pseudo states, and responsive behavior without turning the authoring experience into guesswork."
+              }
+            ]
+          },
+          {
+            "title": "Where the API could easily go wrong",
+            "blocks": [
+              {
+                "type": "callout",
+                "eyebrow": "Constraint",
+                "title": "Ergonomics had to justify the abstraction.",
+                "body": "If the API asked for too much mental translation, then raw CSS or utility classes would still be the better choice."
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Type support had to be broad enough to feel trustworthy.",
+                  "Aliases had to be useful without obscuring the underlying CSS meaning.",
+                  "Theme and breakpoint customization had to stay predictable."
+                ]
+              },
+              {
+                "type": "code",
+                "filename": "vbox-example.vue",
+                "actionLabel": "Inspect",
+                "code": "<v-box\n  is=\"button\"\n  display=\"inline-flex\"\n  align-items=\"center\"\n  gap=\"0.5rem\"\n  padding-inline=\"1rem\"\n  padding-block=\"0.75rem\"\n  :hover=\"{ backgroundColor: '#161d2b' }\"\n>\n  Launch demo\n</v-box>"
+              }
+            ]
+          },
+          {
+            "title": "What made the experiment worthwhile",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "content": "Even when I build something experimental, I want it to reveal how I think about systems. VBox was useful because it forced me to make decisions about API clarity, type boundaries, customization, and what counts as a good abstraction for real developers."
+              },
+              {
+                "type": "demo",
+                "demoId": "component-preview"
+              }
+            ]
+          }
+        ]
+      },
+      "motion-with-intent": {
+        "status": "draft",
+        "hero": {
+          "eyebrow": "Motion / Draft",
+          "title": "Interface motion that clarifies instead of distracts.",
+          "description": "A draft essay about using motion to communicate state, hierarchy, and confidence, especially for teams trying to build more taste into their product surfaces."
+        },
+        "meta": {
+          "category": "Motion",
+          "readTime": "6 min read",
+          "publishedOn": "Drafting",
+          "relatedProject": "Portfolio"
+        },
+        "summary": "A study of animation choices that support hierarchy, feedback, and taste without turning the interface into spectacle.",
+        "sections": [
+          {
+            "title": "Draft outline",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "content": "This article is still being shaped, but the central argument is already clear: good motion should reduce interpretation, not increase it."
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Why timing communicates confidence.",
+                  "Why page transitions and hover states should not compete for attention.",
+                  "How reduced-motion support changes what polished interaction means."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

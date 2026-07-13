@@ -1,0 +1,851 @@
+---
+category: "Architecting components"
+description: "Component composition is the art of breaking down a large or complex component into multiple smaller components, where each small component is responsible for managing the rendering and logic of one part of the large piece"
+eyebrow: "Architecting components / Published"
+featuredOnHome: false
+order: 5
+publishedOn: "July 2026"
+readTime: "5 min read"
+status: "published"
+summary: "Component composition is the art of breaking down a large or complex component into multiple smaller components, where each small component is responsible for managing the rendering and logic of one part of the large piece"
+title: "Mastering Component Composition in Vue.js."
+---
+
+## Understanding component composition
+Component composition is the art of breaking down a large or complex component into multiple smaller components, where each small component is responsible for managing the rendering and logic of one part of the large piece. Component composition embraces the [Atomic Design Pattern](https://atomicdesign.bradfrost.com/), and its usage is widely used in UI component libraries such as [shadcn](https://www.shadcn-vue.com/), [Chakra UI](https://chakra-ui.com/), etc.
+
+![A tabs component broken down into multiple smaller components](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750595925971_Screenshot+2025-06-22+at+12.42.01PM.png)
+
+
+In the diagram above, instead of implementing a tabs component inside one big file, the component is broken down into different parts and each part is developed as a separate component.
+
+## Benefits of component composition
+Breaking down a large or complex component into multiple smaller components can have the following advantages:
+
+- Enhanced modularity: Each small component has a single, well-defined responsibility, making the codebase more organised and easier to reason about.
+- Reusability across teams: The ability to architect a large component by composing smaller focused components improves flexibility and reusability across product teams.
+- Declarative programming: Instead of having one big component with lots of configuration props, we can compose functionality through smaller components.
+- Simplified testing: We can test each component in isolation.
+- Faster debugging: When issues occur, instead of debugging one large component, we simply debug the component that has an issue.
+- Improved readability/maintenance: Smaller components are easier to understand, modify and refactor.
+
+## When to apply component composition
+
+- Building design system components: A common application of component composition is when architecting design system components. Since these components are used by multiple product teams within and across multiple organisations, it is important to ensure that the components are highly reusable with a declarative API.
+
+
+For instance, through component composition, we can split a breadcrumb component into Breadcrumb and BreadcrumbItem components.
+
+
+![A breadcrumb component splitted into Breadcrumb and BreadcrumbItem components](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750962550730_Screenshot+2025-06-26+at+7.12.09PM.png)
+
+
+
+    In Vue.js, we can combine component composition with the power of [named slots](https://vuejs.org/guide/components/slots.html#named-slots) to architect complex components. For instance, we can split an accordion component into Accordion and AccordionItem components. Then each AccordionItem component can have named slots for heading, subheading and content.
+
+
+![An accordion component broken down via component composition](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750962496093_Screenshot+2025-06-26+at+7.17.38PM.png)
+
+
+
+- Building large or complex components: When building a large component, such as a multi-step or multi-section form, component composition is a great way to split the component into multiple logical parts consisting of a root component and its child components. The root component would serve as a **manager** and be responsible for orchestrating events such as centralised state management, data fetching, database mutations (create, edit, and delete operations), and managing the layout of child components.
+    
+![A multi-section form broken down into multiple logical components via component composition](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1751315425366_Screenshot+2025-06-30+at+9.21.56PM.png)
+
+
+
+## Vue.js features that aid component composition
+These Vue.js features make it seamless to implement component composition:
+
+
+- provide and inject
+    With [provide & inject](https://vuejs.org/guide/components/provide-inject.html), a parent component can act as a dependency provider by exposing data to any of its descendant components, without props drilling, no matter how deeply nested the descendant components are.  Provide & inject is similar to context API in React.js.
+    
+```ts
+    // Parent.vue
+    <script setup lang="ts">
+      import { provide } from "vue"
+      
+      const props = defineProps<{
+        size: "sm" | "md" | "lg"
+      }>()
+      
+      provide("size", props.size) 
+    </script>
+
+
+    // GrandChild.vue
+    <script setup lang="ts">
+      import { inject } from "vue"
+      
+      const size = inject("size")
+    </script>
+
+```
+
+
+- slots
+    [Slots](https://vuejs.org/guide/components/slots.html) are indispensable when implementing component composition. With slots, a component can accept content between its opening and closing tags. The content could be text, HTML elements, or other components. This is similar to children in React.js. However, in Vue.js, slots are even more powerful with extra features such as [named slots](https://vuejs.org/guide/components/slots.html#named-slots) and [scoped slots.](https://vuejs.org/guide/components/slots.html#scoped-slots)
+    
+```ts
+    <Tooltip>
+      <template #trigger>
+        <Button>Hover me<Button>
+      </template>
+    
+      <template #content>
+        <p>I am a tooltip</p>
+      </template>
+    </Tooltip>
+```
+
+
+- useId composable
+    [useId](https://vuejs.org/api/composition-api-helpers.html#useid) is a built-in, composable function in Vue.js for generating IDs that are unique per application instance and per component instance. The generated IDs are mainly used for adding id attributes to HTML elements, and are quite helpful in cases where the id of one element must match the aria-labelledby or aria-controls attribute of another element. Another common example is using useId to generate values for the for attribute of a label element and an id attribute of an input element. In other words, **useId** is helpful for adding accessibilty attributes on components.
+    
+```ts
+    <script setup>
+      import { useId } from 'vue'
+      
+      const id = useId()
+      </script>
+      
+      <template>
+        <form>
+          <label :for="id">Name:</label>
+          <input :id="id" type="text" />
+        </form>
+      </template>
+```
+
+## Building an accessible tabs component
+As an exercise, let’s practice component composition by building an accessible tabs component that adheres to the [WAI/ARIA accessibility guidelines for tabs.](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) We are going to build the component using Vue.js and TypeScript. 
+
+This is how we can use our tabs component by the time we are done
+
+```ts
+    <TabsRoot defaultTab="react">
+        <TabsList ariaLabel="JavaScript Frameworks">
+          <TabsTrigger value="react">React.js</TabsTrigger>
+          <TabsTrigger value="vue">Vue.js</TabsTrigger>
+          <TabsTrigger value="angular">Angular</TabsTrigger>
+        </TabsList>
+    
+        <TabsContent value="react">
+          React.js is a JavaScript framework for building user interfaces. React.js is maintained by
+          Facebook and a community of individual developers and companies.
+        </TabsContent>
+    
+        <TabsContent value="vue">
+          Vue.js is a JavaScript framework for building user interfaces. Vue.js is maintained by the
+          Vue.js team and a community of individual developers and companies.
+        </TabsContent>
+    
+        <TabsContent value="angular">
+          Angular is a JavaScript framework for building user interfaces. Angular is maintained by
+          Google and a community of individual developers and companies.
+        </TabsContent>
+    </TabsRoot>
+```
+
+And this will be the result
+
+![Tabs component in horizontal orientation](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750520737111_Screenshot+2025-06-21+at+4.41.00PM.png)
+
+
+The default orientation is horizontal. If we want vertical orientation, we can simply set orientation to vertical.
+
+```ts
+    <TabsRoot defaultTab="angular" orientation="vertical">
+      <TabsList ariaLabel="JavaScript Frameworks">
+        <TabsTrigger value="react">React.js</TabsTrigger>
+        <TabsTrigger value="vue">Vue.js</TabsTrigger>
+        <TabsTrigger value="angular">Angular</TabsTrigger>
+      </TabsList>
+      
+        <TabsContent value="react">
+          React.js is a JavaScript framework for building user interfaces. React.js is maintained by
+          Facebook and a community of individual developers and companies.
+        </TabsContent>
+    
+        <TabsContent value="vue">
+          Vue.js is a JavaScript framework for building user interfaces. Vue.js is maintained by the
+          Vue.js team and a community of individual developers and companies.
+        </TabsContent>
+    
+        <TabsContent value="angular">
+          Angular is a JavaScript framework for building user interfaces. Angular is maintained by
+          Google and a community of individual developers and companies.
+        </TabsContent>
+      
+    </TabsRoot>
+```
+  
+And this will be the result
+
+![Tabs component in vertical orientation](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750520981897_Screenshot+2025-06-21+at+4.41.52PM.png)
+
+
+What is not obvious from the screenshots are the aria roles, properties and states that the components have and the fact that we can navigate between tabs by pressing the Right and Left arrow keys (horizontal orientation) or the Up and Down arrow keys (vertical orientation).
+
+**Prequisites**
+This demo uses Vue 3. So to code along, ensure you have Node.js version 18.3 or higher.
+****
+**Installation**
+On your terminal, run
+
+    
+    `npm create vue@latest`
+    
+
+You will be prompted to answer a few questions. You can give the project any name you like. I named mine **accessible-tabs-component**. However, make sure to select **Yes** for TypeScript. 
+
+Check out to the project folder 
+
+    // e.g
+    `cd accessible-tabs-component`
+
+install dependencies
+
+    `npm install`
+
+start the development server
+
+    `npm run dev`
+
+
+![](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750521742002_Screenshot+2025-06-21+at+5.02.10PM.png)
+
+****
+Delete the boilerplate code in App.vue file so that App.vue looks like this
+
+```ts
+    <script setup lang="ts"></script>
+    
+    <template>
+      <div class="app"></div>
+    </template>
+    
+    <style scoped>
+    .app {
+     font-family: Helvetica, Arial, sans-serif;
+    }
+    </style>
+```
+
+Finally, remove this line from the main.ts file.
+
+
+   ` import './assets/main.css'`
+
+**Development**
+Create a **tabs** folder inside the components directory and add the following files: **TabsRoot.vue**, **TabsList.vue**, **TabsTrigger.vue** and **TabsContent.vue**
+
+
+![](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750529769365_Screenshot+2025-06-21+at+7.15.55PM.png)
+
+
+
+- TabsRoot: This is the root component and will be responsible for orchestrating features such as the orientation of the tabs (horizontal or vertical) and the default selected tab when the component mounts. 
+- TabsList: This is the wrapper around the list of tab triggers. It’s a flex-box container that will either render the tab triggers horizontally or vertically depending on the value of orientation.
+- TabsTrigger: Each TabsTrigger represents the interactive elements that change the display of contents when clicked or when navigated by via the keyboard.
+- TabsContent: Each TabsContent represents the content that is rendered when a TabsTrigger is clicked or as users navigate the TabsTriggers via the keyboard.
+
+TabsRoot.vue
+
+```ts
+    <template>
+      <div :class="`tabs-root tabs-root--${orientation}`">
+        <slot></slot>
+      </div>
+    </template>
+    
+    <script setup lang="ts">
+    const props = withDefaults(
+      defineProps<{
+        defaultTab: string
+        orientation?: 'horizontal' | 'vertical'
+      }>(),
+      {
+        orientation: 'horizontal',
+      },
+    )
+    
+    const activeTab = ref(props.defaultTab)
+    const updateActiveTab = (tab: string) => activeTab.value = tab
+    </script>
+    
+    <style scoped>
+    .tabs-root {
+      background-color: #fff;
+      display: flex;
+    }
+    
+    .tabs-root--horizontal {
+      flex-direction: column;
+    }
+    
+    .tabs-root--vertical {
+      flex-direction: row;
+    }
+    </style>
+```ts
+
+From the code block above we achieved several things:
+
+- We defined two props, **defaultTab** and **orientation**. The **orientation** prop is communicated to the styles block via a dynamic class name **tabs-root--${orientation}**.
+- If **orientation** is horizontal, it means that the tabs (TabsTriggers) are aligned horizontally next to each other, while the content (TabsContent) of the active tab is beneath the list of tabs. So TabsRoot sets flex-direction to column. However, a vertical orientation means that the tabs are stacked on top of each other, while the content (TabsContent) of the active tab is positioned towards the right side of the list of tabs. So TabsRoot sets flex-direction to row.
+- We add a slot to accommodate the contents that will be rendered inside TabsRoot.
+- We add an **activeTab** state and initialise it with the value of the **defaultTab** prop.
+- We create **updateActiveTab** function that will be called each time one of the tabs is clicked. This updates the **activeTab** state with the new tab that was selected.
+
+But how can TabsList, TabsTrigger and TabsContent access the value of activeTab and orientation? [We can leverage a feature in Vue.js known as Provide and Inject](https://vuejs.org/guide/components/provide-inject.html) to pass data from TabsRoot to its descendants. Provide & Inject make it easy to break down complex components into a set of tightly coupled components that should be used together to construct a user interface in a declarative manner. For instance we can split an accordion into AccordionRoot, AccordionItem, AccordionItemHeader & AccordionItemContent. Then with provide & inject, we can pass data down from AccordionRoot to any of its descendants.
+
+TabsRoot.vue (Updated)
+
+```ts
+    <template>
+      <div :class="`tabs-root tabs-root--${orientation}`">
+        <slot></slot>
+      </div>
+    </template>
+    
+    <script setup lang="ts">
+    import { provide, computed, ref } from 'vue'
+    import {
+      ActiveTab,
+      Orientation,
+      UpdateActiveTab,
+    } from './keys'
+    
+    const props = withDefaults(
+      defineProps<{
+        defaultTab: string
+        orientation?: 'horizontal' | 'vertical'
+      }>(),
+      {
+        orientation: 'horizontal',
+      },
+    )
+    
+    const activeTab = ref(props.defaultTab)
+    const updateActiveTab = (tab: string) => (activeTab.value = tab)
+    
+    provide(ActiveTab, activeTab)
+    provide(UpdateActiveTab, updateActiveTab)
+    provide(
+      Orientation,
+      computed(() => props.orientation),
+    )
+    </script>
+    
+    <style scoped>
+    .tabs-root {
+      background-color: #fff;
+      display: flex;
+    }
+    
+    .tabs-root--horizontal {
+      flex-direction: column;
+    }
+    
+    .tabs-root--vertical {
+      flex-direction: row;
+    }
+    </style>
+```ts
+
+From the code block above we achieved the following:
+
+- We used the **provide** API in Vue.js to expose **activeTab**, **updateActiveTab**, and **orientation**, so that the child components can have access to these variables.
+- The first argument passed to **provide** is the key that child components can use to access the provided value. The second argument is the value of that key.
+- While we can use strings as keys, [it is recommended to use JavaScript Symbols to avoid potential naming collisions](https://vuejs.org/guide/components/provide-inject.html#working-with-symbol-keys). Hence, we are importing Symbols from a keys.ts file.
+
+tabs/keys.ts
+
+```ts
+    import type { InjectionKey, Ref } from 'vue'
+    export const ActiveTab = Symbol() as InjectionKey<Ref<string>>
+    export const Orientation = Symbol() as InjectionKey<Ref<'horizontal' | 'vertical'>>
+    export const UpdateActiveTab = Symbol() as InjectionKey<(tab: string) => void>
+```
+
+TabsList.vue
+
+```ts
+    <template>
+      <div :class="`tabs-list tabs-list--${orientation}`">
+        <slot></slot>
+      </div>
+    </template>
+    
+    <script setup lang="ts">
+    import { inject, Ref } from 'vue'
+    import { Orientation } from './keys'
+    
+    const orientation = inject(Orientation) as Ref<'horizontal' | 'vertical'>
+    </script>
+    
+    <style scoped>
+    .tabs-list {
+      display: flex;
+      gap: 1rem;
+      --border-color: #dfdfdf;
+    }
+    
+    .tabs-list--horizontal {
+      border-block-end: 1px solid var(--border-color);
+    }
+    
+    .tabs-list--vertical {
+      flex-direction: column;
+      border-inline-end: 1px solid var(--border-color);
+    }
+    </style>
+  ```ts  
+
+From the code block above we achieved the following:
+
+- We used the **inject** API in Vue.js to access the **orientation** and passed the **orientation** to our styles block via a dynamic class **tabs-list--${orientation}.**
+- If **orientation** is horizontal, we set a bottom border.
+- If **orientation** is vertical, we set flex-direction to column and set a right border.
+- We used logical properties for styling e.g. border-block-end (border-bottom) and border-inline-end (border-right).
+
+TabsTrigger.vue
+```ts
+    <template>
+      <button
+        type="button"
+        :disabled="disabled"
+        :class="tabsTriggerClassNames"
+        @click="updateActiveTab(value)"
+      >
+        <slot></slot>
+      </button>
+    </template>
+    
+    <script setup lang="ts">
+    import { computed, inject, Ref } from 'vue'
+    import {
+      ActiveTab,
+      Orientation,
+      UpdateActiveTab,
+     } from './keys'
+    
+    const props = defineProps<{
+      value: string
+      disabled?: boolean
+    }>()
+    const activeTab = inject(ActiveTab) as Ref<string>
+    const updateActiveTab = inject(UpdateActiveTab) as (tab: string) => void
+    const orientation = inject(Orientation) as Ref<'horizontal' | 'vertical'>
+    
+    const isActiveTab = computed(() => props.value === activeTab.value)
+    
+    const tabsTriggerClassNames = computed(() => [
+      'tabs-trigger',
+      `tabs-trigger--${orientation.value}`,
+      isActiveTab.value && 'tabs-trigger--active',
+    ])
+    </script>
+    
+    <style scoped>
+    .tabs-trigger {
+      font-size: 0.875rem; /** 14px */
+      border: none;
+      background: none;
+      color: #71717a;
+      cursor: pointer;
+      padding-block: 0.5rem;
+      transition: color 0.2s ease-in-out;
+    }
+    
+    .tabs-trigger:hover {
+      color: #111827;
+    }
+    
+    .tabs-trigger:disabled {
+      color: #71717a;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .tabs-trigger--active {
+      color: #111827;
+      position: relative;
+    }
+    
+    /** 
+     * Using pseudo element to add a border bottom (horizontal orientation) or border right (vertical orientation) to the active tab without causing the tab to shift
+     */
+    .tabs-trigger--horizontal.tabs-trigger--active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #111827;
+    }
+    
+    .tabs-trigger--vertical.tabs-trigger--active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: -1px;
+      width: 2px;
+      height: 100%;
+      background-color: #111827;
+    }
+    </style>
+```    
+
+From the code block above we achieved the following:
+
+- We defined two props, **value** and **disabled**.
+- The **value** prop is a required prop as it serves as a unique identifier for a tab. The **defaultTab** prop in TabsRoot must match one of the **value** props in TabsTrigger.
+- We used **inject** to access the values of **activeTab**, **updateActiveTab** and **orientation**.
+- We created **isActiveTab,** a computed property that returns true if the **value** prop matches the value of **activeTab**.
+- We used an after pseudo element to simulate borders on the active tab. Using border-bottom or border-right would cause layout shift.
+
+TabsContent.vue
+```ts
+    <template>
+      <div
+        v-if="isActiveTab"
+        :class="`tabs-content tabs-content--${orientation}`"
+      >
+        <slot></slot>
+      </div>
+    </template>
+    
+    <script setup lang="ts">
+    import { computed, inject, Ref } from 'vue'
+    import { ActiveTab, Orientation } from './keys'
+    
+    const props = defineProps<{
+      value: string
+    }>()
+    
+    const activeTab = inject(ActiveTab) as Ref<string>
+    const orientation = inject(Orientation) as Ref<'horizontal' | 'vertical'>
+    
+    const isActiveTab = computed(() => props.value === activeTab.value)
+    </script>
+    
+    <style scoped>
+    .tabs-content {
+      line-height: 1.5;
+      color: #333;
+    }
+    .tabs-content--horizontal {
+      padding-block: 1rem;
+    }
+    .tabs-content--vertical {
+      padding-inline: 1rem;
+    }
+    </style>
+```
+From the code block above we achieved the following:
+
+- We created a **value** prop. This must match one of the **value** props on TabsTrigger. For instance, clicking a TabsTrigger whose value is ‘react’ will cause a TabsContent whose value is ‘react’ to be displayed on the UI.
+- We used **inject** to access **activeTab** and **orientation**.
+
+If we test the components at this point, we should have a ‘functional’ Tabs component!
+
+```ts
+    <TabsRoot defaultTab="react">
+        <TabsList>
+          <TabsTrigger value="react">React.js</TabsTrigger>
+          <TabsTrigger value="vue">Vue.js</TabsTrigger>
+          <TabsTrigger value="angular">Angular</TabsTrigger>
+        </TabsList>
+    
+        <TabsContent value="react">
+          React.js is a JavaScript framework for building user interfaces. React.js is maintained by
+          Facebook and a community of individual developers and companies.
+        </TabsContent>
+    
+        <TabsContent value="vue">
+          Vue.js is a JavaScript framework for building user interfaces. Vue.js is maintained by the
+          Vue.js team and a community of individual developers and companies.
+        </TabsContent>
+    
+        <TabsContent value="angular">
+          Angular is a JavaScript framework for building user interfaces. Angular is maintained by
+          Google and a community of individual developers and companies.
+        </TabsContent>
+    </TabsRoot>
+```
+
+![](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750545306888_Screenshot+2025-06-21+at+4.41.00PM.png)
+
+
+## Implementing accessibility requirements
+
+So far, we have built a functional and flexible tabs component. It even supports both horizontal and vertical orientations. 
+
+But a tabs component should not be considered complete if it is not accessible. No UI interface should be considered complete if it is not accessible. Accessibility is about ensuring that users with disabilities can still perceive, access and use our components and applications. Usually, these users browse the web using special technologies such as screen readers. The interesting thing is that accessible interfaces do not only improve user experience (UX) for users with disabilities, they also improve UX for users without disabilities, for example, by making the interface keyboard accessible. In other words, accessibility improves UX for everyone!
+
+[This resource contains the standard accessibility requirements of a tabs component.](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)
+
+Let’s follow the guidelines on that resource and implement accessibility requirements for our tabs component.
+
+TabsList.vue (Updated)
+
+```ts
+    <template>
+      <div
+        role="tablist"
+        :aria-label="ariaLabel"
+        :aria-orientation="orientation"
+        :class="`tabs-list tabs-list--${orientation}`"
+      >
+        <slot></slot>
+      </div>
+    </template>
+    
+    <script setup lang="ts">
+    import { inject, Ref } from 'vue'
+    import { Orientation } from './keys'
+    
+    withDefaults(
+      defineProps<{
+        ariaLabel?: string
+      }>(),
+      {
+        ariaLabel: 'Tabs List',
+      },
+    )
+    
+    const orientation = inject(Orientation) as Ref<'horizontal' | 'vertical'>
+    </script>
+    
+    <style scoped>
+    /* same styles */
+    </style>
+
+```
+
+From the code block above we achieved the following:
+
+- We set the role of the root element of TabsList to **tablist.**
+- We created an **ariaLabel** prop. Then we added an **aria-label** attribute and set its value to the **ariaLabel** prop. For example, if we set the ariaLabel prop to ‘JavaScript frameworks’, screen readers will announce that the tabs component is about JavaScript frameworks.
+- We added an **aria-orientation** attribute and set its value to the **orientation** variable. So if orientation is ‘vertical’, then aria-orientation will be vertical.
+
+TabsRoot.vue (Updated)
+
+```ts
+    <template>
+      <div 
+        ref="tabsRoot" 
+        :class="`tabs-root tabs-root--${orientation}`" 
+        @keydown="handleKeydown"
+    >
+        <slot></slot>
+      </div>
+    </template>
+    
+    <script setup lang="ts">
+    import { provide, computed, ref, useId, useTemplateRef } from 'vue'
+    import {
+      ActiveTab,
+      Orientation,
+      UpdateActiveTab,
+      TabsInstanceId
+    } from './keys'
+    
+    const props = withDefaults(
+      defineProps<{
+        defaultTab: string
+        orientation?: 'horizontal' | 'vertical'
+      }>(),
+      {
+        orientation: 'horizontal',
+      },
+    )
+    
+    const tabsRootRef = useTemplateRef('tabsRoot')
+    const activeTab = ref(props.defaultTab)
+    const updateActiveTab = (tab: string) => (activeTab.value = tab)
+    // Single instance ID that all child components can use
+    const tabsInstanceId = ref(useId())
+    
+    provide(ActiveTab, activeTab)
+    provide(UpdateActiveTab, updateActiveTab)
+    provide(
+      Orientation,
+      computed(() => props.orientation),
+    )
+    provide(TabsInstanceId, tabsInstanceId)
+    
+    const handleKeydown = (event: KeyboardEvent) => {
+      /**
+       * Listen for keydown event on tab triggers of the current tab instance.
+       */
+      const target = event.target as HTMLButtonElement
+      if (!target.matches('[data-tabs-trigger]')) return
+      const tabTriggers = Array.from(tabsRootRef.value?.querySelectorAll('[data-tabs-trigger]:not(:disabled)'))
+    
+      const currentIndex = tabTriggers.indexOf(target)
+      const keyMap = {
+        horizontal: { ArrowRight: 1, ArrowLeft: -1 },
+        vertical: { ArrowDown: 1, ArrowUp: -1 },
+      }
+      let direction = 0
+    
+      if (props.orientation === 'horizontal') {
+        direction = keyMap.horizontal[event.key] || 0
+      } else {
+        direction = keyMap.vertical[event.key] || 0
+      }
+      if (direction !== 0) {
+        let newIndex = currentIndex + direction
+        if (newIndex < 0) newIndex = tabTriggers.length - 1
+        if (newIndex >= tabTriggers.length) newIndex = 0
+        tabTriggers[newIndex].focus()
+        tabTriggers[newIndex].click()
+      }
+    }
+    </script>
+    
+    <style scoped>
+    /* same styles */
+    </style>
+```
+
+tabs/keys.ts (Updated)
+```ts
+    import type { InjectionKey } from 'vue'
+    export const ActiveTab = Symbol() as InjectionKey<string>
+    export const Orientation = Symbol() as InjectionKey<'horizontal' | 'vertical'>
+    export const UpdateActiveTab = Symbol() as InjectionKey<(tab: string) => void>
+    export const TabsInstanceId = Symbol() as InjectionKey<Ref<string>>
+```
+
+TabsRoot.vue seems to have a couple of things going on, so let me break them down
+
+- We attached a keydown event listener that invokes **handleKeydown** function.
+- If orientation is horizontal, **handleKeydown f**unction allows users to navigate between tabs when the Left and Right arrow keys are pressed. But if orientation is vertical, then it allows users to navigate between tabs when the Up and Down arrow keys are pressed.
+- We used provide to expose **TabsInstanceId,** a unique ID that both TabsTrigger and TabsContent components can use to generate their own unique IDs making it easy to for them to set aria-controls and aria-labelledby attributes respectively.
+
+TabsTrigger.vue (Updated)
+
+```ts
+    <template>
+      <button
+        type="button"
+        role="tab"
+        :aria-selected="isActiveTab"
+        :id="id"
+        :aria-controls="ariaControls"
+        :tabindex="isActiveTab ? 0 : -1"
+        data-tabs-trigger
+        :class="tabsTriggerClassNames"
+        :disabled="disabled"
+        @click="updateActiveTab(value)"
+      >
+        <slot></slot>
+      </button>
+    </template>
+    
+    <script setup lang="ts">
+    import { inject, computed, Ref } from 'vue'
+    import { ActiveTab, Orientation, UpdateActiveTab, TabsInstanceId } from './keys'
+    
+    const props = defineProps<{
+      value: string
+      disabled?: boolean
+    }>()
+    
+    const activeTab = inject(ActiveTab) as Ref<string>
+    const updateActiveTab = inject(UpdateActiveTab) as (tab: string) => void
+    const orientation = inject(Orientation) as Ref<'horizontal' | 'vertical'>
+    const tabsInstanceId = inject(TabsInstanceId) as Ref<string>
+    
+    const tabsTriggerClassNames = computed(() => [
+      'tabs-trigger',
+      `tabs-trigger--${orientation.value}`,
+      isActiveTab.value && 'tabs-trigger--active',
+    ])
+    const isActiveTab = computed(() => props.value === activeTab.value)
+    const id = computed(() => `tabs-trigger-${props.value}-${tabsInstanceId.value}`)
+    const ariaControls = computed(() => `tabs-content-${props.value}-${tabsInstanceId.value}`)
+    </script>
+    
+    <style scoped>
+    /* same styles */
+    </style>
+```
+
+From the code block above we achieved the following:
+
+
+- We set the role tof the root element to **tab.**
+- We added aria-selected attribute, which will be set to **true** if that tab is the currently selected tab or **false** if it is not the currently selected tab.
+- We added an id attribute which is derived by concatenating ‘tabs-trigger’, the **value** prop and the **tabsInstanceId** injected from the root compoent. This way, even if there are multiple tabs on the DOM, each TabsTrigger component will have a unique ID. The id attribute must match the aria-labelledby attribute on its corresponding TabsContent component.
+- We added **aria-controls** attribute and set its value to **ariaControls,** a computed property derived by concatenating ‘tabs-content’, the **value** prop and the **tabsInstanceId** injected from the root compoent. The aria-controls attribute on a TabsTrigger must match the id attribute on its corresponding TabsContent component.
+- In a tabs component only the active tab should be reachable via **Tab** key navigation (tabindex = 0) while inactive tabs are excluded from the tab sequence (tabindex = -1). Users navigate between tabs using arrow keys, not the Tab key. This is the [roving index pattern for keyboard accessibility](https://ebay.gitbook.io/mindpatterns/techniques/roving-tabindex).
+
+TabsContent (Updated)
+
+```ts
+    <template>
+      <div
+        v-if="isActiveTab"
+        role="tabpanel"
+        :id="id"
+        :aria-labelledby="ariaLabelledBy"
+        tabindex="0"
+        :class="`tabs-content tabs-content--${orientation}`"
+      >
+        <slot></slot>
+      </div>
+    </template>
+    
+    <script setup lang="ts">
+    import { computed, inject, Ref } from 'vue'
+    import { ActiveTab, Orientation, TabsInstanceId } from './keys'
+    
+    const props = defineProps<{
+      value: string
+    }>()
+    
+    const activeTab = inject(ActiveTab) as Ref<string>
+    const orientation = inject(Orientation) as Ref<'horizontal' | 'vertical'>
+    const tabsInstanceId = inject(TabsInstanceId) as Ref<string>
+    
+    const isActiveTab = computed(() => props.value === activeTab.value)
+    const id = computed(() => `tabs-content-${props.value}-${tabsInstanceId.value}`)
+    const ariaLabelledBy = computed(() => `tabs-trigger-${props.value}-${tabsInstanceId.value}`)
+    </script>
+    
+    <style scoped>
+    /* same styles */
+    </style>
+```
+
+
+- We set the role of the root element to **tabpanel**.
+- We added an id attribute which is derived by concatenating ‘tabs-content’, the value prop and the tabsInstanceId injected from the root compoent. The id attribute of must match the aria-controls attribute on its corresponding TabsTrigger component.
+- We added **aria-labelledby** attribute and set its value to **ariaLabelledBy,** a computed property derived by concatenating ‘tabs-trigger’, the value prop and the tabsInstanceId injected from the root compoent. The aria-labelledy attribute must match the id attribute on the corresponding TabsTrigger component.
+
+
+![id attribute on TabsTrigger must match aria-labelledby on corresponding TabsContent. id attribute on TabsContent must match aria-controls on corresponding TabsTrigger.](https://paper-attachments.dropboxusercontent.com/s_8CBB51B2CF1EC5E1AADA8D21A570CED27364C840DAD1243E195C6CA3794EF933_1750617975962_Screenshot+2025-06-22+at+7.37.57PM.png)
+
+
+With all these updates, we can go ahead and test the components. For horizontal orientation, pressing the Right or Left arrow keys when one of the tabs is focused should allow us to navigate between tabs without having to click. For vertical orientation, we should be able to navigate between tabs with the Up and Down arrow keys.
+
+Implementing aria-roles, aria-states, and keyboard navigation involves adding extra lines of code. But if done correctly, it can lead to a user interface that is functional, inclusive, and has a great user experience.
+
+You can [find the full solution here on Github](https://github.com/timothyokooboh/accessible-tabs-component-demo).
+[](https://stackblitz.com/edit/vue3-vite-typescript-starter-zj8u8m7p?file=src%2FApp.vue,src%2Fcomponents%2Ftabs%2Fkeys.ts,src%2Fcomponents%2Ftabs%2FTabsRoot.vue,src%2Fcomponents%2Ftabs%2FTabsTrigger.vue,src%2Fcomponents%2Ftabs%2FTabsContent.vue,src%2Fcomponents%2Ftabs%2FTabsList.vue,package.json)
+**Conclusion**
+
+Component composition is a technique for splitting a large or complex component into multiple smaller components with benefits such as improved maintenance, flexibility and reusability.
+
+The component composition approach we have explored extends far beyond tabs. Whether you are building accordions, dropdowns, breadcrumbs, or tables, the same principles apply: break it down, make it declarative and don’t compromise on accessibility.
+
+In Vue.js, features such as provide/inject, slots and composition API make it easy to apply the art of component composition. By breaking down our tabs component into smaller focused components, we ended up with a final solution that is flexible, declarative and easier to maintain.
+
+However, while component composition is powerful, overusing it can backfire. Avoid unneccssary composition if the component is trivial.

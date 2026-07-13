@@ -1,0 +1,31 @@
+{
+  "studio": {
+    "metadata": {"title": "Estudio de escritura", "description": "Espacio local de autoría MDX para los artículos del portafolio de Timothy Okooboh."},
+    "shell": {
+      "eyebrow": "Estudio privado", "title": "Estudio de escritura", "description": "Un flujo MDX local para redactar, editar y previsualizar artículos antes de publicarlos.",
+      "allPosts": "Todos los artículos", "newPost": "Nuevo artículo", "backToSite": "Volver al portafolio", "signedInAs": "Sesión iniciada como {email}", "signOut": "Cerrar sesión"
+    },
+    "auth": {
+      "title": "Acceso local al estudio", "description": "No se necesita inicio de sesión alojado. El estudio se abre directamente en localhost y no forma parte del sitio desplegado.",
+      "emailLabel": "Correo electrónico", "emailPlaceholder": "tu@ejemplo.com", "submit": "Enviar enlace mágico", "success": "Enlace enviado. Revisa tu bandeja de entrada.",
+      "invalidEmail": "Introduce un correo válido.", "requestFailed": "Ocurrió un error al solicitar el enlace.", "signedInRedirect": "Ya has iniciado sesión."
+    },
+    "setup": {
+      "title": "Flujo de autoría local", "description": "Estas rutas están pensadas para localhost. El portafolio público puede seguir siendo estático mientras el espacio de autoría vive junto al código.",
+      "required": "Ruta del repositorio", "filename": "Fuente de contenido MDX", "note": "Los artículos viven como archivos MDX locales. Redacta, publica e itera aquí y confirma los cambios igual que el código."
+    },
+    "dashboard": {
+      "title": "Todos los artículos", "description": "Una vista sencilla de ensayos publicados y borradores desde la fuente MDX local.", "status": "Estado", "updated": "Actualizado", "readTime": "Tiempo de lectura", "article": "Artículo", "actions": "Acciones",
+      "publishedCount": "Publicados", "draftCount": "Borradores", "publishedLabel": "Publicado", "draftLabel": "Borrador", "newArticle": "Crear artículo", "edit": "Editar", "openPublic": "Abrir página pública", "empty": "Todavía no hay artículos."
+    },
+    "editor": {
+      "newTitle": "Crear un artículo", "editTitle": "Editar artículo", "formTitle": "Detalles del artículo", "description": "Escribe directamente en el modelo MDX local con metadatos, bloques de código, imágenes Markdown y componentes de demostración.",
+      "titleLabel": "Título", "slugLabel": "Slug", "descriptionLabel": "Descripción principal", "summaryLabel": "Resumen", "categoryLabel": "Categoría", "readTimeLabel": "Tiempo de lectura", "bodyLabel": "Contenido del artículo (MDX)", "bodyDescription": "Usa Markdown, bloques de código, imágenes o los componentes MDX aprobados.",
+      "saveDraft": "Guardar borrador", "publish": "Publicar artículo", "preview": "Previsualizar página pública", "sectionsTitle": "Secciones detectadas", "sectionsDescription": "Esta vista refleja los encabezados MDX actuales.", "previewTitle": "Vista previa en vivo", "previewDescription": "Una vista ligera de los metadatos que enmarcan el artículo.",
+      "previewEmptyTitle": "Vista previa del nuevo artículo", "previewEmptyDescription": "Escribe una introducción clara que explique el tema y por qué importa.", "previewEmptySummary": "Crea un resumen conciso para tarjetas y archivos.", "sectionCount": "{count} secciones", "lineCount": "{count} líneas de contenido", "structureEmpty": "Todavía no hay secciones H2. Añade títulos como ## Contexto o ## Implementación.", "notAvailable": "Este artículo todavía no existe en la fuente local.",
+      "draftLabel": "Borrador", "publishedLabel": "Publicado", "newDescriptionPlaceholder": "Escribe el párrafo principal del artículo.", "newSummaryPlaceholder": "Un resumen conciso de lo que enseña el artículo.", "newTitlePlaceholder": "Título del próximo artículo", "newSlugPlaceholder": "slug-articulo", "newCategoryPlaceholder": "Sistemas de diseño", "newReadTimePlaceholder": "5 min de lectura",
+      "bodyExampleFilename": "article.mdx", "bodyExampleLabel": "Sintaxis compatible",
+      "errors": {"required": "Este campo es obligatorio.", "slugTaken": "Este slug ya está en uso por otro artículo.", "validationError": "Corrige los campos marcados e inténtalo de nuevo."}
+    }
+  }
+}

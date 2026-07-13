@@ -1,0 +1,311 @@
+{
+  "projects": {
+    "seamkit-ui": {
+      "hero": {
+        "eyebrow": "Case study / 2024",
+        "title": "Seamkit UI: raising the accessibility and consistency bar across SeamlessHR products.",
+        "description": "SeamlessHR's shared design system and Storybook documentation surface, built to improve accessibility, reduce development time across teams, and give product teams a more reliable frontend foundation."
+      },
+      "role": "Lead Frontend Engineer",
+      "timeline": "2021 — Present",
+      "stack": "Vue 3, TypeScript, Storybook, Design tokens",
+      "metrics": [
+        "40+ reusable and accessible components",
+        "15+ SaaS product surfaces supported",
+        "50%+ reduction in development time across teams"
+      ],
+      "overview": [
+        "At SeamlessHR, I lead the UI library team and maintain Seamkit UI, the shared component library and documentation surface used across the company’s products. The work is not just about shipping components. It is about giving teams a frontend foundation they can trust and scale with.",
+        "I defined the principles behind the system, created the documentation, led engineers building the library, and worked closely with designers on the UX details of each component. I also organised accessibility sessions for frontend engineers because better primitives alone were not enough to improve product quality."
+      ],
+      "challenge": {
+        "title": "The challenge",
+        "description": "Before Seamkit UI, accessibility and consistency were weak across product teams. Keyboard support was unreliable, shared patterns were under-defined, and the previous component library did not treat accessibility as a first-class concern.",
+        "points": [
+          {
+            "title": "Accessibility had no strong foundation",
+            "description": "Teams were composing interfaces on top of primitives that did not adequately support semantics, focus management, or keyboard interaction."
+          },
+          {
+            "title": "System adoption needed more than components",
+            "description": "Even with better primitives, developers still needed documentation, composition guidance, and education to build accessible product surfaces well."
+          }
+        ]
+      },
+      "implementation": {
+        "title": "What I built",
+        "description": "I led the architecture and delivery of the library, built many of the components myself, and structured the Storybook docs around foundations, accessibility guidance, and composition patterns teams could apply directly in product code.",
+        "filename": "create-accordion-root.ts",
+        "actionLabel": "Inspect",
+        "galleryTitle": "Outcome",
+        "galleryCaption": "A documentation surface that makes the system teachable, usable, and easier to trust.",
+        "galleryItems": {
+          "landing": {
+            "title": "System documentation landing",
+            "caption": "The welcome surface introduces foundations, accessibility standards, and component guidance as one coherent product, not a loose set of docs.",
+            "alt": "Seamkit UI Storybook welcome page showing documentation navigation and design system overview"
+          },
+          "components-overview": {
+            "title": "Component catalogue overview",
+            "caption": "The catalogue turns a large surface area into something teams can scan quickly, with each family mapped to a clear implementation page.",
+            "alt": "Seamkit UI components overview page listing component families like Accordion, Alert, Avatar, Badge, and Banner"
+          },
+          "accessibility": {
+            "title": "Accessibility guidance surface",
+            "caption": "Accessibility expectations live inside the system docs themselves, with concrete references for keyboard flow, focus treatment, ARIA, and contrast.",
+            "alt": "Seamkit UI accessibility documentation page showing composition review guidance and accessibility checks"
+          },
+          "foundations": {
+            "title": "Token foundations reference",
+            "caption": "Foundations documentation translates raw token decisions into practical references engineers and designers can inspect while building real interfaces.",
+            "alt": "Seamkit UI foundations page documenting color tokens and system foundations"
+          }
+        },
+        "reflection": "Seamkit UI taught me that design-system work succeeds when component quality, documentation, and team habits improve together. Shipping primitives is only part of the job."
+      }
+    },
+    "olanna": {
+      "hero": {
+        "eyebrow": "Case study / 2026",
+        "title": "Olanna: frontend systems for real-time AI chat and voice workflows.",
+        "description": "A three-month contract where I owned frontend work across authentication, knowledge-base tooling, chat and voice product surfaces, and the schema-driven contract behind generative UI responses."
+      },
+      "role": "Senior Frontend Engineer (Contract)",
+      "timeline": "3 months",
+      "stack": "Next.js, TypeScript, WebSockets, Lexical",
+      "metrics": [
+        "Magic link, 2FA, OAuth, phone, and password auth flows",
+        "Real-time voice and chat conversation surfaces",
+        "Schema-driven generative UI proposal adopted by the team"
+      ],
+      "overview": [
+        "Olanna provisions AI agents for businesses and connects those agents to channels like phone calls, messaging, and WhatsApp. During my contract, I worked on the frontend systems that let business owners configure agents, simulate conversations, manage knowledge, and monitor interactions in real time.",
+        "I also contributed to the UI library foundations by fixing accessibility issues in existing components and building new primitives like pagination and multiselect. That foundation work made it easier to move quickly on the more complex conversational features."
+      ],
+      "challenge": {
+        "title": "The challenge",
+        "description": "Olanna combined real-time conversations, multiple authentication flows, agent configuration, and knowledge-base management in one product. The challenge was making those flows feel usable without exposing all of the underlying system complexity to business users.",
+        "points": [
+          {
+            "title": "Real-time UX had to feel dependable",
+            "description": "Chat, voice, listen-in sessions, and live transcriptions all depended on WebSockets and responsive state handling."
+          },
+          {
+            "title": "Generative UI needed a cleaner contract",
+            "description": "The initial proposal put too much templating responsibility on the backend. I proposed a shared schema model so the frontend could safely map agent responses to real UI components."
+          }
+        ]
+      },
+      "implementation": {
+        "title": "What I built",
+        "description": "I built the authentication suite, reusable conversation hooks and primitives, super-agent interactions, agent preview settings, listen-in experiences, inbox flows, and the knowledge-base UX feeding the RAG architecture. I also wrote the generative UI proposal the team used as the implementation path.",
+        "filename": "generative-ui-schema.ts",
+        "actionLabel": "Inspect",
+        "galleryTitle": "Outcome",
+        "galleryCaption": "A set of product surfaces that made AI conversations, settings, and knowledge operations feel more concrete to business users.",
+        "galleryItems": {
+          "agent-home": {
+            "title": "Agent query surface",
+            "caption": "A calm starting point for asking the provisioned agent business questions through chat or voice.",
+            "alt": "Olanna agent home view with a large conversation input for querying the agent"
+          },
+          "personality-preview": {
+            "title": "Settings with live preview",
+            "caption": "Agent personality, language, and preview modes sit side by side so configuration decisions stay grounded in immediate feedback.",
+            "alt": "Olanna agent settings view showing personality controls beside a live agent preview"
+          },
+          "voice-settings": {
+            "title": "Voice tuning controls",
+            "caption": "Tone, speed, and depth controls are grouped with a live voice preview so operators can tune behavior with confidence.",
+            "alt": "Olanna voice settings screen with sliders for tone, personality, speed, and depth"
+          },
+          "model-settings": {
+            "title": "Model selection controls",
+            "caption": "Provider and model choices are exposed clearly so backend intelligence decisions feel understandable from the product surface.",
+            "alt": "Olanna model settings screen listing language model provider and model choices"
+          },
+          "inbox-thread": {
+            "title": "Inbox conversation view",
+            "caption": "The split layout keeps the customer thread readable while preserving contact context and message history.",
+            "alt": "Olanna inbox layout showing a conversation list beside an open message thread"
+          },
+          "live-call": {
+            "title": "Real-time listen-in",
+            "caption": "Business owners can join live calls, follow transcript updates, and stay close to active customer interactions.",
+            "alt": "Olanna live call listen-in view with participants and real-time transcript updates"
+          },
+          "call-summary": {
+            "title": "Generated call summary",
+            "caption": "Summaries convert live transcript detail into a quick operational snapshot that teams can scan after the call.",
+            "alt": "Olanna call summary card generated from an ongoing voice conversation"
+          }
+        },
+        "reflection": "Olanna reminded me that strong frontend work is not only about what gets rendered. One of my most valuable contributions was helping the team settle on a cleaner generative UI contract."
+      }
+    },
+    "myfastmeds": {
+      "hero": {
+        "eyebrow": "Case study / In progress",
+        "title": "MyFastMeds: solo end-to-end delivery for a medicine commerce platform.",
+        "description": "A solo contract build where I owned both the frontend and backend of a medicine marketplace for healthcare and non-healthcare professionals."
+      },
+      "role": "Full-stack Engineer",
+      "timeline": "Solo contract build",
+      "stack": "Next.js, Nest.js, TypeScript",
+      "metrics": [
+        "98% of core product features completed",
+        "Frontend and backend ownership by one engineer",
+        "Storefront, cart, checkout, and admin workflows built"
+      ],
+      "overview": [
+        "MyFastMeds is a health-commerce product for purchasing medicines with delivery support. Because I was the only engineer on the project, I owned the full path from UI decisions to API design and the backend workflows supporting the product.",
+        "That kind of setup changes the work. I was not only implementing screens, but also deciding how search, cart, checkout, account flows, inventory behavior, and operational rules should fit together across the whole system."
+      ],
+      "challenge": {
+        "title": "The challenge",
+        "description": "The product needed to feel trustworthy and straightforward in a sensitive domain, while still moving fast enough for a client engagement being built by one engineer.",
+        "points": [
+          {
+            "title": "Trust had to be visible in the UX",
+            "description": "Because the domain is medicine procurement, the interface needed to communicate reliability, product availability, and purchasing clarity from the first screen."
+          },
+          {
+            "title": "Solo ownership meant every decision connected",
+            "description": "Frontend states, backend contracts, cart rules, and checkout behavior all had to be designed and implemented with the same mental model."
+          }
+        ]
+      },
+      "implementation": {
+        "title": "What I built",
+        "description": "I built the storefront, category navigation, product pages, cart, and checkout flows, and I designed the backend APIs and business logic required to support them. The work involved constant trade-offs between speed, clarity, and long-term coherence.",
+        "filename": "create-checkout-session.ts",
+        "actionLabel": "Inspect",
+        "galleryTitle": "Outcome",
+        "galleryCaption": "A still-private product foundation that shows end-to-end ownership across interface design, application architecture, and backend workflows.",
+        "galleryItems": {
+          "storefront-home": {
+            "title": "Marketplace landing",
+            "caption": "The landing surface makes trust, search, and product discovery visible immediately for buyers navigating a health-commerce experience.",
+            "alt": "MyFastMeds landing page showing search, marketplace hero, and product categories"
+          },
+          "catalog": {
+            "title": "Category-led product discovery",
+            "caption": "The catalogue balances categories, pricing, and add-to-cart actions so buyers can browse inventory quickly without losing trust cues.",
+            "alt": "MyFastMeds catalogue page showing new arrivals and popular product listings"
+          },
+          "notifications": {
+            "title": "Order notifications workflow",
+            "caption": "The notifications surface keeps unread state, order updates, and bulk actions visible so operational follow-up feels lightweight.",
+            "alt": "MyFastMeds notifications page showing read and unread order alerts"
+          },
+          "cart": {
+            "title": "Cart and checkout handoff",
+            "caption": "Quantity controls, stock visibility, totals, and the order summary stay on one screen so buyers can validate decisions before moving into payment.",
+            "alt": "MyFastMeds cart page showing item quantities, totals, and checkout summary"
+          }
+        },
+        "reflection": "MyFastMeds strengthened my ability to think across the whole product, not just the UI. When one engineer owns both sides of the system, clear architecture becomes a product decision, not just a technical one."
+      }
+    },
+    "vbox": {
+      "hero": {
+        "eyebrow": "Open source / Experiment",
+        "title": "VBox: bringing typed style props and polymorphism to Vue.",
+        "description": "An open source experiment inspired by Chakra UI’s style props, built to give Vue developers a typed, polymorphic styling primitive with theming, aliases, and responsive support."
+      },
+      "role": "Creator",
+      "timeline": "Independent experiment",
+      "stack": "Vue, TypeScript, npm package design",
+      "metrics": [
+        "Typed support for every CSS property as props",
+        "Theme, alias, and breakpoint customization",
+        "Used to style the VueDrill landing page end to end"
+      ],
+      "overview": [
+        "VBox started from a simple observation: I liked the style-props experience in Chakra UI, but I did not see a Vue alternative that felt equally ergonomic.",
+        "I built it as a polymorphic component plus lightweight styling engine with type-safe style props, responsive values, pseudo states, vendor prefixing, and design-token customization."
+      ],
+      "challenge": {
+        "title": "The challenge",
+        "description": "The hard part was designing an API that stayed expressive without becoming unreadable, while still giving developers reliable autocomplete, theming hooks, and room for custom aliases.",
+        "points": [
+          {
+            "title": "Ergonomics had to justify the abstraction",
+            "description": "If the API felt noisy or unpredictable, the whole experiment would lose its value for real application work."
+          },
+          {
+            "title": "System behavior needed to stay flexible",
+            "description": "Responsive breakpoints, theme values, pseudo states, and aliasing all had to coexist without turning the API into a type-safety mess."
+          }
+        ]
+      },
+      "implementation": {
+        "title": "What I built",
+        "description": "I designed the component API, implemented the styling engine and type system, and added support for themes, aliases, responsive values, pseudo states, and vendor prefixing. I also used VBox on a real landing page to make sure the abstraction held up outside a demo.",
+        "filename": "vbox-example.vue",
+        "actionLabel": "Inspect",
+        "galleryTitle": "Outcome",
+        "galleryCaption": "A focused open source experiment that reflects how I think about APIs, developer experience, and reusable frontend primitives.",
+        "galleryItems": {
+          "marketing-home": {
+            "title": "Developer-facing landing page",
+            "caption": "The homepage demonstrates the abstraction quickly: typed style props, theming, and lightweight ergonomics framed for Vue developers evaluating the idea.",
+            "alt": "VBox landing page introducing the polymorphic Vue component and style props system"
+          },
+          "style-props": {
+            "title": "Docs with live API examples",
+            "caption": "The documentation pairs the style-props API with rendered output so Vue developers can understand the abstraction without guessing how it behaves.",
+            "alt": "VBox documentation page showing the style props API and rendered example output"
+          },
+          "vbox-config": {
+            "title": "Configuration and type setup",
+            "caption": "The configuration docs explain how aliases, breakpoints, themes, and generated types fit together in a real project setup.",
+            "alt": "VBox documentation page explaining VBox configuration and generated type support"
+          }
+        },
+        "reflection": "VBox reminded me that experiments become more useful when you push them far enough to reveal real API and developer-experience trade-offs."
+      }
+    }
+  },
+  "workDetailPage": {
+    "backLink": "Back to work",
+    "metricsEyebrow": "Project metrics",
+    "overviewEyebrow": "01 / Overview",
+    "challengeEyebrow": "02 / Challenge",
+    "implementationEyebrow": "03 / Implementation",
+    "reflectionEyebrow": "Reflection",
+    "reflectionTitle": "What this project sharpened",
+    "visitLive": "Visit live surface",
+    "roleLabel": "Role",
+    "timelineLabel": "Timeline",
+    "stackLabel": "Stack",
+    "metricLabel": "Metric {index}"
+  },
+  "workPage": {
+    "hero": {
+      "eyebrow": "Selected projects",
+      "title": "Frontend work with real product depth.",
+      "description": "A focused set of projects across design systems, AI workflows, commerce, and open source. The common thread is ownership: understanding the product, shaping the system, and shipping interfaces that hold up in real use."
+    },
+    "professional": {
+      "eyebrow": "Case studies",
+      "title": "Case studies from shipped product work.",
+      "description": "These projects show how I work inside real product constraints: building reusable systems, partnering closely with design, and carrying frontend execution from architecture through shipped detail.",
+      "cta": "Open case study"
+    },
+    "lab": {
+      "eyebrow": "Open source",
+      "title": "Open source work that sharpened my frontend instincts.",
+      "description": "VBox started as an experiment, but it still reflects how I like to work: strong primitives, ergonomic APIs, and abstractions that stay useful in real product code.",
+      "ctaPrimary": "Read the case study",
+      "ctaSecondary": "Open project"
+    },
+    "cta": {
+      "eyebrow": "Next step",
+      "title": "Need a senior frontend engineer who can own the system behind the interface?",
+      "description": "That usually means shared libraries, dense product flows, or frontend architecture work where accessibility, maintainability, and implementation quality all need real attention.",
+      "primaryAction": "Contact me",
+      "secondaryAction": "Download resume"
+    }
+  }
+}

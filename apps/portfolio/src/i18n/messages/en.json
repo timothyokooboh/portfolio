@@ -1,0 +1,71 @@
+{
+  "common": {
+    "skipToContent": "Skip to content"
+  },
+  "footer": {
+    "title": "Timothy.Okooboh",
+    "description": "Senior frontend engineer focused on accessible product UI, design systems, and frontend architecture.",
+    "cta": "Share the context.",
+    "socials": "Socials",
+    "socialItems": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "pages": "Pages",
+    "contact": "Contact",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "emailValue": "okoobohtimothy@gmail.com",
+    "locationValue": "Lagos, Nigeria",
+    "copyright": "Designed and built by Timothy Okooboh",
+    "coordinates": "6° 27' 0\" N, 3° 23' 0\" E"
+  },
+  "metadata": {
+    "title": "Timothy Okooboh | Senior Frontend Engineer",
+    "description": "Senior frontend engineer with 6+ years building Vue.js and React.js products, with strengths in design systems, frontend architecture, accessibility, and performance."
+  },
+  "navigation": {
+    "home": "Home",
+    "work": "Work",
+    "designs": "Designs",
+    "writing": "Writing",
+    "resume": "Resume",
+    "contact": "Contact",
+    "primaryLabel": "Primary navigation",
+    "mobileLabel": "Mobile navigation",
+    "mobileDescription": "Browse site sections and quick actions.",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "languageLabel": "Language",
+    "languages": {
+      "en": "English",
+      "fr": "French",
+      "es": "Spanish"
+    }
+  },
+  "pages": {
+    "work": {
+      "title": "Selected work",
+      "description": "Case studies spanning design systems, AI interfaces, commerce, and open source frontend tooling."
+    },
+    "workDetail": {
+      "description": "Project detail and implementation notes from Timothy Okooboh."
+    },
+    "designs": {
+      "title": "Design studies",
+      "description": "Screens and interface studies from the portfolio redesign, linked back to Figma and built to show the thinking behind the system."
+    },
+    "writing": {
+      "title": "Writing",
+      "description": "Notes on frontend architecture, accessibility, motion, and interface systems."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "How to reach Timothy Okooboh about senior frontend roles, design systems work, or product UI work that needs deeper frontend ownership."
+    }
+  },
+  "theme": {
+    "toggleToDark": "Switch to dark theme",
+    "toggleToLight": "Switch to light theme"
+  }
+}

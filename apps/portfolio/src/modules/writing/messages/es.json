@@ -1,0 +1,73 @@
+{
+  "writingPage": {
+    "hero": {
+      "eyebrow": "Artículos",
+      "title": "Escribo sobre sistemas frontend, calidad de interfaz y detalles de implementación.",
+      "description": "Ensayos breves, notas de construcción y análisis con código sobre React, accesibilidad, sistemas de diseño, movimiento y las decisiones de ingeniería detrás de interfaces de producto pulidas."
+    },
+    "intro": {
+      "title": "Lo que encontrarás aquí",
+      "description": "Principalmente escritura práctica: decisiones de sistema, experimentos con componentes, compromisos de implementación y fragmentos de código útiles para otros ingenieros."
+    },
+    "published": {
+      "title": "Ensayos publicados",
+      "description": "Artículos que reflejan cómo pienso sobre sistemas, API y calidad frontend en la práctica."
+    },
+    "drafts": {
+      "title": "En progreso",
+      "description": "Notas y ensayos que todavía están tomando forma antes de publicarse."
+    }
+  },
+  "writingArticlePage": {
+    "backLink": "Volver a artículos",
+    "metaCategory": "Categoría",
+    "metaReadTime": "Tiempo de lectura",
+    "metaPublishedOn": "Publicado",
+    "metaRelatedProject": "Proyecto relacionado",
+    "metaStatus": "Estado",
+    "overviewTitle": "En este artículo",
+    "publishedLabel": "Publicado",
+    "draftLabel": "Borrador",
+    "nextArticleEyebrow": "Seguir leyendo",
+    "nextArticleTitle": "Más artículos",
+    "nextArticleDescription": "Los artículos de este portafolio crecen junto al trabajo frontend y de diseño, no separados de él.",
+    "nextArticleAction": "Ver todos los artículos",
+    "demos": {
+      "feedbackSurface": {
+        "eyebrow": "Vista previa interactiva",
+        "description": "Una superficie pequeña para probar jerarquía, movimiento y respuesta de estado.",
+        "denseMode": "Modo denso",
+        "denseModeAriaLabel": "Activar el modo denso",
+        "tabs": {"review": "Revisión", "states": "Estados"},
+        "review": {
+          "title": "Revisión de accesibilidad",
+          "description": "Empieza por la superficie útil más pequeña.",
+          "focusTitle": "Objetivo de foco",
+          "focusDescription": "Anillo visible, contraste claro y navegación por teclado predecible.",
+          "feedbackTitle": "Respuesta",
+          "feedbackDescription": "El movimiento se mantiene lo bastante sutil como para apoyar la tarea sin competir con ella.",
+          "primaryAction": "Continuar revisión",
+          "secondaryAction": "Ver especificación"
+        },
+        "states": {
+          "restTitle": "Reposo",
+          "restDescription": "Jerarquía predeterminada sólida con énfasis sereno.",
+          "hoverTitle": "Hover",
+          "hoverDescription": "Cambio de color sutil que comunica intención sin ruido.",
+          "pressTitle": "Presión",
+          "pressDescription": "Respuesta comprimida que se siente rápida y firme."
+        }
+      },
+      "componentPreview": {
+        "eyebrow": "Vista previa interactiva",
+        "title": "Una pequeña superficie de API en movimiento",
+        "description": "Este tipo de componente integrado es lo que quiero que admita el sistema de artículos.",
+        "renderedIdea": "Resultado",
+        "name": "VBox",
+        "caption": "Superficie componible",
+        "action": "Abrir notas de código abierto",
+        "code": "<v-box display=\"flex\" gap=\"1rem\">\n  <v-box font-weight=\"700\">VBox</v-box>\n  <v-box color=\"#55627a\">Superficie componible</v-box>\n</v-box>"
+      }
+    }
+  }
+}

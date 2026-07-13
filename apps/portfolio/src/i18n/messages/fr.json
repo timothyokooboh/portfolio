@@ -1,0 +1,61 @@
+{
+  "common": {
+    "skipToContent": "Aller au contenu"
+  },
+  "footer": {
+    "description": "Ingénieur frontend senior spécialisé dans les interfaces produit accessibles, les design systems et l’architecture frontend.",
+    "cta": "Partagez le contexte.",
+    "socials": "Réseaux",
+    "pages": "Pages",
+    "contact": "Contact",
+    "emailLabel": "E-mail",
+    "locationLabel": "Localisation",
+    "locationValue": "Lagos, Nigéria",
+    "copyright": "Conçu et développé par Timothy Okooboh"
+  },
+  "metadata": {
+    "title": "Timothy Okooboh | Ingénieur frontend senior",
+    "description": "Ingénieur frontend senior avec plus de 6 ans d’expérience sur des produits Vue.js et React.js, spécialisé dans les design systems, l’architecture frontend, l’accessibilité et la performance."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "work": "Projets",
+    "designs": "Designs",
+    "writing": "Articles",
+    "resume": "CV",
+    "contact": "Contact",
+    "primaryLabel": "Navigation principale",
+    "mobileLabel": "Navigation mobile",
+    "mobileDescription": "Parcourir les sections du site et les actions rapides.",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation",
+    "languageLabel": "Langue",
+    "languages": {
+      "en": "Anglais",
+      "fr": "Français",
+      "es": "Espagnol"
+    }
+  },
+  "pages": {
+    "work": {
+      "title": "Projets sélectionnés",
+      "description": "Études de cas autour des design systems, des interfaces IA, du commerce et des outils frontend open source."
+    },
+    "designs": {
+      "title": "Études de design",
+      "description": "Écrans et études d’interface issus de la refonte du portfolio, reliés à Figma et accompagnés de la réflexion derrière le système."
+    },
+    "writing": {
+      "title": "Articles",
+      "description": "Notes sur l’architecture frontend, l’accessibilité, le mouvement et les systèmes d’interface."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contacter Timothy Okooboh pour un rôle frontend senior, un design system ou un produit nécessitant une forte expertise frontend."
+    }
+  },
+  "theme": {
+    "toggleToDark": "Passer au thème sombre",
+    "toggleToLight": "Passer au thème clair"
+  }
+}

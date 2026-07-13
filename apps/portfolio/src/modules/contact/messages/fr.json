@@ -1,0 +1,36 @@
+{
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Vous recrutez pour un rôle frontend senior, un design system ou une interface produit ? Parlons-en.",
+      "description": "Présentez-moi le rôle, le produit et le niveau de responsabilité attendu."
+    },
+    "actions": {
+      "email": "M'écrire",
+      "resume": "Voir mon CV"
+    },
+    "channels": {
+      "title": "Retrouvez-moi ici.",
+      "items": {
+        "email": {
+          "eyebrow": "Direct",
+          "title": "E-mail",
+          "description": "Idéal pour les détails d'un rôle ou d'un projet.",
+          "action": "M'écrire"
+        },
+        "linkedin": {
+          "eyebrow": "Recrutement",
+          "title": "LinkedIn",
+          "description": "Idéal pour les recruteurs et les présentations.",
+          "action": "Ouvrir LinkedIn"
+        },
+        "github": {
+          "eyebrow": "Code",
+          "title": "GitHub",
+          "description": "Parcourir mon code et mes projets open source.",
+          "action": "Voir GitHub"
+        }
+      }
+    }
+  }
+}

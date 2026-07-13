@@ -1,31 +1,17 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "repository": "https://github.com/timothyokooboh/portfolio",
-  "author": "timothy okooboh <okoobohtimothy@gmail.com>",
+  "name": "portfolio-monorepo",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
-  "devDependencies": {
-    "lerna": "^7.4.2",
-    "prettier": "^3.0.3",
-    "turbo": "^1.10.16"
-  },
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
-    "format:fix": "yarn turbo run format:fix",
-    "format:check": "yarn turbo run format:check",
-    "lint": "yarn turbo run lint",
-    "test": "yarn turbo run test",
-    "e2e": "yarn turbo run e2e",
-    "dev": "yarn turbo run dev",
-    "build": "yarn turbo run build",
-    "deploy": "yarn turbo run deploy"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "docs": "pnpm --filter @apps/docs storybook",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "typecheck": "turbo run typecheck"
   },
-  "dependencies": {
-    "git-url-parse": "^14.0.0"
+  "devDependencies": {
+    "turbo": "^2.5.4"
   }
 }

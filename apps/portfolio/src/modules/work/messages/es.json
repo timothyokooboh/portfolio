@@ -1,0 +1,43 @@
+{
+  "workPage": {
+    "hero": {
+      "eyebrow": "Proyectos seleccionados",
+      "title": "Trabajo frontend con profundidad de producto real.",
+      "description": "Una selección de proyectos de sistemas de diseño, flujos de IA, comercio y código abierto, unidos por la responsabilidad de principio a fin."
+    },
+    "professional": {
+      "eyebrow": "Casos de estudio",
+      "title": "Casos de productos que llegaron a producción.",
+      "description": "Estos proyectos muestran cómo trabajo con restricciones reales, desde la arquitectura hasta el detalle final.",
+      "cta": "Abrir caso de estudio"
+    },
+    "lab": {
+      "eyebrow": "Código abierto",
+      "title": "Código abierto que fortaleció mi criterio frontend.",
+      "description": "VBox refleja cómo me gusta trabajar: primitivas sólidas, APIs ergonómicas y abstracciones útiles en productos reales.",
+      "ctaPrimary": "Leer el caso de estudio",
+      "ctaSecondary": "Abrir proyecto"
+    },
+    "cta": {
+      "eyebrow": "Siguiente paso",
+      "title": "¿Necesitas un ingeniero frontend sénior que pueda liderar el sistema detrás de la interfaz?",
+      "description": "Bibliotecas compartidas, flujos de producto complejos o arquitectura frontend donde importan la accesibilidad y la calidad.",
+      "primaryAction": "Contáctame",
+      "secondaryAction": "Descargar CV"
+    }
+  },
+  "workDetailPage": {
+    "backLink": "Volver a proyectos",
+    "metricsEyebrow": "Métricas del proyecto",
+    "overviewEyebrow": "01 / Resumen",
+    "challengeEyebrow": "02 / Desafío",
+    "implementationEyebrow": "03 / Implementación",
+    "reflectionEyebrow": "Reflexión",
+    "reflectionTitle": "Lo que este proyecto reforzó",
+    "visitLive": "Visitar producto",
+    "roleLabel": "Rol",
+    "timelineLabel": "Periodo",
+    "stackLabel": "Stack",
+    "metricLabel": "Métrica {index}"
+  }
+}

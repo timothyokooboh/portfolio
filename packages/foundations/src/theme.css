@@ -1,0 +1,266 @@
+html {
+  color-scheme: light;
+  --ds-color-canvas: #f8f9ff;
+  --ds-color-surface: #ffffff;
+  --ds-color-surface-muted: #f1f4fb;
+  --ds-color-surface-tint: #e5eeff;
+  --ds-color-border: #c6c6cd;
+  --ds-color-border-subtle: #e4e6eb;
+  --ds-color-ink: #0b1c30;
+  --ds-color-ink-muted: #45464d;
+  --ds-color-ink-soft: #6b7280;
+  --ds-color-accent: #855300;
+  --ds-color-accent-strong: #6c4300;
+  --ds-color-accent-soft: #f6e8d2;
+  --ds-color-accent-contrast: #fff9f0;
+  --ds-color-success: #0e7a53;
+  --ds-color-warning: #8c5a00;
+  --ds-color-danger: #b3261e;
+  --ds-color-inverse-surface: #0b1c30;
+  --ds-color-inverse-border: #1e2b44;
+  --ds-color-inverse-ink: #f8f9ff;
+  --ds-color-inverse-ink-muted: #c4cdda;
+  --ds-color-inverse-accent: #d89a35;
+
+  --ds-shadow-soft: 0 1px 2px rgb(11 28 48 / 0.05), 0 12px 32px rgb(11 28 48 / 0.08);
+  --ds-shadow-card: 0 20px 60px rgb(11 28 48 / 0.12);
+  --ds-shadow-focus: 0 0 0 4px rgb(133 83 0 / 0.18);
+
+  --ds-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ds-ease-productive: cubic-bezier(0.16, 1, 0.3, 1);
+  --ds-ease-crisp: cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-ease-emphasized-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ds-ease-emphasized-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ds-duration-instant: 120ms;
+  --ds-duration-fast: 160ms;
+  --ds-duration-base: 220ms;
+  --ds-duration-slow: 280ms;
+}
+
+html.dark {
+  color-scheme: dark;
+  --ds-color-canvas: #0b1220;
+  --ds-color-surface: #101a2b;
+  --ds-color-surface-muted: #142033;
+  --ds-color-surface-tint: #1b2940;
+  --ds-color-border: #2b3a52;
+  --ds-color-border-subtle: #202e45;
+  --ds-color-ink: #f4f7fb;
+  --ds-color-ink-muted: #c4cdda;
+  --ds-color-ink-soft: #8d98aa;
+  --ds-color-accent: #d89a35;
+  --ds-color-accent-strong: #e7b55b;
+  --ds-color-accent-soft: #2a2113;
+  --ds-color-accent-contrast: #140f08;
+  --ds-color-success: #31b67e;
+  --ds-color-warning: #e4a83e;
+  --ds-color-danger: #f07f78;
+
+  --ds-shadow-soft: 0 1px 2px rgb(0 0 0 / 0.25), 0 18px 44px rgb(0 0 0 / 0.35);
+  --ds-shadow-card: 0 24px 72px rgb(0 0 0 / 0.45);
+  --ds-shadow-focus: 0 0 0 4px rgb(216 154 53 / 0.24);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    color-scheme: dark;
+    --ds-color-canvas: #0b1220;
+    --ds-color-surface: #101a2b;
+    --ds-color-surface-muted: #142033;
+    --ds-color-surface-tint: #1b2940;
+    --ds-color-border: #2b3a52;
+    --ds-color-border-subtle: #202e45;
+    --ds-color-ink: #f4f7fb;
+    --ds-color-ink-muted: #c4cdda;
+    --ds-color-ink-soft: #8d98aa;
+    --ds-color-accent: #d89a35;
+    --ds-color-accent-strong: #e7b55b;
+    --ds-color-accent-soft: #2a2113;
+    --ds-color-accent-contrast: #140f08;
+    --ds-color-success: #31b67e;
+    --ds-color-warning: #e4a83e;
+    --ds-color-danger: #f07f78;
+
+    --ds-shadow-soft: 0 1px 2px rgb(0 0 0 / 0.25), 0 18px 44px rgb(0 0 0 / 0.35);
+    --ds-shadow-card: 0 24px 72px rgb(0 0 0 / 0.45);
+    --ds-shadow-focus: 0 0 0 4px rgb(216 154 53 / 0.24);
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-playfair-display);
+  --font-editorial: var(--font-source-serif, var(--font-playfair-display));
+
+  --color-background: var(--ds-color-canvas);
+  --color-foreground: var(--ds-color-ink);
+  --color-canvas: var(--ds-color-canvas);
+  --color-surface: var(--ds-color-surface);
+  --color-surface-muted: var(--ds-color-surface-muted);
+  --color-surface-tint: var(--ds-color-surface-tint);
+  --color-border: var(--ds-color-border);
+  --color-border-subtle: var(--ds-color-border-subtle);
+  --color-ink: var(--ds-color-ink);
+  --color-ink-muted: var(--ds-color-ink-muted);
+  --color-ink-soft: var(--ds-color-ink-soft);
+  --color-accent: var(--ds-color-accent);
+  --color-accent-strong: var(--ds-color-accent-strong);
+  --color-accent-soft: var(--ds-color-accent-soft);
+  --color-accent-contrast: var(--ds-color-accent-contrast);
+  --color-success: var(--ds-color-success);
+  --color-warning: var(--ds-color-warning);
+  --color-danger: var(--ds-color-danger);
+  --color-inverse-surface: var(--ds-color-inverse-surface);
+  --color-inverse-border: var(--ds-color-inverse-border);
+  --color-inverse-ink: var(--ds-color-inverse-ink);
+  --color-inverse-ink-muted: var(--ds-color-inverse-ink-muted);
+  --color-inverse-accent: var(--ds-color-inverse-accent);
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1.45;
+  --text-eyebrow: 0.8125rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-display-sm: 2.5rem;
+  --text-display-sm--line-height: 1.08;
+  --text-display-md: 3.25rem;
+  --text-display-md--line-height: 1.02;
+  --text-display-lg: 4rem;
+  --text-display-lg--line-height: 1;
+
+  --tracking-eyebrow: 0.12em;
+  --tracking-display: -0.03em;
+  --tracking-tight: -0.015em;
+
+  --spacing-page: clamp(1.5rem, 4vw, 2.5rem);
+  --spacing-section: clamp(4rem, 7vw, 7rem);
+  --spacing-card: 1.5rem;
+  --spacing-stack-sm: 0.75rem;
+  --spacing-stack-md: 1.25rem;
+  --spacing-stack-lg: 2rem;
+
+  --radius-card: 1.5rem;
+  --radius-panel: 2rem;
+  --radius-pill: 9999px;
+
+  --shadow-soft: var(--ds-shadow-soft);
+  --shadow-card: var(--ds-shadow-card);
+  --shadow-focus: var(--ds-shadow-focus);
+
+  --container-copy: 42rem;
+  --container-reading: 48rem;
+  --container-content: 75rem;
+
+  --breakpoint-3xl: 112rem;
+
+  --ease-standard: var(--ds-ease-standard);
+  --ease-productive: var(--ds-ease-productive);
+  --ease-crisp: var(--ds-ease-crisp);
+  --ease-emphasized-out: var(--ds-ease-emphasized-out);
+  --ease-emphasized-in-out: var(--ds-ease-emphasized-in-out);
+
+  --duration-instant: var(--ds-duration-instant);
+  --duration-fast: var(--ds-duration-fast);
+  --duration-base: var(--ds-duration-base);
+  --duration-slow: var(--ds-duration-slow);
+}
+
+@layer base {
+  html {
+    background-color: var(--ds-color-canvas);
+    color: var(--ds-color-ink);
+  }
+
+  body {
+    background-color: var(--ds-color-canvas);
+    color: var(--ds-color-ink);
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: var(--ds-color-accent-soft);
+    color: var(--ds-color-ink);
+  }
+}
+
+@layer utilities {
+  .ds-motion-button {
+    transition-property: transform, background-color, border-color, color, box-shadow;
+    transition-duration: var(--ds-duration-fast);
+    transition-timing-function: var(--ds-ease-productive);
+  }
+
+  .ds-motion-button:active {
+    transform: scale(0.97);
+  }
+
+  .ds-motion-surface {
+    transition-property: transform, box-shadow, border-color, background-color;
+    transition-duration: var(--ds-duration-base);
+    transition-timing-function: var(--ds-ease-emphasized-out);
+  }
+
+  .ds-motion-field {
+    transition-property: transform, border-color, box-shadow, background-color;
+    transition-duration: var(--ds-duration-fast);
+    transition-timing-function: var(--ds-ease-productive);
+  }
+
+  .ds-motion-tab {
+    transition-property: transform, background-color, color, box-shadow;
+    transition-duration: var(--ds-duration-fast);
+    transition-timing-function: var(--ds-ease-productive);
+  }
+
+  .ds-motion-thumb {
+    transition-property: transform, background-color;
+    transition-duration: var(--ds-duration-fast);
+    transition-timing-function: var(--ds-ease-productive);
+  }
+
+  .ds-motion-visual {
+    transition-property: transform, opacity;
+    transition-duration: var(--ds-duration-base);
+    transition-timing-function: var(--ds-ease-emphasized-out);
+  }
+
+  .ds-motion-arrow {
+    transition-property: transform, color;
+    transition-duration: var(--ds-duration-fast);
+    transition-timing-function: var(--ds-ease-productive);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .ds-motion-surface-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--ds-shadow-card);
+    }
+
+    .group:hover .ds-motion-visual-scale {
+      transform: scale(1.03);
+    }
+
+    .group:hover .ds-motion-arrow-shift {
+      transform: translate3d(4px, -4px, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ds-motion-button,
+    .ds-motion-surface,
+    .ds-motion-field,
+    .ds-motion-tab,
+    .ds-motion-thumb,
+    .ds-motion-visual,
+    .ds-motion-arrow {
+      transition-duration: 1ms;
+    }
+
+    .ds-motion-button:active,
+    .ds-motion-surface-lift:hover,
+    .group:hover .ds-motion-visual-scale,
+    .group:hover .ds-motion-arrow-shift {
+      transform: none;
+    }
+  }
+}

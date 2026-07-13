@@ -1,0 +1,247 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Senior Frontend Engineer",
+      "title": {
+        "line1": "Frontend",
+        "line2Emphasis": "engineering",
+        "line2Suffix": "with",
+        "line3Prefix": "systems depth and",
+        "line3Gradient": "growing design taste."
+      },
+      "description": "Senior frontend engineer with 6+ years of professional experience building Vue.js and React.js applications, especially around design systems, frontend architecture, accessibility, and performance. I’m deliberately strengthening the design side of my practice and documenting that progress alongside the engineering work.",
+      "primaryAction": "View case studies",
+      "secondaryAction": "Latest writing",
+      "availability": "Open to senior frontend roles, design systems work, and selective contracts.",
+      "location": "Based in Lagos, NG"
+    },
+    "positioning": {
+      "title": "Current focus at SeamlessHR.",
+      "description": "At SeamlessHR, I lead the UI library team and maintain the shared design system across components, documentation, tooling, and patterns. I work closely with designers and engineers so accessibility is built into the product foundation.",
+      "stats": {
+        "years": {
+          "value": "06+",
+          "label": "Years building"
+        },
+        "components": {
+          "value": "40+",
+          "label": "Design system components"
+        }
+      }
+    },
+    "featuredWork": {
+      "title": "Selected Works",
+      "action": "View all projects",
+      "items": {
+        "seamkit": {
+          "label": "Design System / Vue 3",
+          "title": "Seamkit UI",
+          "summary": "A shared component library and documentation that raised accessibility standards and reduced development time across 15+ product surfaces."
+        },
+        "olanna": {
+          "label": "AI Platform / Next.js",
+          "title": "Olanna",
+          "summary": "Real-time AI conversation tooling, auth architecture, knowledge-base management, and a schema-driven generative UI approach."
+        },
+        "myfastmeds": {
+          "label": "Health Tech / Full Stack",
+          "title": "MyFastMeds",
+          "summary": "A solo-built commerce platform for safe medicine procurement, spanning product UX, storefront architecture, and backend workflows."
+        },
+        "vbox": {
+          "label": "Open Source / Vue",
+          "title": "VBox",
+          "summary": "A polymorphic styling engine that brings typed style props, theming, and ergonomic system primitives to Vue applications."
+        }
+      }
+    },
+    "principles": {
+      "eyebrow": "Principles",
+      "title": "Depth, range, flexibility, and agency.",
+      "description": "The through-line in my work is not just shipping interfaces. It is taking ownership of systems, understanding product constraints deeply, and making deliberate technical decisions that improve the experience for both users and teams.",
+      "items": {
+        "depth": {
+          "index": "01",
+          "title": "Depth in systems",
+          "description": "I like working below the surface: component contracts, accessibility rules, documentation patterns, and the architecture that keeps product work from drifting."
+        },
+        "range": {
+          "index": "02",
+          "title": "Range across contexts",
+          "description": "My work spans internal tooling, open source, AI workflows, design systems, commerce, and product features with very different constraints and audiences."
+        },
+        "flexibility": {
+          "index": "03",
+          "title": "Flexible execution",
+          "description": "I can move from polished UI work to deeper engineering problems, from leading shared foundations to shipping contract work under tight timelines."
+        },
+        "agency": {
+          "index": "04",
+          "title": "Agency and ownership",
+          "description": "I do my best work where there is room to think, propose better approaches, and carry execution responsibly from idea to implementation."
+        }
+      }
+    },
+    "experience": {
+      "eyebrow": "History",
+      "title": "Experience and ownership snapshot",
+      "items": {
+        "seamlesshr": {
+          "period": "05/2021 — Present",
+          "company": "SeamlessHR",
+          "role": "Lead Frontend Engineer",
+          "location": "Lagos, Nigeria",
+          "note": "Core maintainer of SeamlessHR's Vue.js design system component library, leading work across accessibility, frontend architecture, documentation, and implementation quality.",
+          "highlights": [
+            "Led the development of 40+ reusable and accessible Vue.js design system components, driving consistency and scalability across the company’s products.",
+            "Developed analytics dashboards for tracking employee performance metrics, using Chart.js for data visualisation and real-time monitoring of team objectives and key results.",
+            "Implemented an automated performance improvement plan workflow that tracks employee performance reviews and recommends improvement plans based on team objectives and key results.",
+            "Defined and monitored Core Web Vitals targets across products, using Lighthouse to set measurable frontend performance baselines."
+          ]
+        },
+        "olanna": {
+          "period": "03/2026",
+          "company": "Olanna",
+          "role": "Senior Frontend Engineer (Contract)",
+          "location": "San Francisco, USA",
+          "note": "Ownership across real-time AI chat and voice experiences, authentication flows, and knowledge-base management tooling.",
+          "highlights": [
+            "Integrated secure authentication flows including magic links, OTP, 2FA, OAuth, password reset, and phone login.",
+            "Shipped real-time conversation experiences for chat, voice previews, inbox flows, and listen-in sessions using WebSockets.",
+            "Proposed the shared-schema generative UI contract that the team adopted for agent-driven UI rendering."
+          ]
+        },
+        "realtrac": {
+          "period": "03/2023 — 02/2025",
+          "company": "Realtrac",
+          "role": "Senior Frontend Engineer (Contract)",
+          "location": "San Francisco, USA",
+          "note": "Contract work across frontend architecture, analytics dashboards, and payment flows for a real-estate platform.",
+          "highlights": [
+            "Built scalable frontend architecture for a real-estate platform serving global property purchases.",
+            "Developed analytics dashboards that made platform activity easier for operators to track.",
+            "Integrated secure payment flows for international property transactions."
+          ]
+        },
+        "independent": {
+          "period": "Independent",
+          "company": "Contract and Open Source Work",
+          "role": "Full-stack and Frontend Systems Builder",
+          "location": "Remote",
+          "note": "A mix of solo client execution and self-initiated frontend systems work that sharpens product judgment and API design taste.",
+          "highlights": [
+            "Built MyFastMeds end to end across Next.js and Nest.js, owning both the storefront UX and backend workflows as a solo engineer.",
+            "Created VBox, a typed style-props engine for Vue that supports theming, aliases, responsive tokens, and polymorphic composition.",
+            "Use independent projects to test abstractions, deepen systems thinking, and turn curiosity into concrete product-quality execution."
+          ]
+        },
+        "lixy": {
+          "period": "11/2020 — 02/2021",
+          "company": "Lixy Technologies",
+          "role": "Frontend Developer",
+          "location": "San Francisco, USA",
+          "note": "Frontend work on a Nuxt SSR application with a strong emphasis on performance and product utility.",
+          "highlights": [
+            "Built and optimized a Nuxt SSR application, improving TTFB and LCP through code-splitting and lazy loading.",
+            "Developed a custom chat widget that became part of the company’s launch strategy and improved customer engagement.",
+            "Migrated map functionality from Google Maps to Leaflet.js, significantly reducing API costs."
+          ]
+        },
+        "flux": {
+          "period": "08/2020 — 10/2020",
+          "company": "Flux Technology Africa",
+          "role": "Frontend Developer",
+          "location": "Lagos, Nigeria",
+          "note": "Product work focused on improving the buying experience and overall performance of a food delivery platform.",
+          "highlights": [
+            "Improved UX quality across the product experience.",
+            "Improved checkout performance for a food delivery platform."
+          ]
+        },
+        "andela": {
+          "period": "05/2019 — 10/2019",
+          "company": "Google Andela Development Program",
+          "role": "Frontend Developer Intern",
+          "location": "Lagos, Nigeria",
+          "note": "Early professional training period where I built frontend applications against real APIs and product requirements.",
+          "highlights": [
+            "Built frontend applications with HTML, CSS, JavaScript, and REST APIs.",
+            "This was the start of the professional path I have been building on since 2019."
+          ]
+        }
+      }
+    },
+    "credentials": {
+      "eyebrow": "Background",
+      "title": "Education, certifications, and the path into engineering.",
+      "description": "A few pieces of context that explain how I got here and what I keep sharpening outside the day-to-day product work.",
+      "items": {
+        "education": {
+          "eyebrow": "Education",
+          "title": "From Pharmacy to frontend engineering.",
+          "description": "I studied Pharmacy at the University of Benin before transitioning into software engineering and working professionally since 2019.",
+          "points": [
+            "University of Benin",
+            "Pharmacy",
+            "11/2011 — 11/2017"
+          ]
+        },
+        "certifications": {
+          "eyebrow": "Certifications",
+          "title": "Structured learning beyond the day job.",
+          "description": "I use formal courses to deepen areas where I want stronger technical range, especially across backend and full-stack work.",
+          "points": [
+            "Udacity Full-stack Developer Nanodegree",
+            "freeCodeCamp Backend Development & APIs"
+          ]
+        },
+        "stack": {
+          "eyebrow": "Working stack",
+          "title": "The tools I work with most often.",
+          "description": "Most of my recent work sits across product UI, design systems, testing, and pragmatic full-stack delivery.",
+          "points": [
+            "Figma, TypeScript, Vue 3, React, Next.js",
+            "Node.js, Nest.js, Express.js, Fastify",
+            "Vitest, Testing Library, Jest, Playwright, monorepos"
+          ]
+        }
+      }
+    },
+    "writing": {
+      "title": "Writing",
+      "action": "Read all",
+      "items": {
+        "empathy": {
+          "meta": "Tech / 5 min read",
+          "title": "Why design systems fail without engineering empathy."
+        },
+        "vbox": {
+          "meta": "Process / 8 min read",
+          "title": "Architecting VBox: a polymorphic journey."
+        }
+      }
+    },
+    "experiments": {
+      "title": "Design Studies",
+      "action": "View all",
+      "items": {
+        "system": {
+          "title": "System review board",
+          "caption": "Design tokens, hierarchy, and contrast studies."
+        },
+        "editorial": {
+          "title": "Editorial surface",
+          "caption": "Type-led layouts for writing and knowledge sharing."
+        },
+        "motion": {
+          "title": "Motion study",
+          "caption": "Interface feedback, staging, and transition rhythm."
+        },
+        "more": {
+          "title": "15+ more",
+          "caption": "Design ideas, prototypes, and unfinished explorations."
+        }
+      }
+    }
+  }
+}

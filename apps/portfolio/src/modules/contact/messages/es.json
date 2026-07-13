@@ -1,0 +1,36 @@
+{
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "¿Buscas experiencia frontend sénior, sistemas de diseño o interfaces de producto? Hablemos.",
+      "description": "Cuéntame sobre el rol, el producto y dónde necesitas liderazgo."
+    },
+    "actions": {
+      "email": "Escríbeme",
+      "resume": "Ver CV"
+    },
+    "channels": {
+      "title": "Encuéntrame aquí.",
+      "items": {
+        "email": {
+          "eyebrow": "Directo",
+          "title": "Correo",
+          "description": "Ideal para compartir detalles de un rol o proyecto.",
+          "action": "Escríbeme"
+        },
+        "linkedin": {
+          "eyebrow": "Contratación",
+          "title": "LinkedIn",
+          "description": "Ideal para reclutadores y presentaciones.",
+          "action": "Abrir LinkedIn"
+        },
+        "github": {
+          "eyebrow": "Código",
+          "title": "GitHub",
+          "description": "Explora mi código y mi trabajo de código abierto.",
+          "action": "Ver GitHub"
+        }
+      }
+    }
+  }
+}
