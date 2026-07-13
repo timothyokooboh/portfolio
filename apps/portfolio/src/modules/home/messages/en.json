@@ -9,7 +9,7 @@
         "line3Prefix": "systems depth and",
         "line3Gradient": "growing design taste."
       },
-      "description": "Senior frontend engineer with 6+ years of professional experience building Vue.js and React.js applications, especially around design systems, frontend architecture, accessibility, and performance. I’m deliberately strengthening the design side of my practice and documenting that progress alongside the engineering work.",
+      "description": "Senior frontend engineer with 7+ years of professional experience building Vue.js and React.js applications, especially around design systems, frontend architecture, accessibility, and performance. I’m deliberately strengthening the design side of my practice and documenting that progress alongside the engineering work.",
       "primaryAction": "View case studies",
       "secondaryAction": "Latest writing",
       "availability": "Open to senior frontend roles, design systems work, and selective contracts.",
@@ -20,7 +20,7 @@
       "description": "At SeamlessHR, I lead the UI library team and maintain the shared design system across components, documentation, tooling, and patterns. I work closely with designers and engineers so accessibility is built into the product foundation.",
       "stats": {
         "years": {
-          "value": "06+",
+          "value": "05+",
           "label": "Years building"
         },
         "components": {
@@ -189,7 +189,7 @@
         "certifications": {
           "eyebrow": "Certifications",
           "title": "Structured learning beyond the day job.",
-          "description": "I use formal courses to deepen areas where I want stronger technical range, especially across backend and full-stack work.",
+          "description": "I use formal courses to deepen areas where I want stronger technical depth, especially across design engineering, AI automation, and full-stack development.",
           "points": [
             "Udacity Full-stack Developer Nanodegree",
             "freeCodeCamp Backend Development & APIs"
@@ -200,7 +200,7 @@
           "title": "The tools I work with most often.",
           "description": "Most of my recent work sits across product UI, design systems, testing, and pragmatic full-stack delivery.",
           "points": [
-            "Figma, TypeScript, Vue 3, React, Next.js",
+            "Figma, TypeScript, Vue.js, React, Next.js",
             "Node.js, Nest.js, Express.js, Fastify",
             "Vitest, Testing Library, Jest, Playwright, monorepos"
           ]
