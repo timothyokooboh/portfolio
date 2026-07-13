@@ -1,9 +1,9 @@
-import { SectionHeading, WritingCard } from "@portfolio/ui-lib";
+import { SectionHeading } from "@portfolio/ui-lib";
 
 import type { WritingArticle } from "@/modules/writing/types/writing";
 import { getWritingArticlePath } from "@/modules/writing/utils/get-writing-content";
 
-import { AppLink } from "@/components/ui/app-link";
+import { WritingArticleRow } from "./writing-article-row";
 
 interface WritingCollectionSectionProps {
   articles: WritingArticle[];
@@ -19,9 +19,9 @@ function WritingCollectionSection({
   title,
 }: WritingCollectionSectionProps) {
   return (
-    <section className="space-y-6">
+    <section className="space-y-8">
       <SectionHeading title={title} description={description} />
-      <div className="grid gap-4 lg:grid-cols-3">
+      <div className="space-y-10 md:space-y-12">
         {articles.map((article) => {
           let href: string | undefined;
 
@@ -30,10 +30,9 @@ function WritingCollectionSection({
           }
 
           return (
-            <WritingCard
+            <WritingArticleRow
               key={article.slug}
               href={href}
-              linkComponent={AppLink}
               meta={`${article.meta.category} / ${article.meta.readTime}`}
               title={article.hero.title}
               summary={article.summary}

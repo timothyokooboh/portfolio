@@ -7,6 +7,8 @@
     },
     "actions": {
       "email": "Email me",
+      "emailCopied": "Email copied",
+      "emailCopyFailed": "Copy unavailable",
       "resume": "View resume"
     },
     "channels": {

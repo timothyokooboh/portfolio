@@ -30,7 +30,6 @@ function ProjectCard({
   const isInteractive = Boolean(href);
   const surfaceClassName = cn(
     "group h-full min-w-0 w-full overflow-hidden rounded-card border shadow-soft",
-    isInteractive && "ds-motion-surface ds-motion-surface-lift",
     tone === "dark"
       ? "border-inverse-border bg-inverse-surface text-inverse-ink"
       : "border-border bg-surface-tint text-ink",
@@ -43,14 +42,7 @@ function ProjectCard({
       {...props}
     >
       <div className="relative aspect-[16/10] overflow-hidden border-b border-black/5 bg-surface">
-        <div
-          className={cn(
-            "absolute inset-0",
-            isInteractive && "ds-motion-visual",
-          )}
-        >
-          {visual}
-        </div>
+        <div className="absolute inset-0">{visual}</div>
       </div>
       <div className="flex min-w-0 items-start justify-between gap-4 p-5 sm:gap-6 sm:p-6">
         <div className="min-w-0 space-y-3">

@@ -8,6 +8,7 @@ import {
   type WritingArticleStatus,
 } from "@/modules/writing/constants/writing";
 import type { WritingArticle } from "@/modules/writing/types/writing";
+import { normalizeLineEndings } from "@/modules/writing/utils/normalize-line-endings";
 
 const FRONTMATTER_DELIMITER = "---";
 const FRONTMATTER_SEPARATOR = ":";
@@ -257,29 +258,31 @@ function normalizeWritingFrontmatter(
 }
 
 function parseFrontmatter(fileContent: string): ParsedFrontmatter {
-  if (!fileContent.startsWith(`${FRONTMATTER_DELIMITER}\n`)) {
+  const normalizedFileContent = normalizeLineEndings(fileContent);
+
+  if (!normalizedFileContent.startsWith(`${FRONTMATTER_DELIMITER}\n`)) {
     return {
-      body: fileContent.trim(),
+      body: normalizedFileContent.trim(),
       data: {},
     };
   }
 
-  const delimiterIndex = fileContent.indexOf(
+  const delimiterIndex = normalizedFileContent.indexOf(
     `\n${FRONTMATTER_DELIMITER}\n`,
     FRONTMATTER_DELIMITER.length + 1,
   );
 
   if (delimiterIndex === -1) {
     return {
-      body: fileContent.trim(),
+      body: normalizedFileContent.trim(),
       data: {},
     };
   }
 
-  const frontmatterBlock = fileContent
+  const frontmatterBlock = normalizedFileContent
     .slice(FRONTMATTER_DELIMITER.length + 1, delimiterIndex)
     .trim();
-  const body = fileContent
+  const body = normalizedFileContent
     .slice(delimiterIndex + (`\n${FRONTMATTER_DELIMITER}\n`).length)
     .trim();
   const data = Object.fromEntries(

@@ -11,7 +11,7 @@ const projectCardProps = {
 
 describe("ProjectCard", () => {
   it("applies wrapper layout classes to the link when href is provided", () => {
-    render(
+    const { container } = render(
       <ProjectCard
         {...projectCardProps}
         href="/work/seamkit-ui"
@@ -23,6 +23,11 @@ describe("ProjectCard", () => {
 
     expect(link).toHaveClass("xl:col-span-8");
     expect(link).toHaveAccessibleName("Seamkit UI");
+    expect(container.querySelector("article")).not.toHaveClass(
+      "ds-motion-surface-lift",
+    );
+    expect(container.querySelector(".ds-motion-visual")).not.toBeInTheDocument();
+    expect(container.querySelector(".ds-motion-arrow-shift")).toBeInTheDocument();
   });
 
   it("applies layout classes to the article when the card is not interactive", () => {

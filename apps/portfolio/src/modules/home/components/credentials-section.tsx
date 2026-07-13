@@ -4,7 +4,7 @@ import { useMessages } from "next-intl";
 import { CREDENTIAL_KEYS } from "@/modules/home/constants/home";
 import type { AppMessages } from "@/types/messages";
 
-import { CredentialCard } from "./credential-card";
+import { CredentialRow } from "./credential-row";
 import { SectionShell } from "@/components/page/section-shell";
 
 interface CredentialMessageItem {
@@ -30,9 +30,9 @@ function CredentialsSection() {
           description={messages.home.credentials.description}
         />
 
-        <div className="grid gap-6 xl:grid-cols-3">
+        <div className="space-y-14 md:space-y-20">
           {credentials.map((credential) => (
-            <CredentialCard
+            <CredentialRow
               key={credential.id}
               description={credential.description}
               eyebrow={credential.eyebrow}

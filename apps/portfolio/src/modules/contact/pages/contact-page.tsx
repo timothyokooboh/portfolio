@@ -19,6 +19,7 @@ import { SectionShell } from "@/components/page/section-shell";
 import { SiteShell } from "@/components/layout/site-shell";
 import { PageHero } from "@/components/page/page-hero";
 import { ButtonLink } from "@/components/ui/button-link";
+import { EmailActionLink } from "../components/email-action-link";
 import { ContactMethodCard } from "../components/contact-method-card";
 
 async function generateContactPageMetadata(): Promise<Metadata> {
@@ -54,9 +55,12 @@ function ContactPage() {
         asideClassName="w-full lg:w-auto"
         aside={
           <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:flex-col">
-            <ButtonLink href={`mailto:${EMAIL_ADDRESS}`} variant="primary" size="lg">
-              {t("actions.email")}
-            </ButtonLink>
+            <EmailActionLink
+              emailAddress={EMAIL_ADDRESS}
+              label={t("actions.email")}
+              variant="primary"
+              size="lg"
+            />
             <ButtonLink
               href={RESUME_URL}
               variant="secondary"

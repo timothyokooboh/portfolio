@@ -1,4 +1,3 @@
-import { Callout } from "@portfolio/ui-lib";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -14,6 +13,7 @@ import { SectionShell } from "@/components/page/section-shell";
 import { SiteShell } from "@/components/layout/site-shell";
 import { PageHero } from "@/components/page/page-hero";
 import { WritingCollectionSection } from "../components/writing-collection-section";
+import { WritingIntro } from "../components/writing-intro";
 
 interface WritingPageContentProps {
   publishedArticles: WritingArticle[];
@@ -44,10 +44,11 @@ function WritingPageContent({
         description={t("hero.description")}
       />
 
-      <SectionShell className="pt-0" contentClassName="space-y-10">
-        <Callout title={t("intro.title")}>
-          <p>{t("intro.description")}</p>
-        </Callout>
+      <SectionShell className="pt-0" contentClassName="space-y-16 md:space-y-20">
+        <WritingIntro
+          title={t("intro.title")}
+          description={t("intro.description")}
+        />
 
         <WritingCollectionSection
           articles={publishedArticles}

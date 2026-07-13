@@ -7,6 +7,8 @@
     },
     "actions": {
       "email": "M'écrire",
+      "emailCopied": "E-mail copié",
+      "emailCopyFailed": "Copie impossible",
       "resume": "Voir mon CV"
     },
     "channels": {

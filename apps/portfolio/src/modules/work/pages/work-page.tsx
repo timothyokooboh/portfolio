@@ -124,7 +124,7 @@ function WorkPage() {
 
       <SectionShell>
         <Callout
-          className="text-center"
+          className="text-center [&>div]:mx-auto [&>div]:max-w-4xl [&>h3]:mx-auto [&>h3]:max-w-5xl"
           eyebrow={messages.workPage.cta.eyebrow}
           title={messages.workPage.cta.title}
         >
