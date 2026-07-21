@@ -8,7 +8,7 @@ test("renders the writing flow and local studio authoring surfaces", async ({ pa
 
   await expect(
     page.getByRole("heading", {
-      name: /writing about frontend systems, interface craft, and implementation detail\./i,
+      name: /writing about frontend systems and user interface architecture/i,
     }),
   ).toBeVisible();
 

@@ -7,7 +7,7 @@
     },
     "intro": {
       "title": "Why this work is here now",
-      "description": "I’m deliberately building the design side of my practice in public. These studies document what I am testing, what I am learning, and how that learning feeds back into the way I build products."
+      "description": "I’m deliberately building the design side of my craft in public. These studies document what I am testing, what I am learning, and how that learning feeds back into the way I build products."
     },
     "learning": {
       "title": "What I am actively learning",
@@ -222,7 +222,7 @@
         "figmaFrame": "Design showcase gallery"
       },
       "overview": [
-        "The design side of my practice is newer than the engineering side, so the page needs framing that is confident, transparent, and scalable as more studies, prototypes, and experiments get added.",
+        "The design side of my craft is newer than the engineering side, so the page needs framing that is confident, transparent, and scalable as more studies, prototypes, and experiments get added.",
         "This study builds that framing through compact cards, clear captions, and a system that can scale as more Figma projects, prototypes, and interface experiments are added."
       ],
       "principles": [

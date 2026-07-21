@@ -403,7 +403,7 @@
       },
       "role": "Senior Frontend Engineer (Contract)",
       "timeline": "3 months",
-      "stack": "Next.js, TypeScript, WebSockets, Lexical",
+      "stack": "Next.js, TypeScript, WebSockets",
       "metrics": [
         "Magic link, 2FA, OAuth, phone, and password auth flows",
         "Real-time voice and chat conversation surfaces",
@@ -650,12 +650,8 @@
   "writingPage": {
     "hero": {
       "eyebrow": "Writing",
-      "title": "Writing about frontend systems, interface craft, and implementation detail.",
-      "description": "Short essays, build notes, and code-backed breakdowns on React, accessibility, design systems, motion, and the engineering decisions behind polished product UI."
-    },
-    "intro": {
-      "title": "What you will find here",
-      "description": "Mostly practical writing: system decisions, component experiments, implementation trade-offs, and code snippets another engineer can actually take something from."
+      "title": "Writing about frontend systems and user interface architecture",
+      "description": "Technical articles on accessibility, design systems, motion, and the engineering decisions behind polished product UI."
     },
     "items": [
       {

@@ -72,7 +72,7 @@
       },
       "role": "Senior Frontend Engineer (Contract)",
       "timeline": "3 months",
-      "stack": "Next.js, TypeScript, WebSockets, Lexical",
+      "stack": "Next.js, TypeScript, WebSockets",
       "metrics": [
         "Magic link, 2FA, OAuth, phone, and password auth flows",
         "Real-time voice and chat conversation surfaces",

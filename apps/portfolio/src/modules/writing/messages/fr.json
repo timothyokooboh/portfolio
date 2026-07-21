@@ -2,12 +2,8 @@
   "writingPage": {
     "hero": {
       "eyebrow": "Articles",
-      "title": "Écrire sur les systèmes frontend, le soin apporté aux interfaces et les détails d'implémentation.",
-      "description": "Des essais courts, des notes de construction et des analyses appuyées par du code sur React, l'accessibilité, les design systems, le mouvement et les décisions qui donnent naissance à des interfaces produit soignées."
-    },
-    "intro": {
-      "title": "Ce que vous trouverez ici",
-      "description": "Des textes surtout pratiques : décisions de système, expériences de composants, compromis d'implémentation et extraits de code utiles à d'autres ingénieurs."
+      "title": "Écrire sur les systèmes frontend et l’architecture des interfaces utilisateur",
+      "description": "Des articles techniques sur l’accessibilité, les design systems, le mouvement et les décisions d’ingénierie qui sous-tendent des interfaces produit soignées."
     },
     "published": {
       "title": "Essais publiés",

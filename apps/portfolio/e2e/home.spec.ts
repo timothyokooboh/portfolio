@@ -82,7 +82,7 @@ test("routes from the homepage discovery surfaces", async ({ page }) => {
   await page.getByRole("link", { name: /read all/i }).click();
   await expect(
     page.getByRole("heading", {
-      name: /writing about frontend systems, interface craft, and implementation detail\./i,
+      name: /writing about frontend systems and user interface architecture/i,
     }),
   ).toBeVisible();
 

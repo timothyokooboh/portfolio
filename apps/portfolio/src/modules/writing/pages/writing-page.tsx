@@ -13,7 +13,6 @@ import { SectionShell } from "@/components/page/section-shell";
 import { SiteShell } from "@/components/layout/site-shell";
 import { PageHero } from "@/components/page/page-hero";
 import { WritingCollectionSection } from "../components/writing-collection-section";
-import { WritingIntro } from "../components/writing-intro";
 
 interface WritingPageContentProps {
   publishedArticles: WritingArticle[];
@@ -44,12 +43,7 @@ function WritingPageContent({
         description={t("hero.description")}
       />
 
-      <SectionShell className="pt-0" contentClassName="space-y-16 md:space-y-20">
-        <WritingIntro
-          title={t("intro.title")}
-          description={t("intro.description")}
-        />
-
+      <SectionShell className="pt-0">
         <WritingCollectionSection
           articles={publishedArticles}
           title={t("published.title")}

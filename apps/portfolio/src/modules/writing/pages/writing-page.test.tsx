@@ -16,7 +16,7 @@ describe("WritingPage", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: /writing about frontend systems, interface craft, and implementation detail\./i,
+        name: /writing about frontend systems and user interface architecture/i,
       }),
     ).toBeInTheDocument();
     expect(
