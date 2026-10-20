@@ -27,7 +27,7 @@ function SiteHeader({ activeItemId }: SiteHeaderProps) {
       <div className="relative mx-auto flex max-w-[75rem] items-center justify-between gap-3 border border-white/70 bg-background/80 px-4 py-4 shadow-soft backdrop-blur-md md:gap-6 md:px-6">
         <AppLink
           href={PAGE_LINKS.home}
-          className="shrink-0 font-display text-[1.3rem] font-semibold leading-none tracking-[-0.05em] text-ink transition-colors hover:text-accent sm:text-[1.5rem] md:text-[1.75rem]"
+          className="min-w-0 [overflow-wrap:anywhere] font-display text-[1.3rem] font-semibold leading-none tracking-[-0.05em] text-ink transition-colors hover:text-accent sm:text-[1.5rem] md:text-[1.75rem]"
         >
           {footer("title").toUpperCase()}
         </AppLink>

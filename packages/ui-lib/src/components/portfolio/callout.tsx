@@ -6,7 +6,7 @@ import { If } from "../ui/if";
 import { cn } from "../../lib/cn";
 import { CALLOUT_TITLE_CLASS } from "../../lib/portfolio-typography";
 
-const calloutVariants = cva("space-y-4", {
+const calloutVariants = cva("min-w-0 space-y-4 [overflow-wrap:anywhere]", {
   variants: {
     variant: {
       panel: "rounded-card border border-border bg-surface-tint p-8 shadow-soft",

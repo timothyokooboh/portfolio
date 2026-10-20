@@ -76,7 +76,7 @@ function WorkPage() {
             description={messages.workPage.lab.description}
           />
 
-          <div className="grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(20rem,0.8fr)]">
+          <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(20rem,0.8fr)]">
             <ProjectCard
               label={labProject.label}
               title={labProject.title}
@@ -100,7 +100,7 @@ function WorkPage() {
                   href={labProject.href ?? "#"}
                   variant="primary"
                   size="sm"
-                  className="w-full justify-center sm:w-auto xl:w-full"
+                  className="h-auto min-h-9 w-full whitespace-normal text-center justify-center sm:w-auto xl:w-full"
                 >
                   {messages.workPage.lab.ctaPrimary}
                 </ButtonLink>
@@ -111,7 +111,7 @@ function WorkPage() {
                     size="sm"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full justify-center sm:w-auto xl:w-full"
+                    className="h-auto min-h-9 w-full whitespace-normal text-center justify-center sm:w-auto xl:w-full"
                   >
                     {messages.workPage.lab.ctaSecondary}
                   </ButtonLink>
@@ -124,7 +124,7 @@ function WorkPage() {
 
       <SectionShell>
         <Callout
-          className="text-center [&>div]:mx-auto [&>div]:max-w-4xl [&>h3]:mx-auto [&>h3]:max-w-5xl"
+          className="max-[359px]:[&>h3]:text-2xl text-center [&>div]:mx-auto [&>div]:max-w-4xl [&>h3]:mx-auto [&>h3]:max-w-5xl"
           eyebrow={messages.workPage.cta.eyebrow}
           title={messages.workPage.cta.title}
         >

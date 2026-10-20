@@ -1,3 +1,5 @@
+import { CREDENTIAL_TITLE_CLASS } from "@/constants/typography";
+
 interface CredentialRowProps {
   description: string;
   eyebrow: string;
@@ -19,7 +21,7 @@ function CredentialRow({
 
       <div className="grid gap-7 xl:grid-cols-[minmax(0,1.15fr)_minmax(15rem,0.85fr)] xl:gap-12">
         <div className="space-y-3">
-          <h3 className="max-w-[34rem] font-display text-[clamp(1.85rem,3.4vw,2.5rem)] font-semibold leading-tight text-ink">
+          <h3 className={CREDENTIAL_TITLE_CLASS}>
             {title}
           </h3>
           <p className="max-w-[38rem] text-base leading-7 text-ink-muted">

@@ -118,7 +118,7 @@ function WorkDetailPageContent({ project }: WorkDetailPageContentProps) {
               }))}
             />
 
-            <Callout eyebrow={project.label} title={project.summary}>
+            <Callout className="max-[378px]:[&>h3]:text-2xl" eyebrow={project.label} title={project.summary}>
               <p>{project.reflection}</p>
             </Callout>
           </aside>

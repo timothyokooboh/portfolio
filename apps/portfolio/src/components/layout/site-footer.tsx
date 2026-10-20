@@ -21,7 +21,7 @@ function SiteFooter() {
     <footer className="border-t border-border/40 px-page py-12 md:py-16">
       <div className="mx-auto max-w-[75rem] space-y-10">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
-          <div className="max-w-[30rem] space-y-5">
+          <div className="min-w-0 max-w-[30rem] space-y-5 [overflow-wrap:anywhere]">
             <p className={FOOTER_TITLE_CLASS}>
               {t("title").toUpperCase()}
             </p>
@@ -82,7 +82,7 @@ function SiteFooter() {
                   </p>
                   <AppLink
                     href={`mailto:${t("emailValue")}`}
-                    className="text-base leading-6 text-ink-muted transition-colors hover:text-ink"
+                    className="text-base leading-6 text-ink-muted [overflow-wrap:anywhere] transition-colors hover:text-ink"
                   >
                     {t("emailValue")}
                   </AppLink>
